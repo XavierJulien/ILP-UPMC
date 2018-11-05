@@ -37,7 +37,7 @@ public class InterpreterTest {
     protected static String[] samplesDirName = { "SamplesTME2" }; 
     protected static String pattern = "ur?[0-8]\\d*-[123456]";
     protected static String XMLgrammarFile = "XMLGrammars/grammar1.rng";
-    int i;
+    
     protected File file;
     public InterpreterTest(final File file) {
     	this.file = file;
