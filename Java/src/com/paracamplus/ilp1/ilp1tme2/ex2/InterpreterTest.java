@@ -34,7 +34,7 @@ import com.paracamplus.ilp1.parser.xml.XMLParser;
 @RunWith(Parameterized.class)
 public class InterpreterTest {
     
-    protected static String[] samplesDirName = { "SamplesTME2" }; 
+    protected static String[] samplesDirName = { "SamplesILP1" }; 
     protected static String pattern = "ur?[0-8]\\d*-[123456]";
     protected static String XMLgrammarFile = "XMLGrammars/grammar1.rng";
     
