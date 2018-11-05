@@ -26,7 +26,7 @@ grammar ILPMLgrammar1;
  * Règles sytaxiques.
  * 
  * ANTLR impose que le nom des règles syntaxique comment par 
- * une minuscule.
+ * une minuscule.r recogn
  * Ces règles ont la forme "BNF".
  * Chaque règle retourne un objet Java représentant un morceau d'AST.
  * La récursivité directe à gauche est autorisée.
