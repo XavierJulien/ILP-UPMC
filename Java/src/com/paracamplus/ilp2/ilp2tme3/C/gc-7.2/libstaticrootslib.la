@@ -17,7 +17,7 @@ old_library='libstaticrootslib.a'
 inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' /Users/julienxavier/eclipse-workspace/ILP-UPMC/C/gc-7.2/libgc.la -lpthread'
+dependency_libs=' /Users/julienxavier/eclipse-workspace/ILP-UPMC/Java/src/com/paracamplus/ilp2/ilp2tme3/C/gc-7.2/libgc.la -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
