@@ -3,101 +3,103 @@
 #include "ilp.h"
 
 /* Global variables */
-ILP_Object	pseudosequence;
-ILP_Object	y_3d;
-ILP_Object	function;
-ILP_Object	one;
-ILP_Object	foo;
-ILP_Object	x;
-ILP_Object	y;
-ILP_Object	two;
+ILP_Object pseudosequence;
+ILP_Object foo;
 
+/* Global prototypes */
+ILP_Object ilp__pseudosequence (ILP_Closure ilp_useless,
+				ILP_Object one1, ILP_Object two2);
+ILP_Object ilp__foo (ILP_Closure ilp_useless, ILP_Object x3);
 
-ILP_Object 
-ilp_program()
+/* Global functions */
+
+ILP_Object
+ilp__pseudosequence (ILP_Closure ilp_useless,
+		     ILP_Object one1, ILP_Object two2)
 {
+  return two2;
+}
+
+struct ILP_Closure pseudosequence_closure_object = {
+  &ILP_object_Closure_class,
+  {{ilp__pseudosequence,
+    2,
+    {NULL}}}
+};
+
+ILP_Object
+ilp__foo (ILP_Closure ilp_useless, ILP_Object x3)
+{
+  {
+    ILP_Object ilptmp450;
+    ILP_Object ilptmp451;
+    ilptmp450 = ILP_Integer2ILP (2);
+    ilptmp451 = x3;
+    return ILP_Times (ilptmp450, ilptmp451);
+  }
+}
+
+struct ILP_Closure foo_closure_object = {
+  &ILP_object_Closure_class,
+  {{ilp__foo,
+    1,
+    {NULL}}}
+};
+
+
+ILP_Object
+ilp_program ()
+{
+  {
+    ILP_Object ilptmp452;
+    ilptmp452 = ILP_Integer2ILP (12);
+
+    {
+      ILP_Object y4 = ilptmp452;
+      {
+	ILP_Object ilptmp453;
 	{
-		ILP_Object	ilptmp120;
-		ilptmp120 = function;
-		{
-			ILP_Object	ilptmp121;
-			ILP_Object	ilptmp122;
-			ilptmp121 = one;
-			ilptmp122 = two;
-			ilptmp120 = ILP_invoke(pseudosequence, 2, ilptmp121, ilptmp122);
-		}
-		ilptmp120 = two;
-		ilptmp120 = function;
-		{
-			ILP_Object	ilptmp123;
-			ILP_Object	ilptmp124;
-			{
-				ILP_Object	ilptmp125;
-				ilptmp125 = x;
-				ilptmp123 = ILP_invoke(foo, 1, ilptmp125);
-			}
-			{
-				ILP_Object	ilptmp126;
-				ILP_Object	ilptmp127;
-				ilptmp126 = ILP_Integer2ILP(2);
-				ilptmp127 = x;
-				ilptmp124 = ILP_Times(ilptmp126, ilptmp127);
-			}
-			ilptmp120 = ILP_invoke(ilptmp123, 1, ilptmp124);
-		}
-		{
-			ILP_Object	ilptmp128;
-			ilptmp128 = ILP_Integer2ILP(12);
-
-			{
-				ILP_Object	y1 = ilptmp128;
-				ilptmp120 = foo;
-
-			}
-		}
-		{
-			ILP_Object	ilptmp129;
-			ilptmp129 = pseudosequence;
-			{
-				ILP_Object	ilptmp130;
-				{
-					ILP_Object	ilptmp131;
-					ilptmp131 = y_3d;
-					{
-						ILP_Object	ilptmp132;
-						ilptmp132 = y;
-						ilptmp131 = ILP_invoke(foo, 1, ilptmp132);
-					}
-					ilptmp130 = ilptmp131;
-				}
-				ilptmp130 = y;
-				ilptmp129 = ilptmp130;
-			}
-			ilptmp120 = ilptmp129;
-		}
-		return ilptmp120;
+	  ILP_Object ilptmp454;
+	  ILP_Object ilptmp455;
+	  {
+	    ILP_Object ilptmp456;
+	    {
+	      ILP_Object ilptmp457;
+	      ilptmp457 = y4;
+	      ilptmp456 = ilp__foo (NULL, ilptmp457);
+	    }
+	    ilptmp454 = (y4 = ilptmp456);
+	  }
+	  ilptmp455 = y4;
+	  ilptmp453 = ilp__pseudosequence (NULL, ilptmp454, ilptmp455);
 	}
+	return ilp__foo (NULL, ilptmp453);
+      }
+
+    }
+  }
 
 }
 
-static ILP_Object 
-ilp_caught_program()
+static ILP_Object
+ilp_caught_program ()
 {
-	struct ILP_catcher *current_catcher = ILP_current_catcher;
-	struct ILP_catcher new_catcher;
+  struct ILP_catcher *current_catcher = ILP_current_catcher;
+  struct ILP_catcher new_catcher;
 
-	if (0 == setjmp(new_catcher._jmp_buf)) {
-		ILP_establish_catcher(&new_catcher);
-		return ilp_program();
-	};
-	return ILP_current_exception;
+  if (0 == setjmp (new_catcher._jmp_buf))
+    {
+      ILP_establish_catcher (&new_catcher);
+      return ilp_program ();
+    };
+  return ILP_current_exception;
 }
 
-int 
-main(int argc, char *argv[])
+int
+main (int argc, char *argv[])
 {
-	ILP_START_GC;
-	ILP_print(ilp_caught_program());
-	ILP_newline();
-	return EXIT_SUCCESS;
+  ILP_START_GC;
+  ILP_print (ilp_caught_program ());
+  ILP_newline ();
+  return EXIT_SUCCESS;
 }

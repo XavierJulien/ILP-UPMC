@@ -3,157 +3,172 @@
 #include "ilp.h"
 
 /* Global variables */
-ILP_Object	even;
-ILP_Object	function;
-ILP_Object	odd;
-ILP_Object	n;
+ILP_Object even;
+ILP_Object odd;
 
+/* Global prototypes */
+ILP_Object ilp__odd (ILP_Closure ilp_useless, ILP_Object n1);
+ILP_Object ilp__even (ILP_Closure ilp_useless, ILP_Object n2);
 
-ILP_Object 
-ilp_program()
+/* Global functions */
+
+ILP_Object
+ilp__odd (ILP_Closure ilp_useless, ILP_Object n1)
 {
+  {
+    ILP_Object ilptmp390;
+    {
+      ILP_Object ilptmp391;
+      ILP_Object ilptmp392;
+      ilptmp391 = n1;
+      ilptmp392 = ILP_Integer2ILP (0);
+      ilptmp390 = ILP_Equal (ilptmp391, ilptmp392);
+    }
+    if (ILP_isEquivalentToTrue (ilptmp390))
+      {
+	return ILP_FALSE;
+
+      }
+    else
+      {
 	{
-		ILP_Object	ilptmp69;
-		ilptmp69 = function;
+	  ILP_Object ilptmp393;
+	  {
+	    ILP_Object ilptmp394;
+	    ILP_Object ilptmp395;
+	    ilptmp394 = n1;
+	    ilptmp395 = ILP_Integer2ILP (1);
+	    ilptmp393 = ILP_Equal (ilptmp394, ilptmp395);
+	  }
+	  if (ILP_isEquivalentToTrue (ilptmp393))
+	    {
+	      return ILP_TRUE;
+
+	    }
+	  else
+	    {
+	      {
+		ILP_Object ilptmp396;
 		{
-			ILP_Object	ilptmp70;
-			ILP_Object	ilptmp71;
-			{
-				ILP_Object	ilptmp72;
-				ilptmp72 = n;
-				ilptmp70 = ILP_invoke(odd, 1, ilptmp72);
-			}
-			{
-				ILP_Object	ilptmp73;
-				{
-					ILP_Object	ilptmp74;
-					ILP_Object	ilptmp75;
-					ilptmp74 = n;
-					ilptmp75 = ILP_Integer2ILP(0);
-					ilptmp73 = ILP_Equal(ilptmp74, ilptmp75);
-				}
-				if (ILP_isEquivalentToTrue(ilptmp73)) {
-					ilptmp71 = ILP_FALSE;
-
-				} else {
-					{
-						ILP_Object	ilptmp76;
-						{
-							ILP_Object	ilptmp77;
-							ILP_Object	ilptmp78;
-							ilptmp77 = n;
-							ilptmp78 = ILP_Integer2ILP(1);
-							ilptmp76 = ILP_Equal(ilptmp77, ilptmp78);
-						}
-						if (ILP_isEquivalentToTrue(ilptmp76)) {
-							ilptmp71 = ILP_TRUE;
-
-						} else {
-							{
-								ILP_Object	ilptmp79;
-								{
-									ILP_Object	ilptmp80;
-									ILP_Object	ilptmp81;
-									ilptmp80 = n;
-									ilptmp81 = ILP_Integer2ILP(1);
-									ilptmp79 = ILP_Minus(ilptmp80, ilptmp81);
-								}
-								ilptmp71 = ILP_invoke(even, 1, ilptmp79);
-							}
-
-						}
-					}
-
-				}
-			}
-			ilptmp69 = ILP_invoke(ilptmp70, 1, ilptmp71);
+		  ILP_Object ilptmp397;
+		  ILP_Object ilptmp398;
+		  ilptmp397 = n1;
+		  ilptmp398 = ILP_Integer2ILP (1);
+		  ilptmp396 = ILP_Minus (ilptmp397, ilptmp398);
 		}
-		ilptmp69 = function;
-		{
-			ILP_Object	ilptmp82;
-			ILP_Object	ilptmp83;
-			{
-				ILP_Object	ilptmp84;
-				ilptmp84 = n;
-				ilptmp82 = ILP_invoke(even, 1, ilptmp84);
-			}
-			{
-				ILP_Object	ilptmp85;
-				{
-					ILP_Object	ilptmp86;
-					ILP_Object	ilptmp87;
-					ilptmp86 = n;
-					ilptmp87 = ILP_Integer2ILP(0);
-					ilptmp85 = ILP_Equal(ilptmp86, ilptmp87);
-				}
-				if (ILP_isEquivalentToTrue(ilptmp85)) {
-					ilptmp83 = ILP_TRUE;
+		return ilp__even (NULL, ilptmp396);
+	      }
 
-				} else {
-					{
-						ILP_Object	ilptmp88;
-						{
-							ILP_Object	ilptmp89;
-							ILP_Object	ilptmp90;
-							ilptmp89 = n;
-							ilptmp90 = ILP_Integer2ILP(1);
-							ilptmp88 = ILP_Equal(ilptmp89, ilptmp90);
-						}
-						if (ILP_isEquivalentToTrue(ilptmp88)) {
-							ilptmp83 = ILP_FALSE;
-
-						} else {
-							{
-								ILP_Object	ilptmp91;
-								{
-									ILP_Object	ilptmp92;
-									ILP_Object	ilptmp93;
-									ilptmp92 = n;
-									ilptmp93 = ILP_Integer2ILP(1);
-									ilptmp91 = ILP_Minus(ilptmp92, ilptmp93);
-								}
-								ilptmp83 = ILP_invoke(odd, 1, ilptmp91);
-							}
-
-						}
-					}
-
-				}
-			}
-			ilptmp69 = ILP_invoke(ilptmp82, 1, ilptmp83);
-		}
-		{
-			ILP_Object	ilptmp94;
-			{
-				ILP_Object	ilptmp95;
-				ilptmp95 = ILP_Integer2ILP(56);
-				ilptmp94 = ILP_invoke(odd, 1, ilptmp95);
-			}
-			ilptmp69 = ILP_Not(ilptmp94);
-		}
-		return ilptmp69;
+	    }
 	}
 
+      }
+  }
 }
 
-static ILP_Object 
-ilp_caught_program()
-{
-	struct ILP_catcher *current_catcher = ILP_current_catcher;
-	struct ILP_catcher new_catcher;
+struct ILP_Closure odd_closure_object = {
+  &ILP_object_Closure_class,
+  {{ilp__odd,
+    1,
+    {NULL}}}
+};
 
-	if (0 == setjmp(new_catcher._jmp_buf)) {
-		ILP_establish_catcher(&new_catcher);
-		return ilp_program();
-	};
-	return ILP_current_exception;
+ILP_Object
+ilp__even (ILP_Closure ilp_useless, ILP_Object n2)
+{
+  {
+    ILP_Object ilptmp399;
+    {
+      ILP_Object ilptmp400;
+      ILP_Object ilptmp401;
+      ilptmp400 = n2;
+      ilptmp401 = ILP_Integer2ILP (0);
+      ilptmp399 = ILP_Equal (ilptmp400, ilptmp401);
+    }
+    if (ILP_isEquivalentToTrue (ilptmp399))
+      {
+	return ILP_TRUE;
+
+      }
+    else
+      {
+	{
+	  ILP_Object ilptmp402;
+	  {
+	    ILP_Object ilptmp403;
+	    ILP_Object ilptmp404;
+	    ilptmp403 = n2;
+	    ilptmp404 = ILP_Integer2ILP (1);
+	    ilptmp402 = ILP_Equal (ilptmp403, ilptmp404);
+	  }
+	  if (ILP_isEquivalentToTrue (ilptmp402))
+	    {
+	      return ILP_FALSE;
+
+	    }
+	  else
+	    {
+	      {
+		ILP_Object ilptmp405;
+		{
+		  ILP_Object ilptmp406;
+		  ILP_Object ilptmp407;
+		  ilptmp406 = n2;
+		  ilptmp407 = ILP_Integer2ILP (1);
+		  ilptmp405 = ILP_Minus (ilptmp406, ilptmp407);
+		}
+		return ilp__odd (NULL, ilptmp405);
+	      }
+
+	    }
+	}
+
+      }
+  }
 }
 
-int 
-main(int argc, char *argv[])
+struct ILP_Closure even_closure_object = {
+  &ILP_object_Closure_class,
+  {{ilp__even,
+    1,
+    {NULL}}}
+};
+
+
+ILP_Object
+ilp_program ()
 {
-	ILP_START_GC;
-	ILP_print(ilp_caught_program());
-	ILP_newline();
-	return EXIT_SUCCESS;
+  {
+    ILP_Object ilptmp408;
+    {
+      ILP_Object ilptmp409;
+      ilptmp409 = ILP_Integer2ILP (56);
+      ilptmp408 = ilp__odd (NULL, ilptmp409);
+    }
+    return ILP_Not (ilptmp408);
+  }
+
+}
+
+static ILP_Object
+ilp_caught_program ()
+{
+  struct ILP_catcher *current_catcher = ILP_current_catcher;
+  struct ILP_catcher new_catcher;
+
+  if (0 == setjmp (new_catcher._jmp_buf))
+    {
+      ILP_establish_catcher (&new_catcher);
+      return ilp_program ();
+    };
+  return ILP_current_exception;
+}
+
+int
+main (int argc, char *argv[])
+{
+  ILP_START_GC;
+  ILP_print (ilp_caught_program ());
+  ILP_newline ();
+  return EXIT_SUCCESS;
 }

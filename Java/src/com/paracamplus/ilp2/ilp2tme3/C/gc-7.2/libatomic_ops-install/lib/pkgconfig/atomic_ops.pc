@@ -1,4 +1,4 @@
-prefix=/Users/julienxavier/eclipse-workspace/ILP-UPMC/Java/src/com/paracamplus/ilp2/ilp2tme3/C/gc-7.2/libatomic_ops-install
+prefix=/users/nfs/Etu4/3521024/git/ILP-UPMC/Java/src/com/paracamplus/ilp2/ilp2tme3/C/gc-7.2/libatomic_ops-install
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

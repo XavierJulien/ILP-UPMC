@@ -3,105 +3,134 @@
 #include "ilp.h"
 
 /* Global variables */
-ILP_Object	print;
-ILP_Object	x_3d;
+ILP_Object print;
+
+/* Global prototypes */
+
+/* Global functions */
+
+
 ILP_Object
-do;
-ILP_Object while;
+ilp_program ()
+{
+  {
+    ILP_Object ilptmp316;
+    ilptmp316 = ILP_Integer2ILP (5);
 
-
-ILP_Object	ilp_program() {
-	{
-		ILP_Object	ilptmp19;
-				ilptmp19 =	ILP_Integer2ILP(5);
-
+    {
+      ILP_Object x1 = ilptmp316;
+      {
+	ILP_Object ilptmp317;
+	while (1)
+	  {
+	    ILP_Object ilptmp318;
+	    {
+	      ILP_Object ilptmp319;
+	      ILP_Object ilptmp320;
+	      ilptmp319 = x1;
+	      ilptmp320 = ILP_Integer2ILP (53);
+	      ilptmp318 = ILP_LessThan (ilptmp319, ilptmp320);
+	    }
+	    if (ILP_isEquivalentToTrue (ilptmp318))
+	      {
 		{
-			ILP_Object	x1 = ilptmp19;
+		  ILP_Object ilptmp321;
+		  {
+		    ILP_Object ilptmp322;
+		    ilptmp322 = x1;
+		    ilptmp321 = ILP_print (ilptmp322);
+		  }
+		  {
+		    ILP_Object ilptmp323;
+		    {
+		      ILP_Object ilptmp324;
+		      ILP_Object ilptmp325;
+		      ilptmp324 = ILP_Integer2ILP (2);
+		      ilptmp325 = x1;
+		      ilptmp323 = ILP_Times (ilptmp324, ilptmp325);
+		    }
+		    ilptmp321 = (x1 = ilptmp323);
+		  }
+		  while (1)
+		    {
+		      ILP_Object ilptmp326;
+		      {
+			ILP_Object ilptmp327;
+			ILP_Object ilptmp328;
+			ilptmp327 = x1;
+			ilptmp328 = ILP_Integer2ILP (53);
+			ilptmp326 = ILP_GreaterThan (ilptmp327, ilptmp328);
+		      }
+		      if (ILP_isEquivalentToTrue (ilptmp326))
 			{
-				ILP_Object	ilptmp20;
-				{
-					ILP_Object	ilptmp21;
-					{
-						ILP_Object	ilptmp22;
-						ILP_Object	ilptmp23;
-								ilptmp22 =	x1;
-								ilptmp23 =	ILP_Integer2ILP(53);
-								ilptmp21 =	ILP_LessThan(ilptmp22, ilptmp23);
-					}
-					ilptmp20 = ILP_invoke(while, 1, ilptmp21);
-				}
-						ilptmp20 =
-				do;
+			  {
+			    ILP_Object ilptmp329;
+			    {
+			      ILP_Object ilptmp330;
+			      ilptmp330 = x1;
+			      ilptmp329 = ILP_print (ilptmp330);
+			    }
+			    {
+			      ILP_Object ilptmp331;
+			      {
+				ILP_Object ilptmp332;
+				ILP_Object ilptmp333;
+				ilptmp332 = x1;
+				ilptmp333 = ILP_Integer2ILP (3);
+				ilptmp331 = ILP_Minus (ilptmp332, ilptmp333);
+			      }
+			      ilptmp329 = (x1 = ilptmp331);
+			    }
+			    (void) ilptmp329;
+			  }
+
+			}
+		      else
 			{
-				ILP_Object	ilptmp24;
-				{
-					ILP_Object	ilptmp25;
-					ilptmp25 = x1;
-					ilptmp24 = ILP_print(ilptmp25);
-				}
-				ilptmp24 = x_3d;
-				{
-					ILP_Object	ilptmp26;
-					ILP_Object	ilptmp27;
-					ilptmp26 = ILP_Integer2ILP(2);
-					ilptmp27 = x1;
-					ilptmp24 = ILP_Times(ilptmp26, ilptmp27);
-				}
-				{
-					ILP_Object	ilptmp28;
-					{
-						ILP_Object	ilptmp29;
-						ILP_Object	ilptmp30;
-						ilptmp29 = x1;
-						ilptmp30 = ILP_Integer2ILP(53);
-						ilptmp28 = ILP_GreaterThan(ilptmp29, ilptmp30);
-					}
-					ilptmp24 = ILP_invoke(while, 1, ilptmp28);
-				}
-				ilptmp24 =
-				do;
-			{
-				ILP_Object	ilptmp31;
-				{
-					ILP_Object	ilptmp32;
-					ilptmp32 = x1;
-					ilptmp31 = ILP_print(ilptmp32);
-				}
-				ilptmp31 = x_3d;
-				{
-					ILP_Object	ilptmp33;
-					ILP_Object	ilptmp34;
-					ilptmp33 = x1;
-					ilptmp34 = ILP_Integer2ILP(3);
-					ilptmp31 = ILP_Minus(ilptmp33, ilptmp34);
-				}
-				ilptmp24 = ilptmp31;
-			}
-			ilptmp20 = ilptmp24;
-			}
-			ilptmp20 = x1;
-			return ilptmp20;
-			}
+			  break;
 
 			}
-			}
+		    }
+		  ilptmp321 = ILP_FALSE;
+		  (void) ilptmp321;
+		}
 
-			}
+	      }
+	    else
+	      {
+		break;
 
-			static ILP_Object ilp_caught_program() {
-				struct ILP_catcher *current_catcher = ILP_current_catcher;
-				struct ILP_catcher new_catcher;
+	      }
+	  }
+	ilptmp317 = ILP_FALSE;
+	ilptmp317 = x1;
+	return ilptmp317;
+      }
 
-				if              (0 == setjmp(new_catcher._jmp_buf)) {
-					ILP_establish_catcher(&new_catcher);
-					return ilp_program();
-				};
-				return ILP_current_exception;
-			}
+    }
+  }
 
-			int		main       (int argc, char *argv[]){
-				ILP_START_GC;
-				ILP_print(ilp_caught_program());
-				ILP_newline();
-				return EXIT_SUCCESS;
-			}
+}
+
+static ILP_Object
+ilp_caught_program ()
+{
+  struct ILP_catcher *current_catcher = ILP_current_catcher;
+  struct ILP_catcher new_catcher;
+
+  if (0 == setjmp (new_catcher._jmp_buf))
+    {
+      ILP_establish_catcher (&new_catcher);
+      return ilp_program ();
+    };
+  return ILP_current_exception;
+}
+
+int
+main (int argc, char *argv[])
+{
+  ILP_START_GC;
+  ILP_print (ilp_caught_program ());
+  ILP_newline ();
+  return EXIT_SUCCESS;
+}
