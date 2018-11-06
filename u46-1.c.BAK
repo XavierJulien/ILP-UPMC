@@ -13,23 +13,23 @@ ILP_Object print;
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp620; 
+  ILP_Object ilptmp238; 
 { 
-  ILP_Object ilptmp621; 
-ilptmp621 =  ILP_String2ILP("Un, "); 
-ilptmp620 = ILP_print(ilptmp621);
+  ILP_Object ilptmp239; 
+ilptmp239 =  ILP_String2ILP("Un, "); 
+ilptmp238 = ILP_print(ilptmp239);
 }
 { 
-  ILP_Object ilptmp622; 
-ilptmp622 =  ILP_String2ILP("deux et "); 
-ilptmp620 = ILP_print(ilptmp622);
+  ILP_Object ilptmp240; 
+ilptmp240 =  ILP_String2ILP("deux et "); 
+ilptmp238 = ILP_print(ilptmp240);
 }
 { 
-  ILP_Object ilptmp623; 
-ilptmp623 =  ILP_String2ILP("trois."); 
-ilptmp620 = ILP_print(ilptmp623);
+  ILP_Object ilptmp241; 
+ilptmp241 =  ILP_String2ILP("trois."); 
+ilptmp238 = ILP_print(ilptmp241);
 }
-return ilptmp620; 
+return ilptmp238; 
 } 
 
 } 

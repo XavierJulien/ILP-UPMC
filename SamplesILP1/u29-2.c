@@ -13,41 +13,41 @@ ILP_Object
 ilp_program()
 {
 	{
-		ILP_Object	ilptmp540;
-		ILP_Object	ilptmp541;
-		ilptmp540 = ILP_Integer2ILP(11);
-		ilptmp541 = ILP_Integer2ILP(22);
+		ILP_Object	ilptmp158;
+		ILP_Object	ilptmp159;
+		ilptmp158 = ILP_Integer2ILP(11);
+		ilptmp159 = ILP_Integer2ILP(22);
 
 		{
-			ILP_Object	x1 = ilptmp540;
-			ILP_Object	y2 = ilptmp541;
+			ILP_Object	x1 = ilptmp158;
+			ILP_Object	y2 = ilptmp159;
 			{
-				ILP_Object	ilptmp542;
-				ILP_Object	ilptmp543;
+				ILP_Object	ilptmp160;
+				ILP_Object	ilptmp161;
 				{
-					ILP_Object	ilptmp544;
-					ILP_Object	ilptmp545;
-					ilptmp544 = x1;
-					ilptmp545 = y2;
-					ilptmp542 = ILP_Plus(ilptmp544, ilptmp545);
+					ILP_Object	ilptmp162;
+					ILP_Object	ilptmp163;
+					ilptmp162 = x1;
+					ilptmp163 = y2;
+					ilptmp160 = ILP_Plus(ilptmp162, ilptmp163);
 				}
 				{
-					ILP_Object	ilptmp546;
-					ILP_Object	ilptmp547;
-					ilptmp546 = x1;
-					ilptmp547 = y2;
-					ilptmp543 = ILP_Times(ilptmp546, ilptmp547);
+					ILP_Object	ilptmp164;
+					ILP_Object	ilptmp165;
+					ilptmp164 = x1;
+					ilptmp165 = y2;
+					ilptmp161 = ILP_Times(ilptmp164, ilptmp165);
 				}
 
 				{
-					ILP_Object	x3 = ilptmp542;
-					ILP_Object	y4 = ilptmp543;
+					ILP_Object	x3 = ilptmp160;
+					ILP_Object	y4 = ilptmp161;
 					{
-						ILP_Object	ilptmp548;
-						ILP_Object	ilptmp549;
-						ilptmp548 = x3;
-						ilptmp549 = y4;
-						return ILP_Times(ilptmp548, ilptmp549);
+						ILP_Object	ilptmp166;
+						ILP_Object	ilptmp167;
+						ilptmp166 = x3;
+						ilptmp167 = y4;
+						return ILP_Times(ilptmp166, ilptmp167);
 					}
 
 				}

@@ -13,11 +13,11 @@ ILP_Object
 ilp_program()
 {
 	{
-		ILP_Object	ilptmp408;
-		ILP_Object	ilptmp409;
-		ilptmp408 = ILP_String2ILP("");
-		ilptmp409 = ILP_TRUE;
-		return ILP_Xor(ilptmp408, ilptmp409);
+		ILP_Object	ilptmp26;
+		ILP_Object	ilptmp27;
+		ilptmp26 = ILP_String2ILP("");
+		ilptmp27 = ILP_TRUE;
+		return ILP_Xor(ilptmp26, ilptmp27);
 	}
 
 }

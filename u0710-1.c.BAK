@@ -12,17 +12,17 @@
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp390; 
-  ILP_Object ilptmp391; 
-ilptmp390 = ILP_FALSE; 
+  ILP_Object ilptmp8; 
+  ILP_Object ilptmp9; 
+ilptmp8 = ILP_FALSE; 
 { 
-  ILP_Object ilptmp392; 
-  ILP_Object ilptmp393; 
-ilptmp392 = ILP_Integer2ILP(710); 
-ilptmp393 = ILP_Integer2ILP(2); 
-ilptmp391 = ILP_Or(ilptmp392, ilptmp393);
+  ILP_Object ilptmp10; 
+  ILP_Object ilptmp11; 
+ilptmp10 = ILP_Integer2ILP(710); 
+ilptmp11 = ILP_Integer2ILP(2); 
+ilptmp9 = ILP_Or(ilptmp10, ilptmp11);
 } 
-return ILP_Or(ilptmp390, ilptmp391);
+return ILP_Or(ilptmp8, ilptmp9);
 } 
 
 } 

@@ -14,24 +14,24 @@ ILP_Object
 ilp_program()
 {
 	{
-		ILP_Object	ilptmp627;
+		ILP_Object	ilptmp245;
 		{
-			ILP_Object	ilptmp628;
-			ilptmp628 = ILP_FALSE;
-			if (ILP_isEquivalentToTrue(ilptmp628)) {
+			ILP_Object	ilptmp246;
+			ilptmp246 = ILP_FALSE;
+			if (ILP_isEquivalentToTrue(ilptmp246)) {
 				{
-					ILP_Object	ilptmp629;
-					ilptmp629 = ILP_String2ILP("invisible");
-					ilptmp627 = ILP_print(ilptmp629);
+					ILP_Object	ilptmp247;
+					ilptmp247 = ILP_String2ILP("invisible");
+					ilptmp245 = ILP_print(ilptmp247);
 				}
 
 			} else {
-				ilptmp627 = ILP_FALSE;
+				ilptmp245 = ILP_FALSE;
 
 			}
 		}
-		ilptmp627 = ILP_Integer2ILP(47);
-		return ilptmp627;
+		ilptmp245 = ILP_Integer2ILP(47);
+		return ilptmp245;
 	}
 
 }

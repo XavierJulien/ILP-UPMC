@@ -13,22 +13,22 @@ ILP_Object
 ilp_program()
 {
 	{
-		ILP_Object	ilptmp578;
-		ilptmp578 = ILP_Integer2ILP(33);
+		ILP_Object	ilptmp196;
+		ilptmp196 = ILP_Integer2ILP(33);
 
 		{
-			ILP_Object	u1 = ilptmp578;
+			ILP_Object	u1 = ilptmp196;
 			{
-				ILP_Object	ilptmp579;
-				ilptmp579 = ILP_String2ILP("foobar");
+				ILP_Object	ilptmp197;
+				ilptmp197 = ILP_String2ILP("foobar");
 				{
-					ILP_Object	ilptmp580;
-					ILP_Object	ilptmp581;
-					ilptmp580 = u1;
-					ilptmp581 = ILP_Integer2ILP(22);
-					ilptmp579 = ILP_Plus(ilptmp580, ilptmp581);
+					ILP_Object	ilptmp198;
+					ILP_Object	ilptmp199;
+					ilptmp198 = u1;
+					ilptmp199 = ILP_Integer2ILP(22);
+					ilptmp197 = ILP_Plus(ilptmp198, ilptmp199);
 				}
-				return ilptmp579;
+				return ilptmp197;
 			}
 
 		}
