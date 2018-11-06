@@ -4,144 +4,134 @@
 
 /* Global variables */
 ILP_Object	even;
+ILP_Object	function;
 ILP_Object	odd;
-
-/* Global prototypes */
-ILP_Object 
-ilp__odd(ILP_Closure ilp_useless
-	 ,
-	 ILP_Object n1);
-ILP_Object 
-ilp__even(ILP_Closure ilp_useless
-	  ,
-	  ILP_Object n2);
-
-/* Global functions */
-
-ILP_Object 
-ilp__odd(ILP_Closure ilp_useless
-	 ,
-	 ILP_Object n1)
-{
-	{
-		ILP_Object	ilptmp137;
-		{
-			ILP_Object	ilptmp138;
-			ILP_Object	ilptmp139;
-			ilptmp138 = n1;
-			ilptmp139 = ILP_Integer2ILP(0);
-			ilptmp137 = ILP_Equal(ilptmp138, ilptmp139);
-		}
-		if (ILP_isEquivalentToTrue(ilptmp137)) {
-			return ILP_FALSE;
-
-		} else {
-			{
-				ILP_Object	ilptmp140;
-				{
-					ILP_Object	ilptmp141;
-					ILP_Object	ilptmp142;
-					ilptmp141 = n1;
-					ilptmp142 = ILP_Integer2ILP(1);
-					ilptmp140 = ILP_Equal(ilptmp141, ilptmp142);
-				}
-				if (ILP_isEquivalentToTrue(ilptmp140)) {
-					return ILP_TRUE;
-
-				} else {
-					{
-						ILP_Object	ilptmp143;
-						{
-							ILP_Object	ilptmp144;
-							ILP_Object	ilptmp145;
-							ilptmp144 = n1;
-							ilptmp145 = ILP_Integer2ILP(1);
-							ilptmp143 = ILP_Minus(ilptmp144, ilptmp145);
-						}
-						return ilp__even(NULL, ilptmp143);
-					}
-
-				}
-			}
-
-		}
-	}
-}
-struct ILP_Closure odd_closure_object = {
-	&ILP_object_Closure_class,
-	{{ilp__odd,
-			1,
-	{NULL}}}
-};
-
-ILP_Object 
-ilp__even(ILP_Closure ilp_useless
-	  ,
-	  ILP_Object n2)
-{
-	{
-		ILP_Object	ilptmp146;
-		{
-			ILP_Object	ilptmp147;
-			ILP_Object	ilptmp148;
-			ilptmp147 = n2;
-			ilptmp148 = ILP_Integer2ILP(0);
-			ilptmp146 = ILP_Equal(ilptmp147, ilptmp148);
-		}
-		if (ILP_isEquivalentToTrue(ilptmp146)) {
-			return ILP_TRUE;
-
-		} else {
-			{
-				ILP_Object	ilptmp149;
-				{
-					ILP_Object	ilptmp150;
-					ILP_Object	ilptmp151;
-					ilptmp150 = n2;
-					ilptmp151 = ILP_Integer2ILP(1);
-					ilptmp149 = ILP_Equal(ilptmp150, ilptmp151);
-				}
-				if (ILP_isEquivalentToTrue(ilptmp149)) {
-					return ILP_FALSE;
-
-				} else {
-					{
-						ILP_Object	ilptmp152;
-						{
-							ILP_Object	ilptmp153;
-							ILP_Object	ilptmp154;
-							ilptmp153 = n2;
-							ilptmp154 = ILP_Integer2ILP(1);
-							ilptmp152 = ILP_Minus(ilptmp153, ilptmp154);
-						}
-						return ilp__odd(NULL, ilptmp152);
-					}
-
-				}
-			}
-
-		}
-	}
-}
-struct ILP_Closure even_closure_object = {
-	&ILP_object_Closure_class,
-	{{ilp__even,
-			1,
-	{NULL}}}
-};
+ILP_Object	n;
 
 
 ILP_Object 
 ilp_program()
 {
 	{
-		ILP_Object	ilptmp155;
+		ILP_Object	ilptmp69;
+		ilptmp69 = function;
 		{
-			ILP_Object	ilptmp156;
-			ilptmp156 = ILP_Integer2ILP(56);
-			ilptmp155 = ilp__odd(NULL, ilptmp156);
+			ILP_Object	ilptmp70;
+			ILP_Object	ilptmp71;
+			{
+				ILP_Object	ilptmp72;
+				ilptmp72 = n;
+				ilptmp70 = ILP_invoke(odd, 1, ilptmp72);
+			}
+			{
+				ILP_Object	ilptmp73;
+				{
+					ILP_Object	ilptmp74;
+					ILP_Object	ilptmp75;
+					ilptmp74 = n;
+					ilptmp75 = ILP_Integer2ILP(0);
+					ilptmp73 = ILP_Equal(ilptmp74, ilptmp75);
+				}
+				if (ILP_isEquivalentToTrue(ilptmp73)) {
+					ilptmp71 = ILP_FALSE;
+
+				} else {
+					{
+						ILP_Object	ilptmp76;
+						{
+							ILP_Object	ilptmp77;
+							ILP_Object	ilptmp78;
+							ilptmp77 = n;
+							ilptmp78 = ILP_Integer2ILP(1);
+							ilptmp76 = ILP_Equal(ilptmp77, ilptmp78);
+						}
+						if (ILP_isEquivalentToTrue(ilptmp76)) {
+							ilptmp71 = ILP_TRUE;
+
+						} else {
+							{
+								ILP_Object	ilptmp79;
+								{
+									ILP_Object	ilptmp80;
+									ILP_Object	ilptmp81;
+									ilptmp80 = n;
+									ilptmp81 = ILP_Integer2ILP(1);
+									ilptmp79 = ILP_Minus(ilptmp80, ilptmp81);
+								}
+								ilptmp71 = ILP_invoke(even, 1, ilptmp79);
+							}
+
+						}
+					}
+
+				}
+			}
+			ilptmp69 = ILP_invoke(ilptmp70, 1, ilptmp71);
 		}
-		return ILP_Not(ilptmp155);
+		ilptmp69 = function;
+		{
+			ILP_Object	ilptmp82;
+			ILP_Object	ilptmp83;
+			{
+				ILP_Object	ilptmp84;
+				ilptmp84 = n;
+				ilptmp82 = ILP_invoke(even, 1, ilptmp84);
+			}
+			{
+				ILP_Object	ilptmp85;
+				{
+					ILP_Object	ilptmp86;
+					ILP_Object	ilptmp87;
+					ilptmp86 = n;
+					ilptmp87 = ILP_Integer2ILP(0);
+					ilptmp85 = ILP_Equal(ilptmp86, ilptmp87);
+				}
+				if (ILP_isEquivalentToTrue(ilptmp85)) {
+					ilptmp83 = ILP_TRUE;
+
+				} else {
+					{
+						ILP_Object	ilptmp88;
+						{
+							ILP_Object	ilptmp89;
+							ILP_Object	ilptmp90;
+							ilptmp89 = n;
+							ilptmp90 = ILP_Integer2ILP(1);
+							ilptmp88 = ILP_Equal(ilptmp89, ilptmp90);
+						}
+						if (ILP_isEquivalentToTrue(ilptmp88)) {
+							ilptmp83 = ILP_FALSE;
+
+						} else {
+							{
+								ILP_Object	ilptmp91;
+								{
+									ILP_Object	ilptmp92;
+									ILP_Object	ilptmp93;
+									ilptmp92 = n;
+									ilptmp93 = ILP_Integer2ILP(1);
+									ilptmp91 = ILP_Minus(ilptmp92, ilptmp93);
+								}
+								ilptmp83 = ILP_invoke(odd, 1, ilptmp91);
+							}
+
+						}
+					}
+
+				}
+			}
+			ilptmp69 = ILP_invoke(ilptmp82, 1, ilptmp83);
+		}
+		{
+			ILP_Object	ilptmp94;
+			{
+				ILP_Object	ilptmp95;
+				ilptmp95 = ILP_Integer2ILP(56);
+				ilptmp94 = ILP_invoke(odd, 1, ilptmp95);
+			}
+			ilptmp69 = ILP_Not(ilptmp94);
+		}
+		return ilptmp69;
 	}
 
 }

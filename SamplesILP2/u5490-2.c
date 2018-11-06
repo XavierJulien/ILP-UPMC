@@ -4,49 +4,45 @@
 
 /* Global variables */
 ILP_Object	man_3agle;
-
-/* Global prototypes */
-ILP_Object 
-ilp__man_3agle(ILP_Closure ilp_useless
-	       ,
-	       ILP_Object n1);
-
-/* Global functions */
-
-ILP_Object 
-ilp__man_3agle(ILP_Closure ilp_useless
-	       ,
-	       ILP_Object n1)
-{
-	{
-		ILP_Object	ilptmp92;
-		ILP_Object	ilptmp93;
-		ilptmp92 = n1;
-		ilptmp93 = ILP_Integer2ILP(2);
-		return ILP_Divide(ilptmp92, ilptmp93);
-	}
-}
-struct ILP_Closure man_3agle_closure_object = {
-	&ILP_object_Closure_class,
-	{{ilp__man_3agle,
-			1,
-	{NULL}}}
-};
+ILP_Object	function;
+ILP_Object	n;
 
 
 ILP_Object 
 ilp_program()
 {
 	{
-		ILP_Object	ilptmp94;
+		ILP_Object	ilptmp42;
+		ilptmp42 = function;
 		{
-			ILP_Object	ilptmp95;
-			ILP_Object	ilptmp96;
-			ilptmp95 = ILP_Integer2ILP(2);
-			ilptmp96 = ILP_Integer2ILP(5490);
-			ilptmp94 = ILP_Times(ilptmp95, ilptmp96);
+			ILP_Object	ilptmp43;
+			ILP_Object	ilptmp44;
+			{
+				ILP_Object	ilptmp45;
+				ilptmp45 = n;
+				ilptmp43 = ILP_invoke(man_3agle, 1, ilptmp45);
+			}
+			{
+				ILP_Object	ilptmp46;
+				ILP_Object	ilptmp47;
+				ilptmp46 = n;
+				ilptmp47 = ILP_Integer2ILP(2);
+				ilptmp44 = ILP_Divide(ilptmp46, ilptmp47);
+			}
+			ilptmp42 = ILP_invoke(ilptmp43, 1, ilptmp44);
 		}
-		return ilp__man_3agle(NULL, ilptmp94);
+		{
+			ILP_Object	ilptmp48;
+			{
+				ILP_Object	ilptmp49;
+				ILP_Object	ilptmp50;
+				ilptmp49 = ILP_Integer2ILP(2);
+				ilptmp50 = ILP_Integer2ILP(5490);
+				ilptmp48 = ILP_Times(ilptmp49, ilptmp50);
+			}
+			ilptmp42 = ILP_invoke(man_3agle, 1, ilptmp48);
+		}
+		return ilptmp42;
 	}
 
 }

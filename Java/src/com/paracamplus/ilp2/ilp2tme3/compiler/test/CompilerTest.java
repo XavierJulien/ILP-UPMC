@@ -33,7 +33,7 @@ import com.paracamplus.ilp2.parser.xml.XMLParser;
 public class CompilerTest extends com.paracamplus.ilp1.compiler.test.CompilerTest {
 
     protected static String[] samplesDirName = { "SamplesILP1" };
-    protected static String pattern = "u05-*.+";//"ur?[0-78]\\d*-[123456](gfv)?";
+    protected static String pattern = "ur?[0-78]\\d*-[123456](gfv)?";
     protected static String scriptCommand = "Java/src/com/paracamplus/ilp2/ilp2tme3/C/compileThenRun.sh +gc";
 	protected static String XMLgrammarFile = "XMLGrammars/grammar2.rng";
     

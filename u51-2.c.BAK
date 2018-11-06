@@ -4,61 +4,52 @@
 
 /* Global variables */ 
 ILP_Object print;
-
-/* Global prototypes */ 
-
-/* Global functions */ 
+ILP_Object x_3d;
 
 
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp18; 
-ilptmp18 = ILP_Integer2ILP(49); 
+  ILP_Object ilptmp3; 
+ilptmp3 = ILP_Integer2ILP(49); 
 
   {
-    ILP_Object x1 = ilptmp18;
+    ILP_Object x1 = ilptmp3;
 { 
-  ILP_Object ilptmp19; 
+  ILP_Object ilptmp4; 
 { 
-  ILP_Object ilptmp20; 
-ilptmp20 = x1; 
-ilptmp19 = ILP_print(ilptmp20);
+  ILP_Object ilptmp5; 
+ilptmp5 = x1; 
+ilptmp4 = ILP_print(ilptmp5);
 }
+ilptmp4 = x_3d; 
 { 
-  ILP_Object ilptmp21; 
-{ 
-  ILP_Object ilptmp22; 
-  ILP_Object ilptmp23; 
-ilptmp22 = x1; 
-ilptmp23 = ILP_Integer2ILP(1); 
-ilptmp21 = ILP_Plus(ilptmp22, ilptmp23);
-} 
-ilptmp19 = (x1 = ilptmp21); 
+  ILP_Object ilptmp6; 
+  ILP_Object ilptmp7; 
+ilptmp6 = x1; 
+ilptmp7 = ILP_Integer2ILP(1); 
+ilptmp4 = ILP_Plus(ilptmp6, ilptmp7);
 } 
 { 
-  ILP_Object ilptmp24; 
-ilptmp24 = x1; 
-ilptmp19 = ILP_print(ilptmp24);
+  ILP_Object ilptmp8; 
+ilptmp8 = x1; 
+ilptmp4 = ILP_print(ilptmp8);
 }
+ilptmp4 = x_3d; 
 { 
-  ILP_Object ilptmp25; 
-{ 
-  ILP_Object ilptmp26; 
-  ILP_Object ilptmp27; 
-ilptmp26 = x1; 
-ilptmp27 = ILP_Integer2ILP(1); 
-ilptmp25 = ILP_Plus(ilptmp26, ilptmp27);
-} 
-ilptmp19 = (x1 = ilptmp25); 
+  ILP_Object ilptmp9; 
+  ILP_Object ilptmp10; 
+ilptmp9 = x1; 
+ilptmp10 = ILP_Integer2ILP(1); 
+ilptmp4 = ILP_Plus(ilptmp9, ilptmp10);
 } 
 { 
-  ILP_Object ilptmp28; 
-ilptmp28 = x1; 
-ilptmp19 = ILP_print(ilptmp28);
+  ILP_Object ilptmp11; 
+ilptmp11 = x1; 
+ilptmp4 = ILP_print(ilptmp11);
 }
-ilptmp19 = x1; 
-return ilptmp19; 
+ilptmp4 = x1; 
+return ilptmp4; 
 } 
 
   }

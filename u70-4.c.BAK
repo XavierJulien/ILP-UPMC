@@ -4,33 +4,29 @@
 
 /* Global variables */ 
 
-/* Global prototypes */ 
-
-/* Global functions */ 
-
 
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp289; 
+  ILP_Object ilptmp190; 
 { 
-  ILP_Object ilptmp290; 
+  ILP_Object ilptmp191; 
 { 
-  ILP_Object ilptmp291; 
-  ILP_Object ilptmp292; 
-ilptmp291 = ILP_Integer2ILP(1); 
-ilptmp292 = ILP_Integer2ILP(1); 
-ilptmp290 = ILP_Equal(ilptmp291, ilptmp292);
+  ILP_Object ilptmp192; 
+  ILP_Object ilptmp193; 
+ilptmp192 = ILP_Integer2ILP(1); 
+ilptmp193 = ILP_Integer2ILP(1); 
+ilptmp191 = ILP_Equal(ilptmp192, ilptmp193);
 } 
-  if ( ILP_isEquivalentToTrue(ilptmp290 ) ) {
-ilptmp289 = ILP_TRUE; 
+  if ( ILP_isEquivalentToTrue(ilptmp191 ) ) {
+ilptmp190 = ILP_TRUE; 
 
   } else {
-ilptmp289 = ILP_FALSE; 
+ilptmp190 = ILP_FALSE; 
 
   }
 }
-  if ( ILP_isEquivalentToTrue(ilptmp289 ) ) {
+  if ( ILP_isEquivalentToTrue(ilptmp190 ) ) {
 return ILP_Integer2ILP(3); 
 
   } else {

@@ -3,69 +3,55 @@
 #include "ilp.h"
 
 /* Global variables */
+ILP_Object	g_3d;
+ILP_Object	f;
+ILP_Object	function;
 ILP_Object	g;
+ILP_Object	x;
 ILP_Object	deuxfois;
-
-/* Global prototypes */
-ILP_Object 
-ilp__deuxfois(ILP_Closure ilp_useless
-	      ,
-	      ILP_Object x1);
-
-/* Global functions */
-
-ILP_Object 
-ilp__deuxfois(ILP_Closure ilp_useless
-	      ,
-	      ILP_Object x1)
-{
-	{
-		ILP_Object	ilptmp277;
-		ILP_Object	ilptmp278;
-		ilptmp277 = ILP_Integer2ILP(2);
-		ilptmp278 = x1;
-		return ILP_Times(ilptmp277, ilptmp278);
-	}
-}
-struct ILP_Closure deuxfois_closure_object = {
-	&ILP_object_Closure_class,
-	{{ilp__deuxfois,
-			1,
-	{NULL}}}
-};
 
 
 ILP_Object 
 ilp_program()
 {
 	{
-		ILP_Object	ilptmp279;
+		ILP_Object	ilptmp178;
+		ilptmp178 = function;
 		{
-			ILP_Object	ilptmp280;
-			ilptmp280 = (ILP_Object) & deuxfois_closure_object;
+			ILP_Object	ilptmp179;
+			ilptmp179 = x;
+			ilptmp178 = ILP_invoke(deuxfois, 1, ilptmp179);
+		}
+		{
+			ILP_Object	ilptmp180;
+			ILP_Object	ilptmp181;
+			ilptmp180 = ILP_Integer2ILP(2);
+			ilptmp181 = x;
+			ilptmp178 = ILP_Times(ilptmp180, ilptmp181);
+		}
+		{
+			ILP_Object	ilptmp182;
+			ilptmp182 = deuxfois;
 
 			{
-				ILP_Object	f2 = ilptmp280;
-				{
-					ILP_Object	ilptmp281;
-					ilptmp281 = f2;
-					ilptmp279 = (g = ilptmp281);
-				}
+				ILP_Object	f1 = ilptmp182;
+				ilptmp178 = g_3d;
 
 			}
 		}
+		ilptmp178 = f;
 		{
-			ILP_Object	ilptmp282;
-			ILP_Object	ilptmp283;
+			ILP_Object	ilptmp183;
+			ILP_Object	ilptmp184;
 			{
-				ILP_Object	ilptmp284;
-				ilptmp284 = ILP_Integer2ILP(3000);
-				ilptmp282 = ILP_invoke(g, 1, ilptmp284);
+				ILP_Object	ilptmp185;
+				ilptmp185 = ILP_Integer2ILP(3000);
+				ilptmp183 = ILP_invoke(g, 1, ilptmp185);
 			}
-			ilptmp283 = ILP_Integer2ILP(5);
-			ilptmp279 = ILP_Minus(ilptmp282, ilptmp283);
+			ilptmp184 = ILP_Integer2ILP(5);
+			ilptmp178 = ILP_Minus(ilptmp183, ilptmp184);
 		}
-		return ilptmp279;
+		return ilptmp178;
 	}
 
 }

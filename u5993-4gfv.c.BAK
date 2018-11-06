@@ -4,71 +4,56 @@
 
 /* Global variables */ 
 ILP_Object apply;
+ILP_Object f;
+ILP_Object function;
+ILP_Object x;
 ILP_Object deuxfois;
-
-/* Global prototypes */ 
-ILP_Object ilp__deuxfois(ILP_Closure ilp_useless
-,
-    ILP_Object x1);
-ILP_Object ilp__apply(ILP_Closure ilp_useless
-,
-    ILP_Object f2,
-    ILP_Object x3);
-
-/* Global functions */ 
-
-ILP_Object ilp__deuxfois(ILP_Closure ilp_useless
-,
-    ILP_Object x1) {
-{ 
-  ILP_Object ilptmp241; 
-  ILP_Object ilptmp242; 
-ilptmp241 = ILP_Integer2ILP(2); 
-ilptmp242 = x1; 
-return ILP_Times(ilptmp241, ilptmp242);
-} 
-}
-struct ILP_Closure deuxfois_closure_object = { 
-   &ILP_object_Closure_class, 
-   { { ilp__deuxfois, 
-       1, 
-       { NULL } } } 
-}; 
-
-ILP_Object ilp__apply(ILP_Closure ilp_useless
-,
-    ILP_Object f2,
-    ILP_Object x3) {
-{ 
-  ILP_Object ilptmp243; 
-  ILP_Object ilptmp244; 
-ilptmp243 = f2; 
-ilptmp244 = x3; 
-return ILP_invoke(ilptmp243, 1, ilptmp244);
-}
-}
-struct ILP_Closure apply_closure_object = { 
-   &ILP_object_Closure_class, 
-   { { ilp__apply, 
-       2, 
-       { NULL } } } 
-}; 
 
 
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp245; 
-  ILP_Object ilptmp246; 
+  ILP_Object ilptmp155; 
+ilptmp155 = function; 
 { 
-  ILP_Object ilptmp247; 
-  ILP_Object ilptmp248; 
-ilptmp247 = (ILP_Object)&deuxfois_closure_object; 
-ilptmp248 = ILP_Integer2ILP(3000); 
-ilptmp245 = ilp__apply(NULL , ilptmp247, ilptmp248);
+  ILP_Object ilptmp156; 
+ilptmp156 = x; 
+ilptmp155 = ILP_invoke(deuxfois, 1, ilptmp156);
 }
-ilptmp246 = ILP_Integer2ILP(7); 
-return ILP_Minus(ilptmp245, ilptmp246);
+{ 
+  ILP_Object ilptmp157; 
+  ILP_Object ilptmp158; 
+ilptmp157 = ILP_Integer2ILP(2); 
+ilptmp158 = x; 
+ilptmp155 = ILP_Times(ilptmp157, ilptmp158);
+} 
+ilptmp155 = function; 
+{ 
+  ILP_Object ilptmp159; 
+  ILP_Object ilptmp160; 
+ilptmp159 = f; 
+ilptmp160 = x; 
+ilptmp155 = ILP_invoke(apply, 2, ilptmp159, ilptmp160);
+}
+{ 
+  ILP_Object ilptmp161; 
+ilptmp161 = x; 
+ilptmp155 = ILP_invoke(f, 1, ilptmp161);
+}
+{ 
+  ILP_Object ilptmp162; 
+  ILP_Object ilptmp163; 
+{ 
+  ILP_Object ilptmp164; 
+  ILP_Object ilptmp165; 
+ilptmp164 = deuxfois; 
+ilptmp165 = ILP_Integer2ILP(3000); 
+ilptmp162 = ILP_invoke(apply, 2, ilptmp164, ilptmp165);
+}
+ilptmp163 = ILP_Integer2ILP(7); 
+ilptmp155 = ILP_Minus(ilptmp162, ilptmp163);
+} 
+return ilptmp155; 
 } 
 
 } 

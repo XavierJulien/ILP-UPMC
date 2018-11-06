@@ -4,10 +4,6 @@
 
 /* Global variables */ 
 
-/* Global prototypes */ 
-
-/* Global functions */ 
-
 
 ILP_Object ilp_program () 
 { 

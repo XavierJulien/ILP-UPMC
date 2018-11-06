@@ -3,62 +3,58 @@
 #include "ilp.h"
 
 /* Global variables */
+ILP_Object	function;
+ILP_Object	x;
 ILP_Object	deuxfois;
-
-/* Global prototypes */
-ILP_Object 
-ilp__deuxfois(ILP_Closure ilp_useless
-	      ,
-	      ILP_Object x1);
-
-/* Global functions */
-
-ILP_Object 
-ilp__deuxfois(ILP_Closure ilp_useless
-	      ,
-	      ILP_Object x1)
-{
-	{
-		ILP_Object	ilptmp212;
-		ILP_Object	ilptmp213;
-		ilptmp212 = ILP_Integer2ILP(2);
-		ilptmp213 = x1;
-		return ILP_Times(ilptmp212, ilptmp213);
-	}
-}
-struct ILP_Closure deuxfois_closure_object = {
-	&ILP_object_Closure_class,
-	{{ilp__deuxfois,
-			1,
-	{NULL}}}
-};
 
 
 ILP_Object 
 ilp_program()
 {
 	{
-		ILP_Object	ilptmp214;
-		ILP_Object	ilptmp215;
+		ILP_Object	ilptmp133;
+		ilptmp133 = function;
 		{
-			ILP_Object	ilptmp216;
-			ILP_Object	ilptmp217;
+			ILP_Object	ilptmp134;
+			ILP_Object	ilptmp135;
 			{
-				ILP_Object	ilptmp218;
-				ilptmp218 = (ILP_Object) & deuxfois_closure_object;
-				if (ILP_isEquivalentToTrue(ilptmp218)) {
-					ilptmp216 = (ILP_Object) & deuxfois_closure_object;
-
-				} else {
-					ilptmp216 = (ILP_Object) & deuxfois_closure_object;
-
-				}
+				ILP_Object	ilptmp136;
+				ilptmp136 = x;
+				ilptmp134 = ILP_invoke(deuxfois, 1, ilptmp136);
 			}
-			ilptmp217 = ILP_Integer2ILP(3000);
-			ilptmp214 = ILP_invoke(ilptmp216, 1, ilptmp217);
+			{
+				ILP_Object	ilptmp137;
+				ILP_Object	ilptmp138;
+				ilptmp137 = ILP_Integer2ILP(2);
+				ilptmp138 = x;
+				ilptmp135 = ILP_Times(ilptmp137, ilptmp138);
+			}
+			ilptmp133 = ILP_invoke(ilptmp134, 1, ilptmp135);
 		}
-		ilptmp215 = ILP_Integer2ILP(9);
-		return ILP_Minus(ilptmp214, ilptmp215);
+		{
+			ILP_Object	ilptmp139;
+			ILP_Object	ilptmp140;
+			{
+				ILP_Object	ilptmp141;
+				ILP_Object	ilptmp142;
+				{
+					ILP_Object	ilptmp143;
+					ilptmp143 = deuxfois;
+					if (ILP_isEquivalentToTrue(ilptmp143)) {
+						ilptmp141 = deuxfois;
+
+					} else {
+						ilptmp141 = deuxfois;
+
+					}
+				}
+				ilptmp142 = ILP_Integer2ILP(3000);
+				ilptmp139 = ILP_invoke(ilptmp141, 1, ilptmp142);
+			}
+			ilptmp140 = ILP_Integer2ILP(9);
+			ilptmp133 = ILP_Minus(ilptmp139, ilptmp140);
+		}
+		return ilptmp133;
 	}
 
 }

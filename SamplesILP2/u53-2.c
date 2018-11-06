@@ -4,124 +4,104 @@
 
 /* Global variables */
 ILP_Object	print;
+ILP_Object	x_3d;
+ILP_Object
+do;
+ILP_Object while;
 
-/* Global prototypes */
 
-/* Global functions */
-
-
-ILP_Object 
-ilp_program()
-{
+ILP_Object	ilp_program() {
 	{
-		ILP_Object	ilptmp63;
-		ilptmp63 = ILP_Integer2ILP(5);
+		ILP_Object	ilptmp19;
+				ilptmp19 =	ILP_Integer2ILP(5);
 
 		{
-			ILP_Object	x1 = ilptmp63;
+			ILP_Object	x1 = ilptmp19;
 			{
-				ILP_Object	ilptmp64;
-				while (1) {
-					ILP_Object	ilptmp65;
+				ILP_Object	ilptmp20;
+				{
+					ILP_Object	ilptmp21;
 					{
-						ILP_Object	ilptmp66;
-						ILP_Object	ilptmp67;
-						ilptmp66 = x1;
-						ilptmp67 = ILP_Integer2ILP(53);
-						ilptmp65 = ILP_LessThan(ilptmp66, ilptmp67);
+						ILP_Object	ilptmp22;
+						ILP_Object	ilptmp23;
+								ilptmp22 =	x1;
+								ilptmp23 =	ILP_Integer2ILP(53);
+								ilptmp21 =	ILP_LessThan(ilptmp22, ilptmp23);
 					}
-					if (ILP_isEquivalentToTrue(ilptmp65)) {
-						{
-							ILP_Object	ilptmp68;
-							{
-								ILP_Object	ilptmp69;
-								ilptmp69 = x1;
-								ilptmp68 = ILP_print(ilptmp69);
-							}
-							{
-								ILP_Object	ilptmp70;
-								{
-									ILP_Object	ilptmp71;
-									ILP_Object	ilptmp72;
-									ilptmp71 = ILP_Integer2ILP(2);
-									ilptmp72 = x1;
-									ilptmp70 = ILP_Times(ilptmp71, ilptmp72);
-								}
-								ilptmp68 = (x1 = ilptmp70);
-							}
-							while (1) {
-								ILP_Object	ilptmp73;
-								{
-									ILP_Object	ilptmp74;
-									ILP_Object	ilptmp75;
-									ilptmp74 = x1;
-									ilptmp75 = ILP_Integer2ILP(53);
-									ilptmp73 = ILP_GreaterThan(ilptmp74, ilptmp75);
-								}
-								if (ILP_isEquivalentToTrue(ilptmp73)) {
-									{
-										ILP_Object	ilptmp76;
-										{
-											ILP_Object	ilptmp77;
-											ilptmp77 = x1;
-											ilptmp76 = ILP_print(ilptmp77);
-										}
-										{
-											ILP_Object	ilptmp78;
-											{
-												ILP_Object	ilptmp79;
-												ILP_Object	ilptmp80;
-												ilptmp79 = x1;
-												ilptmp80 = ILP_Integer2ILP(3);
-												ilptmp78 = ILP_Minus(ilptmp79, ilptmp80);
-											}
-											ilptmp76 = (x1 = ilptmp78);
-										}
-										(void)ilptmp76;
-									}
-
-								} else {
-									break;
-
-								}
-							}
-							ilptmp68 = ILP_FALSE;
-							(void)ilptmp68;
-						}
-
-					} else {
-						break;
-
-					}
+					ilptmp20 = ILP_invoke(while, 1, ilptmp21);
 				}
-				ilptmp64 = ILP_FALSE;
-				ilptmp64 = x1;
-				return ilptmp64;
+						ilptmp20 =
+				do;
+			{
+				ILP_Object	ilptmp24;
+				{
+					ILP_Object	ilptmp25;
+					ilptmp25 = x1;
+					ilptmp24 = ILP_print(ilptmp25);
+				}
+				ilptmp24 = x_3d;
+				{
+					ILP_Object	ilptmp26;
+					ILP_Object	ilptmp27;
+					ilptmp26 = ILP_Integer2ILP(2);
+					ilptmp27 = x1;
+					ilptmp24 = ILP_Times(ilptmp26, ilptmp27);
+				}
+				{
+					ILP_Object	ilptmp28;
+					{
+						ILP_Object	ilptmp29;
+						ILP_Object	ilptmp30;
+						ilptmp29 = x1;
+						ilptmp30 = ILP_Integer2ILP(53);
+						ilptmp28 = ILP_GreaterThan(ilptmp29, ilptmp30);
+					}
+					ilptmp24 = ILP_invoke(while, 1, ilptmp28);
+				}
+				ilptmp24 =
+				do;
+			{
+				ILP_Object	ilptmp31;
+				{
+					ILP_Object	ilptmp32;
+					ilptmp32 = x1;
+					ilptmp31 = ILP_print(ilptmp32);
+				}
+				ilptmp31 = x_3d;
+				{
+					ILP_Object	ilptmp33;
+					ILP_Object	ilptmp34;
+					ilptmp33 = x1;
+					ilptmp34 = ILP_Integer2ILP(3);
+					ilptmp31 = ILP_Minus(ilptmp33, ilptmp34);
+				}
+				ilptmp24 = ilptmp31;
+			}
+			ilptmp20 = ilptmp24;
+			}
+			ilptmp20 = x1;
+			return ilptmp20;
 			}
 
-		}
-	}
+			}
+			}
 
-}
+			}
 
-static ILP_Object 
-ilp_caught_program()
-{
-	struct ILP_catcher *current_catcher = ILP_current_catcher;
-	struct ILP_catcher new_catcher;
+			static ILP_Object ilp_caught_program() {
+				struct ILP_catcher *current_catcher = ILP_current_catcher;
+				struct ILP_catcher new_catcher;
 
-	if (0 == setjmp(new_catcher._jmp_buf)) {
-		ILP_establish_catcher(&new_catcher);
-		return ilp_program();
-	};
-	return ILP_current_exception;
-}
+				if              (0 == setjmp(new_catcher._jmp_buf)) {
+					ILP_establish_catcher(&new_catcher);
+					return ilp_program();
+				};
+				return ILP_current_exception;
+			}
 
-int 
-main(int argc, char *argv[])
-{
-	ILP_START_GC;
-	ILP_print(ilp_caught_program());
-	ILP_newline();
-	return EXIT_SUCCESS;
-}
+			int		main       (int argc, char *argv[]){
+				ILP_START_GC;
+				ILP_print(ilp_caught_program());
+				ILP_newline();
+				return EXIT_SUCCESS;
+			}

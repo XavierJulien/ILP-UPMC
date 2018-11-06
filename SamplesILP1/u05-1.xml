@@ -8,9 +8,7 @@
 ;;; end of u5-1.scm
 
  -->
-<program
-><!-- test:name description='constante chaine de caracteres' 
---><string
->foobar</string
-></program
->
+<program>
+<!-- test:name description='constante chaine de caracteres' 
+--><string>foobar</string>
+</program>
