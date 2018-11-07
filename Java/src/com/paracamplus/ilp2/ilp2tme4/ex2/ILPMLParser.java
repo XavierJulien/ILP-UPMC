@@ -34,8 +34,9 @@ extends com.paracamplus.ilp1.parser.ilpml.ILPMLParser {
 			ParseTreeWalker walker = new ParseTreeWalker();
 			ILPMLListener extractor = new ILPMLListener((com.paracamplus.ilp2.ilp2tme4.ex2.IASTfactory) factory);
 			walker.walk(extractor, tree);	
-			
-			return tree.node;
+			//Méthode 2
+			return new ASTfactory().newProgram(tree.node.getFunctionDefinitions(), tree.node.getBody().accept(new RemoveUnless(), null));
+			//return tree.node;
 		} catch (Exception e) {
 			throw new ParseException(e);
 		}

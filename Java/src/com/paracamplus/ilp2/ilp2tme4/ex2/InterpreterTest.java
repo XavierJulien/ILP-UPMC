@@ -28,7 +28,7 @@ import com.paracamplus.ilp1.parser.xml.IXMLParser;
 import com.paracamplus.ilp2.ast.ASTfactory;
 import com.paracamplus.ilp2.interfaces.IASTfactory;
 import com.paracamplus.ilp2.interpreter.Interpreter;
-import com.paracamplus.ilp2.parser.ilpml.ILPMLParser;
+import com.paracamplus.ilp2.ilp2tme4.ex2.ILPMLParser;
 import com.paracamplus.ilp2.parser.xml.XMLParser;
 
 
