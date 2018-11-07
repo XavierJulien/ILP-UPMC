@@ -1,8 +1,8 @@
 tests/test.o: tests/test.c /usr/include/stdc-predef.h \
  include/private/config.h include/gc.h include/gc_version.h \
  include/gc_config_macros.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h \
- /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -34,7 +34,7 @@ tests/test.o: tests/test.c /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/stdio.h \
  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
  /usr/include/x86_64-linux-gnu/bits/stdio.h /usr/include/assert.h \
@@ -56,10 +56,10 @@ tests/test.o: tests/test.c /usr/include/stdc-predef.h \
  libatomic_ops/src/atomic_ops/sysdeps/gcc/../read_ordered.h \
  libatomic_ops/src/atomic_ops/sysdeps/gcc/../test_and_set_t_is_char.h \
  libatomic_ops/src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/xmmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/mmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/mm_malloc.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/mm_malloc.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h \
  libatomic_ops/src/atomic_ops/generalize.h \
  libatomic_ops/src/atomic_ops/generalize-small.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/string.h \
@@ -76,7 +76,7 @@ include/gc_version.h:
 
 include/gc_config_macros.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h:
 
 /usr/include/features.h:
 
@@ -168,7 +168,7 @@ include/gc_pthread_redirects.h:
 
 /usr/include/wchar.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stdarg.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -224,13 +224,13 @@ libatomic_ops/src/atomic_ops/sysdeps/gcc/../test_and_set_t_is_char.h:
 
 libatomic_ops/src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/xmmintrin.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/mmintrin.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/mm_malloc.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/mm_malloc.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/emmintrin.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h:
 
 libatomic_ops/src/atomic_ops/generalize.h:
 

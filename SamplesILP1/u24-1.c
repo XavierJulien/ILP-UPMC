@@ -13,9 +13,9 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp95;
-    ilptmp95 = ILP_TRUE;
-    if (ILP_isEquivalentToTrue (ilptmp95))
+    ILP_Object ilptmp477;
+    ilptmp477 = ILP_TRUE;
+    if (ILP_isEquivalentToTrue (ilptmp477))
       {
 	return ILP_Integer2ILP (1);
 

@@ -136,6 +136,16 @@ struct ILP_Class ILP_object_Exception_class = {
            ILP_classOf } } }
 };
 
+struct ILP_Class ILP_object_Vector_class = {
+     &ILP_object_Class_class,
+     { { &ILP_object_Object_class,
+         "Vector",
+         0,
+         NULL,
+         2,
+         { ILP_classOf } } }
+};
+
 /** Predefined fields
  *
  * Fields yielding non-ILP values are not considered as fields.
@@ -253,7 +263,7 @@ ILP_throw (ILP_Object exception)
      };
      longjmp(ILP_current_catcher->_jmp_buf, 1);
      /** UNREACHABLE */
-     return ILP_die("longjmp botch");
+     return ILP_die("longjmpILP_Object botch");
 }
 
 /** Install a new catcher */
@@ -918,6 +928,53 @@ ILP_print (ILP_Object self)
      }
      return ILP_FALSE;
 }
+
+ILP_Object ILP_sinus (ILP_Object self){
+	if(self->_class == &ILP_object_Float_class) {
+		double f = (double)self->_content.asFloat;
+		return ILP_make_float (sin(f));;
+	}else {
+		return ILP_error ("not a float value");
+	}
+}
+
+ILP_Object ILP_makeVector (ILP_Object taille, ILP_Object value){
+	if(ILP_isInteger(taille)){
+		int size = taille->_content.asInteger;
+		ILP_Object tab = ILP_AllocateVector(size);
+		int i;
+		for(i = 0;i<size;i++){
+			tab->_content.asVector.vector[i] = value;
+			tab->_content.asVector.size = size;
+		}
+		return tab;
+	}else{
+		return ILP_error ("not a integer value");
+	}
+}
+
+ILP_Object ILP_vectorLength (ILP_Object vecteur){
+	if(ILP_isVector(vecteur)){
+		int res = vecteur->_content.asVector.size;
+		return ILP_make_integer (res);
+	}else{
+		return ILP_error ("not a vector");
+	}
+}
+
+ILP_Object ILP_vectorGet (ILP_Object vecteur, ILP_Object index){
+	if(ILP_isVector(vecteur)){
+		if(ILP_isInteger(index)){
+			int ind = index->_content.asInteger;
+			return vecteur->_content.asVector.vector[ind];
+		}else{
+		return ILP_error ("not an integer");
+		}
+	}else{
+		return ILP_error ("not a vector");
+	}
+}
+
 
 ILP_Object
 ILPm_print (ILP_Closure useless, ILP_Object self)

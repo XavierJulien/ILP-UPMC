@@ -1,18 +1,18 @@
-Leaked composite object at 0x1d4bef0 (tests/leak_test.c:19, sz=8, NORMAL)
+Leaked composite object at 0x562d85817ef0 (tests/leak_test.c:19, sz=8, NORMAL)
 
-Leaked composite object at 0x1d4cee0 (tests/leak_test.c:19, sz=9, NORMAL)
+Leaked composite object at 0x562d85818ee0 (tests/leak_test.c:19, sz=9, NORMAL)
 
-Leaked composite object at 0x1d4cf20 (tests/leak_test.c:19, sz=10, NORMAL)
+Leaked composite object at 0x562d85818f20 (tests/leak_test.c:19, sz=10, NORMAL)
 
-Leaked composite object at 0x1d4cf60 (tests/leak_test.c:19, sz=11, NORMAL)
+Leaked composite object at 0x562d85818f60 (tests/leak_test.c:19, sz=11, NORMAL)
 
-Leaked composite object at 0x1d4bf20 (tests/leak_test.c:19, sz=4, NORMAL)
+Leaked composite object at 0x562d85817f20 (tests/leak_test.c:19, sz=4, NORMAL)
 
-Leaked composite object at 0x1d4bf50 (tests/leak_test.c:19, sz=5, NORMAL)
+Leaked composite object at 0x562d85817f50 (tests/leak_test.c:19, sz=5, NORMAL)
 
-Leaked composite object at 0x1d4bf80 (tests/leak_test.c:19, sz=6, NORMAL)
+Leaked composite object at 0x562d85817f80 (tests/leak_test.c:19, sz=6, NORMAL)
 
-Leaked composite object at 0x1d4bfb0 (tests/leak_test.c:19, sz=7, NORMAL)
+Leaked composite object at 0x562d85817fb0 (tests/leak_test.c:19, sz=7, NORMAL)
 
-Leaked composite object at 0x1d4bfe0 (tests/leak_test.c:12, sz=4, NORMAL)
+Leaked composite object at 0x562d85817fe0 (tests/leak_test.c:12, sz=4, NORMAL)
 

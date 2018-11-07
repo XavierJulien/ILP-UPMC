@@ -16,11 +16,11 @@ ILP_Object ilp__f(ILP_Closure ilp_useless
 ,
     ILP_Object ma_3angle1) {
 { 
-  ILP_Object ilptmp355; 
-  ILP_Object ilptmp356; 
-ilptmp355 = ma_3angle1; 
-ilptmp356 = ILP_Integer2ILP(3); 
-return ILP_Divide(ilptmp355, ilptmp356);
+  ILP_Object ilptmp102; 
+  ILP_Object ilptmp103; 
+ilptmp102 = ma_3angle1; 
+ilptmp103 = ILP_Integer2ILP(3); 
+return ILP_Divide(ilptmp102, ilptmp103);
 } 
 }
 struct ILP_Closure f_closure_object = { 
@@ -34,15 +34,15 @@ struct ILP_Closure f_closure_object = {
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp357; 
+  ILP_Object ilptmp104; 
 { 
-  ILP_Object ilptmp358; 
-  ILP_Object ilptmp359; 
-ilptmp358 = ILP_Integer2ILP(3); 
-ilptmp359 = ILP_Integer2ILP(5491); 
-ilptmp357 = ILP_Times(ilptmp358, ilptmp359);
+  ILP_Object ilptmp105; 
+  ILP_Object ilptmp106; 
+ilptmp105 = ILP_Integer2ILP(3); 
+ilptmp106 = ILP_Integer2ILP(5491); 
+ilptmp104 = ILP_Times(ilptmp105, ilptmp106);
 } 
-return ilp__f(NULL , ilptmp357);
+return ilp__f(NULL , ilptmp104);
 }
 
 } 

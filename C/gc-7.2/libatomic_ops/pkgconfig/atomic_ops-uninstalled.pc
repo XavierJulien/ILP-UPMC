@@ -1,7 +1,7 @@
-prefix=/Users/julienxavier/eclipse-workspace/ILP-UPMC/C/gc-7.2/libatomic_ops-install
+prefix=/users/nfs/Etu4/3521024/git/ILP-UPMC/C/gc-7.2/libatomic_ops-install
 exec_prefix=${prefix}
-top_builddir=/Users/julienxavier/eclipse-workspace/ILP-UPMC/C/gc-7.2/libatomic_ops
-top_srcdir=/Users/julienxavier/eclipse-workspace/ILP-UPMC/C/gc-7.2/libatomic_ops
+top_builddir=/users/nfs/Etu4/3521024/git/ILP-UPMC/C/gc-7.2/libatomic_ops
+top_srcdir=/users/nfs/Etu4/3521024/git/ILP-UPMC/C/gc-7.2/libatomic_ops
 
 Name: The atomic_ops library (uninstalled)
 Description: Atomic memory update operations

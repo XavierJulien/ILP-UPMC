@@ -1,0 +1,3 @@
+let x = 2 in
+    let sin = makeVector(5,x) in
+        print(vectorGet(sin,1));

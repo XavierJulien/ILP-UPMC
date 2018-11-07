@@ -10,7 +10,7 @@ libatomic_ops/src/atomic_ops.lo: libatomic_ops/src/atomic_ops.c \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap-16.h /usr/include/sched.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h /usr/include/time.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h /usr/include/time.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/time.h /usr/include/xlocale.h \
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -36,16 +36,16 @@ libatomic_ops/src/atomic_ops.lo: libatomic_ops/src/atomic_ops.c \
  libatomic_ops/src/atomic_ops/sysdeps/gcc/../read_ordered.h \
  libatomic_ops/src/atomic_ops/sysdeps/gcc/../test_and_set_t_is_char.h \
  libatomic_ops/src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/xmmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/mmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/mm_malloc.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/mm_malloc.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \
  /usr/include/x86_64-linux-gnu/sys/sysmacros.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/lib/gcc/x86_64-linux-gnu/4.9/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h \
  libatomic_ops/src/atomic_ops/generalize.h \
  libatomic_ops/src/atomic_ops/generalize-small.h
 
@@ -79,7 +79,7 @@ libatomic_ops/src/config.h:
 
 /usr/include/sched.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/stddef.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h:
 
 /usr/include/time.h:
 
@@ -139,11 +139,11 @@ libatomic_ops/src/atomic_ops/sysdeps/gcc/../test_and_set_t_is_char.h:
 
 libatomic_ops/src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/xmmintrin.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/mmintrin.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/mm_malloc.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/mm_malloc.h:
 
 /usr/include/stdlib.h:
 
@@ -161,7 +161,7 @@ libatomic_ops/src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/4.9/include/emmintrin.h:
+/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h:
 
 libatomic_ops/src/atomic_ops/generalize.h:
 

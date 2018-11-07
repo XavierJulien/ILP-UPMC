@@ -14,11 +14,11 @@ ILP_Object
 ilp__man_3agle (ILP_Closure ilp_useless, ILP_Object n1)
 {
   {
-    ILP_Object ilptmp345;
-    ILP_Object ilptmp346;
-    ilptmp345 = n1;
-    ilptmp346 = ILP_Integer2ILP (2);
-    return ILP_Divide (ilptmp345, ilptmp346);
+    ILP_Object ilptmp92;
+    ILP_Object ilptmp93;
+    ilptmp92 = n1;
+    ilptmp93 = ILP_Integer2ILP (2);
+    return ILP_Divide (ilptmp92, ilptmp93);
   }
 }
 
@@ -34,15 +34,15 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp347;
+    ILP_Object ilptmp94;
     {
-      ILP_Object ilptmp348;
-      ILP_Object ilptmp349;
-      ilptmp348 = ILP_Integer2ILP (2);
-      ilptmp349 = ILP_Integer2ILP (5490);
-      ilptmp347 = ILP_Times (ilptmp348, ilptmp349);
+      ILP_Object ilptmp95;
+      ILP_Object ilptmp96;
+      ilptmp95 = ILP_Integer2ILP (2);
+      ilptmp96 = ILP_Integer2ILP (5490);
+      ilptmp94 = ILP_Times (ilptmp95, ilptmp96);
     }
-    return ilp__man_3agle (NULL, ilptmp347);
+    return ilp__man_3agle (NULL, ilptmp94);
   }
 
 }

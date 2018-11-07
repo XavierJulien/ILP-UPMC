@@ -34,11 +34,11 @@ ILP_Object ilp__foo(ILP_Closure ilp_useless
 ,
     ILP_Object x3) {
 { 
-  ILP_Object ilptmp450; 
-  ILP_Object ilptmp451; 
-ilptmp450 = ILP_Integer2ILP(2); 
-ilptmp451 = x3; 
-return ILP_Times(ilptmp450, ilptmp451);
+  ILP_Object ilptmp197; 
+  ILP_Object ilptmp198; 
+ilptmp197 = ILP_Integer2ILP(2); 
+ilptmp198 = x3; 
+return ILP_Times(ilptmp197, ilptmp198);
 } 
 }
 struct ILP_Closure foo_closure_object = { 
@@ -52,29 +52,29 @@ struct ILP_Closure foo_closure_object = {
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp452; 
-ilptmp452 = ILP_Integer2ILP(12); 
+  ILP_Object ilptmp199; 
+ilptmp199 = ILP_Integer2ILP(12); 
 
   {
-    ILP_Object y4 = ilptmp452;
+    ILP_Object y4 = ilptmp199;
 { 
-  ILP_Object ilptmp453; 
+  ILP_Object ilptmp200; 
 { 
-  ILP_Object ilptmp454; 
-  ILP_Object ilptmp455; 
+  ILP_Object ilptmp201; 
+  ILP_Object ilptmp202; 
 { 
-  ILP_Object ilptmp456; 
+  ILP_Object ilptmp203; 
 { 
-  ILP_Object ilptmp457; 
-ilptmp457 = y4; 
-ilptmp456 = ilp__foo(NULL , ilptmp457);
+  ILP_Object ilptmp204; 
+ilptmp204 = y4; 
+ilptmp203 = ilp__foo(NULL , ilptmp204);
 }
-ilptmp454 = (y4 = ilptmp456); 
+ilptmp201 = (y4 = ilptmp203); 
 } 
-ilptmp455 = y4; 
-ilptmp453 = ilp__pseudosequence(NULL , ilptmp454, ilptmp455);
+ilptmp202 = y4; 
+ilptmp200 = ilp__pseudosequence(NULL , ilptmp201, ilptmp202);
 }
-return ilp__foo(NULL , ilptmp453);
+return ilp__foo(NULL , ilptmp200);
 }
 
   }

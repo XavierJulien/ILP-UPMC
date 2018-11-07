@@ -21,11 +21,11 @@ ILP_Object ilp__deuxfois(ILP_Closure ilp_useless
 ,
     ILP_Object x1) {
 { 
-  ILP_Object ilptmp512; 
-  ILP_Object ilptmp513; 
-ilptmp512 = ILP_Integer2ILP(2); 
-ilptmp513 = x1; 
-return ILP_Times(ilptmp512, ilptmp513);
+  ILP_Object ilptmp259; 
+  ILP_Object ilptmp260; 
+ilptmp259 = ILP_Integer2ILP(2); 
+ilptmp260 = x1; 
+return ILP_Times(ilptmp259, ilptmp260);
 } 
 }
 struct ILP_Closure deuxfois_closure_object = { 
@@ -40,17 +40,17 @@ ILP_Object ilp__twice(ILP_Closure ilp_useless
     ILP_Object f2,
     ILP_Object x3) {
 { 
-  ILP_Object ilptmp514; 
-  ILP_Object ilptmp515; 
-ilptmp514 = f2; 
+  ILP_Object ilptmp261; 
+  ILP_Object ilptmp262; 
+ilptmp261 = f2; 
 { 
-  ILP_Object ilptmp516; 
-  ILP_Object ilptmp517; 
-ilptmp516 = f2; 
-ilptmp517 = x3; 
-ilptmp515 = ILP_invoke(ilptmp516, 1, ilptmp517);
+  ILP_Object ilptmp263; 
+  ILP_Object ilptmp264; 
+ilptmp263 = f2; 
+ilptmp264 = x3; 
+ilptmp262 = ILP_invoke(ilptmp263, 1, ilptmp264);
 }
-return ILP_invoke(ilptmp514, 1, ilptmp515);
+return ILP_invoke(ilptmp261, 1, ilptmp262);
 }
 }
 struct ILP_Closure twice_closure_object = { 
@@ -64,17 +64,17 @@ struct ILP_Closure twice_closure_object = {
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp518; 
-  ILP_Object ilptmp519; 
+  ILP_Object ilptmp265; 
+  ILP_Object ilptmp266; 
 { 
-  ILP_Object ilptmp520; 
-  ILP_Object ilptmp521; 
-ilptmp520 = (ILP_Object)&deuxfois_closure_object; 
-ilptmp521 = ILP_Integer2ILP(1500); 
-ilptmp518 = ilp__twice(NULL , ilptmp520, ilptmp521);
+  ILP_Object ilptmp267; 
+  ILP_Object ilptmp268; 
+ilptmp267 = (ILP_Object)&deuxfois_closure_object; 
+ilptmp268 = ILP_Integer2ILP(1500); 
+ilptmp265 = ilp__twice(NULL , ilptmp267, ilptmp268);
 }
-ilptmp519 = ILP_Integer2ILP(6); 
-return ILP_Minus(ilptmp518, ilptmp519);
+ilptmp266 = ILP_Integer2ILP(6); 
+return ILP_Minus(ilptmp265, ilptmp266);
 } 
 
 } 

@@ -14,11 +14,11 @@ ILP_Object
 ilp__foo (ILP_Closure ilp_useless, ILP_Object x1, ILP_Object y2)
 {
   {
-    ILP_Object ilptmp558;
-    ILP_Object ilptmp559;
-    ilptmp558 = x1;
-    ilptmp559 = y2;
-    return ILP_Plus (ilptmp558, ilptmp559);
+    ILP_Object ilptmp305;
+    ILP_Object ilptmp306;
+    ilptmp305 = x1;
+    ilptmp306 = y2;
+    return ILP_Plus (ilptmp305, ilptmp306);
   }
 }
 
@@ -34,39 +34,39 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp560;
-    ILP_Object ilptmp561;
+    ILP_Object ilptmp307;
+    ILP_Object ilptmp308;
     {
-      ILP_Object ilptmp562;
-      ilptmp562 = ILP_TRUE;
-      if (ILP_isEquivalentToTrue (ilptmp562))
+      ILP_Object ilptmp309;
+      ilptmp309 = ILP_TRUE;
+      if (ILP_isEquivalentToTrue (ilptmp309))
 	{
-	  ilptmp560 = ILP_Integer2ILP (8);
+	  ilptmp307 = ILP_Integer2ILP (8);
 
 	}
       else
 	{
-	  ilptmp560 = ILP_Integer2ILP (1);
+	  ilptmp307 = ILP_Integer2ILP (1);
 
 	}
     }
     {
-      ILP_Object ilptmp563;
-      ilptmp563 = ILP_Integer2ILP (8);
+      ILP_Object ilptmp310;
+      ilptmp310 = ILP_Integer2ILP (8);
 
       {
-	ILP_Object x3 = ilptmp563;
+	ILP_Object x3 = ilptmp310;
 	{
-	  ILP_Object ilptmp564;
-	  ILP_Object ilptmp565;
-	  ilptmp564 = x3;
-	  ilptmp565 = x3;
-	  ilptmp561 = ILP_Times (ilptmp564, ilptmp565);
+	  ILP_Object ilptmp311;
+	  ILP_Object ilptmp312;
+	  ilptmp311 = x3;
+	  ilptmp312 = x3;
+	  ilptmp308 = ILP_Times (ilptmp311, ilptmp312);
 	}
 
       }
     }
-    return ilp__foo (NULL, ilptmp560, ilptmp561);
+    return ilp__foo (NULL, ilptmp307, ilptmp308);
   }
 
 }

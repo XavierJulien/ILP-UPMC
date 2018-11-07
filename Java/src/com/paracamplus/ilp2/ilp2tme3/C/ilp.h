@@ -15,6 +15,7 @@
 #include <stdarg.h>
 #include <string.h>
 #include <setjmp.h>
+#include <math.h>
 
 /** Compatibility */
 #if !defined(__APPLE_CC__)
@@ -82,6 +83,10 @@ typedef struct ILP_Object {
           struct asBox {
                struct ILP_Object*   value;
           } asBox;
+           struct asVector {
+               int      size;
+               struct ILP_Object* vector[1];
+          } asVector;
      }                  _content;
 } *ILP_Object;
 
@@ -342,6 +347,15 @@ extern ILP_Object ILP_dont_call_super_method(
 
 #define ILP_Xor(o1,o2) \
   ILP_xor(o1,o2)
+  
+/** Vector */
+
+#define ILP_AllocateVector(length) \
+  ILP_malloc(sizeof(struct ILP_Object)*length, &ILP_object_Vector_class)
+  
+#define ILP_isVector(o) \
+  ((o)->_class == &ILP_object_Vector_class)
+
 
 /** Constant predefined classes */
 
@@ -355,6 +369,7 @@ extern struct ILP_Class ILP_object_Float_class;
 extern struct ILP_Class ILP_object_Boolean_class;
 extern struct ILP_Class ILP_object_String_class;
 extern struct ILP_Class ILP_object_Exception_class;
+extern struct ILP_Class ILP_object_Vector_class;
 extern struct ILP_Field ILP_object_super_field;
 extern struct ILP_Field ILP_object_defining_class_field;
 extern struct ILP_Field ILP_object_value_field;
@@ -389,6 +404,10 @@ extern ILP_Object ILP_or (ILP_Object o1, ILP_Object o2);
 extern ILP_Object ILP_xor (ILP_Object o1, ILP_Object o2);
 extern ILP_Object ILP_newline ();
 extern ILP_Object ILP_print (ILP_Object self);
+extern ILP_Object ILP_sinus (ILP_Object self);
+extern ILP_Object ILP_makeVector (ILP_Object taille, ILP_Object value);
+extern ILP_Object ILP_vectorLength (ILP_Object vecteur);
+extern ILP_Object ILP_vectorGet (ILP_Object vecteur, ILP_Object index);
 extern ILP_Object ILPm_print (ILP_Closure useless, ILP_Object self);
 extern ILP_Object ILP_classOf (ILP_Object self);
 extern ILP_Object ILPm_classOf (ILP_Closure useless, ILP_Object self);

@@ -13,70 +13,70 @@ ILP_Object print;
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp316; 
-ilptmp316 = ILP_Integer2ILP(5); 
+  ILP_Object ilptmp63; 
+ilptmp63 = ILP_Integer2ILP(5); 
 
   {
-    ILP_Object x1 = ilptmp316;
+    ILP_Object x1 = ilptmp63;
 { 
-  ILP_Object ilptmp317; 
+  ILP_Object ilptmp64; 
 while ( 1 ) { 
-  ILP_Object ilptmp318; 
+  ILP_Object ilptmp65; 
 { 
-  ILP_Object ilptmp319; 
-  ILP_Object ilptmp320; 
-ilptmp319 = x1; 
-ilptmp320 = ILP_Integer2ILP(53); 
-ilptmp318 = ILP_LessThan(ilptmp319, ilptmp320);
+  ILP_Object ilptmp66; 
+  ILP_Object ilptmp67; 
+ilptmp66 = x1; 
+ilptmp67 = ILP_Integer2ILP(53); 
+ilptmp65 = ILP_LessThan(ilptmp66, ilptmp67);
 } 
-  if ( ILP_isEquivalentToTrue(ilptmp318) ) {
+  if ( ILP_isEquivalentToTrue(ilptmp65) ) {
 { 
-  ILP_Object ilptmp321; 
+  ILP_Object ilptmp68; 
 { 
-  ILP_Object ilptmp322; 
-ilptmp322 = x1; 
-ilptmp321 = ILP_print(ilptmp322);
+  ILP_Object ilptmp69; 
+ilptmp69 = x1; 
+ilptmp68 = ILP_print(ilptmp69);
 }
 { 
-  ILP_Object ilptmp323; 
+  ILP_Object ilptmp70; 
 { 
-  ILP_Object ilptmp324; 
-  ILP_Object ilptmp325; 
-ilptmp324 = ILP_Integer2ILP(2); 
-ilptmp325 = x1; 
-ilptmp323 = ILP_Times(ilptmp324, ilptmp325);
+  ILP_Object ilptmp71; 
+  ILP_Object ilptmp72; 
+ilptmp71 = ILP_Integer2ILP(2); 
+ilptmp72 = x1; 
+ilptmp70 = ILP_Times(ilptmp71, ilptmp72);
 } 
-ilptmp321 = (x1 = ilptmp323); 
+ilptmp68 = (x1 = ilptmp70); 
 } 
 while ( 1 ) { 
-  ILP_Object ilptmp326; 
+  ILP_Object ilptmp73; 
 { 
-  ILP_Object ilptmp327; 
-  ILP_Object ilptmp328; 
-ilptmp327 = x1; 
-ilptmp328 = ILP_Integer2ILP(53); 
-ilptmp326 = ILP_GreaterThan(ilptmp327, ilptmp328);
+  ILP_Object ilptmp74; 
+  ILP_Object ilptmp75; 
+ilptmp74 = x1; 
+ilptmp75 = ILP_Integer2ILP(53); 
+ilptmp73 = ILP_GreaterThan(ilptmp74, ilptmp75);
 } 
-  if ( ILP_isEquivalentToTrue(ilptmp326) ) {
+  if ( ILP_isEquivalentToTrue(ilptmp73) ) {
 { 
-  ILP_Object ilptmp329; 
+  ILP_Object ilptmp76; 
 { 
-  ILP_Object ilptmp330; 
-ilptmp330 = x1; 
-ilptmp329 = ILP_print(ilptmp330);
+  ILP_Object ilptmp77; 
+ilptmp77 = x1; 
+ilptmp76 = ILP_print(ilptmp77);
 }
 { 
-  ILP_Object ilptmp331; 
+  ILP_Object ilptmp78; 
 { 
-  ILP_Object ilptmp332; 
-  ILP_Object ilptmp333; 
-ilptmp332 = x1; 
-ilptmp333 = ILP_Integer2ILP(3); 
-ilptmp331 = ILP_Minus(ilptmp332, ilptmp333);
+  ILP_Object ilptmp79; 
+  ILP_Object ilptmp80; 
+ilptmp79 = x1; 
+ilptmp80 = ILP_Integer2ILP(3); 
+ilptmp78 = ILP_Minus(ilptmp79, ilptmp80);
 } 
-ilptmp329 = (x1 = ilptmp331); 
+ilptmp76 = (x1 = ilptmp78); 
 } 
-(void)ilptmp329; 
+(void)ilptmp76; 
 } 
 
 } else { 
@@ -84,8 +84,8 @@ ilptmp329 = (x1 = ilptmp331);
 
 }
 }
-ilptmp321 = ILP_FALSE; 
-(void)ilptmp321; 
+ilptmp68 = ILP_FALSE; 
+(void)ilptmp68; 
 } 
 
 } else { 
@@ -93,9 +93,9 @@ ilptmp321 = ILP_FALSE;
 
 }
 }
-ilptmp317 = ILP_FALSE; 
-ilptmp317 = x1; 
-return ilptmp317; 
+ilptmp64 = ILP_FALSE; 
+ilptmp64 = x1; 
+return ilptmp64; 
 } 
 
   }
