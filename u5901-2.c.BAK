@@ -4,80 +4,83 @@
 
 /* Global variables */ 
 ILP_Object pseudosequence;
-ILP_Object y_3d;
-ILP_Object function;
 ILP_Object foo;
-ILP_Object one;
-ILP_Object x;
-ILP_Object y;
-ILP_Object two;
+
+/* Global prototypes */ 
+ILP_Object ilp__foo(ILP_Closure ilp_useless
+,
+    ILP_Object x1);
+ILP_Object ilp__pseudosequence(ILP_Closure ilp_useless
+,
+    ILP_Object one2,
+    ILP_Object two3);
+
+/* Global functions */ 
+
+ILP_Object ilp__foo(ILP_Closure ilp_useless
+,
+    ILP_Object x1) {
+{ 
+  ILP_Object ilptmp180; 
+  ILP_Object ilptmp181; 
+ilptmp180 = ILP_Integer2ILP(2); 
+ilptmp181 = x1; 
+return ILP_Times(ilptmp180, ilptmp181);
+} 
+}
+struct ILP_Closure foo_closure_object = { 
+   &ILP_object_Closure_class, 
+   { { ilp__foo, 
+       1, 
+       { NULL } } } 
+}; 
+
+ILP_Object ilp__pseudosequence(ILP_Closure ilp_useless
+,
+    ILP_Object one2,
+    ILP_Object two3) {
+return two3; 
+}
+struct ILP_Closure pseudosequence_closure_object = { 
+   &ILP_object_Closure_class, 
+   { { ilp__pseudosequence, 
+       2, 
+       { NULL } } } 
+}; 
 
 
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp106; 
-ilptmp106 = function; 
-{ 
-  ILP_Object ilptmp107; 
-  ILP_Object ilptmp108; 
-{ 
-  ILP_Object ilptmp109; 
-ilptmp109 = x; 
-ilptmp107 = ILP_invoke(foo, 1, ilptmp109);
-}
-{ 
-  ILP_Object ilptmp110; 
-  ILP_Object ilptmp111; 
-ilptmp110 = ILP_Integer2ILP(2); 
-ilptmp111 = x; 
-ilptmp108 = ILP_Times(ilptmp110, ilptmp111);
-} 
-ilptmp106 = ILP_invoke(ilptmp107, 1, ilptmp108);
-}
-ilptmp106 = function; 
-{ 
-  ILP_Object ilptmp112; 
-  ILP_Object ilptmp113; 
-ilptmp112 = one; 
-ilptmp113 = two; 
-ilptmp106 = ILP_invoke(pseudosequence, 2, ilptmp112, ilptmp113);
-}
-ilptmp106 = two; 
-{ 
-  ILP_Object ilptmp114; 
-ilptmp114 = ILP_Integer2ILP(11); 
+  ILP_Object ilptmp182; 
+ilptmp182 = ILP_Integer2ILP(11); 
 
   {
-    ILP_Object y1 = ilptmp114;
-ilptmp106 = foo; 
+    ILP_Object y4 = ilptmp182;
+{ 
+  ILP_Object ilptmp183; 
+{ 
+  ILP_Object ilptmp184; 
+  ILP_Object ilptmp185; 
+{ 
+  ILP_Object ilptmp186; 
+{ 
+  ILP_Object ilptmp187; 
+  ILP_Object ilptmp188; 
+ilptmp187 = y4; 
+ilptmp188 = ILP_Integer2ILP(1); 
+ilptmp186 = ILP_Plus(ilptmp187, ilptmp188);
+} 
+ilptmp184 = (y4 = ilptmp186); 
+} 
+ilptmp185 = y4; 
+ilptmp183 = ilp__pseudosequence(NULL , ilptmp184, ilptmp185);
+}
+return ilp__foo(NULL , ilptmp183);
+}
 
   }
 }
-{ 
-  ILP_Object ilptmp115; 
-ilptmp115 = pseudosequence; 
-{ 
-  ILP_Object ilptmp116; 
-{ 
-  ILP_Object ilptmp117; 
-ilptmp117 = y_3d; 
-{ 
-  ILP_Object ilptmp118; 
-  ILP_Object ilptmp119; 
-ilptmp118 = y; 
-ilptmp119 = ILP_Integer2ILP(1); 
-ilptmp117 = ILP_Plus(ilptmp118, ilptmp119);
-} 
-ilptmp116 = ilptmp117; 
-} 
-ilptmp116 = y; 
-ilptmp115 = ilptmp116; 
-} 
-ilptmp106 = ilptmp115; 
-} 
-return ilptmp106; 
-} 
 
 } 
 

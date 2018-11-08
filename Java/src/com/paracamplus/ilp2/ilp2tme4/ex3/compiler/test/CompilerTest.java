@@ -24,7 +24,7 @@ import com.paracamplus.ilp1.compiler.optimizer.IdentityOptimizer;
 import com.paracamplus.ilp1.compiler.test.CompilerRunner;
 import com.paracamplus.ilp1.parser.xml.IXMLParser;
 import com.paracamplus.ilp2.ilp2tme4.ex3.ast.ASTfactory;
-import com.paracamplus.ilp2.compiler.Compiler;
+import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.Compiler;
 import com.paracamplus.ilp2.interfaces.IASTfactory;
 import com.paracamplus.ilp2.ilp2tme4.ex3.parser.ILPMLParser;
 import com.paracamplus.ilp2.parser.xml.XMLParser;
@@ -32,7 +32,7 @@ import com.paracamplus.ilp2.parser.xml.XMLParser;
 @RunWith(Parameterized.class)
 public class CompilerTest extends com.paracamplus.ilp2.compiler.test.CompilerTest {
 
-    protected static String[] samplesDirName = { "SamplesILP2", "SamplesILP1" };
+    protected static String[] samplesDirName = { "SamplesTME4" };
     protected static String pattern = "ur?[0-78]\\d*-[123456](gfv)?";
     protected static String scriptCommand = "C/compileThenRun.sh +gc";
 	protected static String XMLgrammarFile = "XMLGrammars/grammar2.rng";

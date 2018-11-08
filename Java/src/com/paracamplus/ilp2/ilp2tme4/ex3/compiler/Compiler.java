@@ -14,22 +14,23 @@ import java.util.Set;
 import com.paracamplus.ilp1.ast.ASTboolean;
 import com.paracamplus.ilp1.compiler.AssignDestination;
 import com.paracamplus.ilp1.compiler.CompilationException;
-import com.paracamplus.ilp2.compiler.FreeVariableCollector;
-import com.paracamplus.ilp2.compiler.GlobalVariableCollector;
+import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.FreeVariableCollector;
+import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.GlobalVariableCollector;
 import com.paracamplus.ilp1.compiler.NoDestination;
+import com.paracamplus.ilp1.compiler.ReturnDestination;
 import com.paracamplus.ilp1.compiler.VoidDestination;
 import com.paracamplus.ilp1.compiler.interfaces.IASTCglobalVariable;
 import com.paracamplus.ilp1.compiler.interfaces.IGlobalVariableEnvironment;
 import com.paracamplus.ilp1.compiler.interfaces.IOperatorEnvironment;
 import com.paracamplus.ilp2.compiler.normalizer.INormalizationFactory;
 import com.paracamplus.ilp2.compiler.normalizer.NormalizationFactory;
-import com.paracamplus.ilp2.compiler.normalizer.Normalizer;
+import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.normalizer.Normalizer;
 import com.paracamplus.ilp2.ilp2tme4.ex3.interfaces.IASTunless;
 import com.paracamplus.ilp1.interfaces.IASTboolean;
 import com.paracamplus.ilp1.interfaces.IASTvariable;
 import com.paracamplus.ilp2.compiler.interfaces.IASTCprogram;
 import com.paracamplus.ilp2.interfaces.IASTprogram;
-import com.paracamplus.ilp2.compiler.interfaces.IASTCvisitor;
+import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.interfaces.IASTCvisitor;
 
 
 public class Compiler extends com.paracamplus.ilp2.compiler.Compiler 
@@ -81,18 +82,17 @@ implements IASTCvisitor<Void, Compiler.Context, CompilationException>{
 	public Void visit(IASTunless iast, Context context)
             throws CompilationException {
 		IASTvariable tmp1 = context.newTemporaryVariable();
-		emit("{\n");
 		emit(" ILP_Object " + tmp1.getMangledName() + "; \n");
 		Context c = context.redirect(new AssignDestination(tmp1));//condition
 		iast.getCondition().accept(this, c);
-		emit("  if ( ILP_isEquivalentToFalse(");
+		emit("  if ( ! ILP_isEquivalentToTrue(");
         emit(tmp1.getMangledName());
-        emit(") ) {\n");
-        Context cb = context.redirect(VoidDestination.VOID_DESTINATION);
+        emit(") )\n");
+        Context cb = context.redirect(ReturnDestination.RETURN_DESTINATION);
         iast.getBody().accept(this, cb);
-        emit("\n} else { \n");
-        emit("    null; \n");
+        emit("\n else { \n");
         whatever.accept(this, context);
+        emit("\n}");
 		return null;
     }
 

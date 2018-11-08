@@ -3,23 +3,29 @@
 #include "ilp.h" 
 
 /* Global variables */ 
-ILP_Object x_3d;
+
+/* Global prototypes */ 
+
+/* Global functions */ 
 
 
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp1; 
-ilptmp1 = ILP_Integer2ILP(50); 
+  ILP_Object ilptmp4; 
+ilptmp4 = ILP_Integer2ILP(50); 
 
   {
-    ILP_Object x1 = ilptmp1;
+    ILP_Object x1 = ilptmp4;
 { 
-  ILP_Object ilptmp2; 
-ilptmp2 = x_3d; 
-ilptmp2 = ILP_Integer2ILP(500); 
-ilptmp2 = x1; 
-return ilptmp2; 
+  ILP_Object ilptmp5; 
+{ 
+  ILP_Object ilptmp6; 
+ilptmp6 = ILP_Integer2ILP(500); 
+ilptmp5 = (x1 = ilptmp6); 
+} 
+ilptmp5 = x1; 
+return ilptmp5; 
 } 
 
   }

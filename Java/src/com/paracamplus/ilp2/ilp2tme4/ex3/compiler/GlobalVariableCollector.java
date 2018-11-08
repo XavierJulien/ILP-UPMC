@@ -10,7 +10,7 @@ import java.util.Set;
 
 import com.paracamplus.ilp1.compiler.CompilationException;
 import com.paracamplus.ilp1.compiler.interfaces.IASTCglobalVariable;
-import com.paracamplus.ilp2.compiler.interfaces.IASTCvisitor;
+import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.interfaces.IASTCvisitor;
 import com.paracamplus.ilp2.ilp2tme4.ex3.interfaces.IASTunless;
 
 public class GlobalVariableCollector extends com.paracamplus.ilp2.compiler.GlobalVariableCollector

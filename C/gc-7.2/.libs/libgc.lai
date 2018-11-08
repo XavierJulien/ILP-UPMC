@@ -5,19 +5,19 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname='libgc.so.1'
+dlname='libgc.1.dylib'
 
 # Names of this library.
-library_names='libgc.so.1.0.3 libgc.so.1 libgc.so'
+library_names='libgc.1.dylib libgc.dylib'
 
 # The name of the static archive.
 old_library='libgc.a'
 
 # Linker flags that cannot go in dependency_libs.
-inherited_linker_flags=''
+inherited_linker_flags=' '
 
 # Libraries that this one depends upon.
-dependency_libs=' -lpthread -ldl'
+dependency_libs=' -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''

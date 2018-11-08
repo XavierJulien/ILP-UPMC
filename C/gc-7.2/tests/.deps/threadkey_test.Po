@@ -1,32 +1,38 @@
-tests/threadkey_test.o: tests/threadkey_test.c /usr/include/stdc-predef.h \
- include/private/config.h include/gc.h include/gc_version.h \
- include/gc_config_macros.h \
- /usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h /usr/include/features.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- include/gc_pthread_redirects.h /usr/include/pthread.h \
- /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/byteswap-16.h /usr/include/sched.h \
- /usr/include/time.h /usr/include/x86_64-linux-gnu/bits/sched.h \
- /usr/include/x86_64-linux-gnu/bits/time.h /usr/include/xlocale.h \
- /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
- /usr/include/x86_64-linux-gnu/bits/setjmp.h /usr/include/dlfcn.h \
- /usr/include/x86_64-linux-gnu/bits/dlfcn.h /usr/include/signal.h \
- /usr/include/x86_64-linux-gnu/bits/sigset.h \
- /usr/include/x86_64-linux-gnu/bits/signum.h \
- /usr/include/x86_64-linux-gnu/bits/siginfo.h \
- /usr/include/x86_64-linux-gnu/bits/sigaction.h \
- /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
- /usr/include/x86_64-linux-gnu/bits/sigstack.h \
- /usr/include/x86_64-linux-gnu/sys/ucontext.h \
- /usr/include/x86_64-linux-gnu/bits/sigthread.h
-
-/usr/include/stdc-predef.h:
+tests/threadkey_test.o: tests/threadkey_test.c include/private/config.h \
+  include/gc.h include/gc_version.h include/gc_config_macros.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/__stddef_max_align_t.h \
+  include/gc_pthread_redirects.h /usr/include/pthread.h \
+  /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/sys/_symbol_aliasing.h \
+  /usr/include/sys/_posix_availability.h /usr/include/machine/_types.h \
+  /usr/include/i386/_types.h /usr/include/sys/_pthread/_pthread_types.h \
+  /usr/include/pthread/pthread_impl.h /usr/include/pthread/sched.h \
+  /usr/include/pthread_impl.h /usr/include/time.h \
+  /usr/include/Availability.h /usr/include/AvailabilityInternal.h \
+  /usr/include/sys/_types/_clock_t.h /usr/include/machine/types.h \
+  /usr/include/i386/types.h /usr/include/sys/_types/_int8_t.h \
+  /usr/include/sys/_types/_int16_t.h /usr/include/sys/_types/_int32_t.h \
+  /usr/include/sys/_types/_int64_t.h /usr/include/sys/_types/_u_int8_t.h \
+  /usr/include/sys/_types/_u_int16_t.h \
+  /usr/include/sys/_types/_u_int32_t.h \
+  /usr/include/sys/_types/_u_int64_t.h \
+  /usr/include/sys/_types/_intptr_t.h \
+  /usr/include/sys/_types/_uintptr_t.h /usr/include/sys/_types/_null.h \
+  /usr/include/sys/_types/_size_t.h /usr/include/sys/_types/_time_t.h \
+  /usr/include/sys/_types/_timespec.h \
+  /usr/include/sys/_pthread/_pthread_attr_t.h \
+  /usr/include/sys/_pthread/_pthread_cond_t.h \
+  /usr/include/sys/_pthread/_pthread_condattr_t.h \
+  /usr/include/sys/_pthread/_pthread_key_t.h \
+  /usr/include/sys/_pthread/_pthread_mutex_t.h \
+  /usr/include/sys/_pthread/_pthread_mutexattr_t.h \
+  /usr/include/sys/_pthread/_pthread_once_t.h \
+  /usr/include/sys/_pthread/_pthread_rwlock_t.h \
+  /usr/include/sys/_pthread/_pthread_rwlockattr_t.h \
+  /usr/include/sys/_pthread/_pthread_t.h /usr/include/pthread/qos.h \
+  /usr/include/sys/qos.h /usr/include/sys/_types/_mach_port_t.h \
+  /usr/include/sys/_types/_sigset_t.h
 
 include/private/config.h:
 
@@ -36,66 +42,100 @@ include/gc_version.h:
 
 include/gc_config_macros.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h:
 
-/usr/include/features.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/__stddef_max_align_t.h:
 
 include/gc_pthread_redirects.h:
 
 /usr/include/pthread.h:
 
-/usr/include/endian.h:
+/usr/include/_types.h:
 
-/usr/include/x86_64-linux-gnu/bits/endian.h:
+/usr/include/sys/_types.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+/usr/include/sys/cdefs.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/usr/include/sys/_symbol_aliasing.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/usr/include/sys/_posix_availability.h:
 
-/usr/include/x86_64-linux-gnu/bits/byteswap-16.h:
+/usr/include/machine/_types.h:
 
-/usr/include/sched.h:
+/usr/include/i386/_types.h:
+
+/usr/include/sys/_pthread/_pthread_types.h:
+
+/usr/include/pthread/pthread_impl.h:
+
+/usr/include/pthread/sched.h:
+
+/usr/include/pthread_impl.h:
 
 /usr/include/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/sched.h:
+/usr/include/Availability.h:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
+/usr/include/AvailabilityInternal.h:
 
-/usr/include/xlocale.h:
+/usr/include/sys/_types/_clock_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+/usr/include/machine/types.h:
 
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
+/usr/include/i386/types.h:
 
-/usr/include/dlfcn.h:
+/usr/include/sys/_types/_int8_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/dlfcn.h:
+/usr/include/sys/_types/_int16_t.h:
 
-/usr/include/signal.h:
+/usr/include/sys/_types/_int32_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigset.h:
+/usr/include/sys/_types/_int64_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/signum.h:
+/usr/include/sys/_types/_u_int8_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/siginfo.h:
+/usr/include/sys/_types/_u_int16_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigaction.h:
+/usr/include/sys/_types/_u_int32_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigcontext.h:
+/usr/include/sys/_types/_u_int64_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigstack.h:
+/usr/include/sys/_types/_intptr_t.h:
 
-/usr/include/x86_64-linux-gnu/sys/ucontext.h:
+/usr/include/sys/_types/_uintptr_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+/usr/include/sys/_types/_null.h:
+
+/usr/include/sys/_types/_size_t.h:
+
+/usr/include/sys/_types/_time_t.h:
+
+/usr/include/sys/_types/_timespec.h:
+
+/usr/include/sys/_pthread/_pthread_attr_t.h:
+
+/usr/include/sys/_pthread/_pthread_cond_t.h:
+
+/usr/include/sys/_pthread/_pthread_condattr_t.h:
+
+/usr/include/sys/_pthread/_pthread_key_t.h:
+
+/usr/include/sys/_pthread/_pthread_mutex_t.h:
+
+/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
+
+/usr/include/sys/_pthread/_pthread_once_t.h:
+
+/usr/include/sys/_pthread/_pthread_rwlock_t.h:
+
+/usr/include/sys/_pthread/_pthread_rwlockattr_t.h:
+
+/usr/include/sys/_pthread/_pthread_t.h:
+
+/usr/include/pthread/qos.h:
+
+/usr/include/sys/qos.h:
+
+/usr/include/sys/_types/_mach_port_t.h:
+
+/usr/include/sys/_types/_sigset_t.h:

@@ -3,6 +3,7 @@
 #include "ilp.h" 
 
 /* Global variables */ 
+ILP_Object print;
 
 /* Global prototypes */ 
 
@@ -11,8 +12,19 @@
 
 ILP_Object ilp_program () 
 { 
-return ILP_Integer2ILP(34); 
+ ILP_Object ilptmp1; 
+ilptmp1 = ILP_FALSE; 
+  if ( ! ILP_isEquivalentToTrue(ilptmp1) )
+{ 
+  ILP_Object ilptmp2; 
+ilptmp2 = ILP_Integer2ILP(1); 
+return ILP_print(ilptmp2);
+}
 
+ else { 
+return ILP_FALSE; 
+
+}
 } 
 
 static ILP_Object ilp_caught_program () {
