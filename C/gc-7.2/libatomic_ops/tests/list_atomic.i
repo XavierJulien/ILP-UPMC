@@ -1,37 +1,43 @@
 # 1 "list_atomic.c"
-# 1 "<built-in>" 1
-# 1 "<built-in>" 3
-# 361 "<built-in>" 3
-# 1 "<command line>" 1
-# 1 "<built-in>" 2
-# 1 "list_atomic.c" 2
+# 1 "/users/Etu4/3521024/git/ILP-UPMC/C/gc-7.2/libatomic_ops/tests//"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 1 "<command-line>" 2
+# 1 "list_atomic.c"
 # 1 "../src/atomic_ops.h" 1
 # 27 "../src/atomic_ops.h"
 # 1 "/usr/include/assert.h" 1 3 4
-# 42 "/usr/include/assert.h" 3 4
-# 1 "/usr/include/sys/cdefs.h" 1 3 4
-# 587 "/usr/include/sys/cdefs.h" 3 4
-# 1 "/usr/include/sys/_symbol_aliasing.h" 1 3 4
-# 588 "/usr/include/sys/cdefs.h" 2 3 4
-# 653 "/usr/include/sys/cdefs.h" 3 4
-# 1 "/usr/include/sys/_posix_availability.h" 1 3 4
-# 654 "/usr/include/sys/cdefs.h" 2 3 4
-# 43 "/usr/include/assert.h" 2 3 4
+# 35 "/usr/include/assert.h" 3 4
+# 1 "/usr/include/features.h" 1 3 4
+# 364 "/usr/include/features.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 1 3 4
+# 415 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 416 "/usr/include/x86_64-linux-gnu/sys/cdefs.h" 2 3 4
+# 365 "/usr/include/features.h" 2 3 4
+# 388 "/usr/include/features.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 1 3 4
+# 10 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h" 1 3 4
+# 11 "/usr/include/x86_64-linux-gnu/gnu/stubs.h" 2 3 4
+# 389 "/usr/include/features.h" 2 3 4
+# 36 "/usr/include/assert.h" 2 3 4
 # 28 "../src/atomic_ops.h" 2
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h" 1 3 4
-# 51 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 1 3 4
+# 149 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 3 4
+
+# 149 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 3 4
 typedef long int ptrdiff_t;
-# 62 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h" 3 4
+# 216 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 3 4
 typedef long unsigned int size_t;
-# 76 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h" 3 4
-typedef long unsigned int rsize_t;
-# 90 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h" 3 4
+# 328 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 3 4
 typedef int wchar_t;
-# 118 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h" 3 4
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/__stddef_max_align_t.h" 1 3 4
-# 32 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/__stddef_max_align_t.h" 3 4
-typedef long double max_align_t;
-# 119 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stddef.h" 2 3 4
+# 426 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 3 4
+typedef struct {
+  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
+  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
+} max_align_t;
 # 29 "../src/atomic_ops.h" 2
 # 225 "../src/atomic_ops.h"
 # 1 "../src/atomic_ops/sysdeps/gcc/x86_64.h" 1
@@ -40,10 +46,16 @@ typedef long double max_align_t;
 # 28 "../src/atomic_ops/sysdeps/gcc/../all_aligned_atomic_load_store.h"
 # 1 "../src/atomic_ops/sysdeps/gcc/../aligned_atomic_load_store.h" 1
 # 26 "../src/atomic_ops/sysdeps/gcc/../aligned_atomic_load_store.h"
+
+# 26 "../src/atomic_ops/sysdeps/gcc/../aligned_atomic_load_store.h"
 static __inline size_t
 AO_load(const volatile size_t *addr)
 {
-  ((void)0);
+  
+# 29 "../src/atomic_ops/sysdeps/gcc/../aligned_atomic_load_store.h" 3 4
+ ((void) (0))
+# 29 "../src/atomic_ops/sysdeps/gcc/../aligned_atomic_load_store.h"
+                                                 ;
 
 
   return *(size_t *)addr;
@@ -53,7 +65,11 @@ AO_load(const volatile size_t *addr)
 static __inline void
 AO_store(volatile size_t *addr, size_t new_val)
 {
-  ((void)0);
+  
+# 39 "../src/atomic_ops/sysdeps/gcc/../aligned_atomic_load_store.h" 3 4
+ ((void) (0))
+# 39 "../src/atomic_ops/sysdeps/gcc/../aligned_atomic_load_store.h"
+                                                 ;
   (*(size_t *)addr) = new_val;
 }
 # 29 "../src/atomic_ops/sysdeps/gcc/../all_aligned_atomic_load_store.h" 2
@@ -79,7 +95,11 @@ AO_char_store(volatile unsigned char *addr, unsigned char new_val)
 static __inline unsigned short
 AO_short_load(const volatile unsigned short *addr)
 {
-  ((void)0);
+  
+# 31 "../src/atomic_ops/sysdeps/gcc/../short_aligned_atomic_load_store.h" 3 4
+ ((void) (0))
+# 31 "../src/atomic_ops/sysdeps/gcc/../short_aligned_atomic_load_store.h"
+                                                           ;
 
 
   return (*(unsigned short *)addr);
@@ -89,7 +109,11 @@ AO_short_load(const volatile unsigned short *addr)
 static __inline void
 AO_short_store(volatile unsigned short *addr, unsigned short new_val)
 {
-  ((void)0);
+  
+# 41 "../src/atomic_ops/sysdeps/gcc/../short_aligned_atomic_load_store.h" 3 4
+ ((void) (0))
+# 41 "../src/atomic_ops/sysdeps/gcc/../short_aligned_atomic_load_store.h"
+                                                           ;
   (*(unsigned short *)addr) = new_val;
 }
 # 31 "../src/atomic_ops/sysdeps/gcc/../all_aligned_atomic_load_store.h" 2
@@ -98,7 +122,11 @@ AO_short_store(volatile unsigned short *addr, unsigned short new_val)
 static __inline unsigned int
 AO_int_load(const volatile unsigned int *addr)
 {
-  ((void)0);
+  
+# 29 "../src/atomic_ops/sysdeps/gcc/../int_aligned_atomic_load_store.h" 3 4
+ ((void) (0))
+# 29 "../src/atomic_ops/sysdeps/gcc/../int_aligned_atomic_load_store.h"
+                                                         ;
 
 
   return (*(unsigned int *)addr);
@@ -108,19 +136,16 @@ AO_int_load(const volatile unsigned int *addr)
 static __inline void
 AO_int_store(volatile unsigned int *addr, unsigned int new_val)
 {
-  ((void)0);
+  
+# 39 "../src/atomic_ops/sysdeps/gcc/../int_aligned_atomic_load_store.h" 3 4
+ ((void) (0))
+# 39 "../src/atomic_ops/sysdeps/gcc/../int_aligned_atomic_load_store.h"
+                                                         ;
   (*(unsigned int *)addr) = new_val;
 }
-# 32 "../src/atomic_ops/sysdeps/gcc/../all_aligned_atomic_load_store.h" 2
+# 31 "../src/atomic_ops/sysdeps/gcc/../all_aligned_atomic_load_store.h" 2
 # 20 "../src/atomic_ops/sysdeps/gcc/x86_64.h" 2
-
-
-
-
-
-
-
-
+# 28 "../src/atomic_ops/sysdeps/gcc/x86_64.h"
 # 1 "../src/atomic_ops/sysdeps/gcc/../ordered_except_wr.h" 1
 # 30 "../src/atomic_ops/sysdeps/gcc/../ordered_except_wr.h"
 # 1 "../src/atomic_ops/sysdeps/gcc/../read_ordered.h" 1
@@ -248,482 +273,906 @@ typedef enum {AO_BYTE_TS_clear = 0, AO_BYTE_TS_set = 0xff} AO_BYTE_TS_val;
 
 # 1 "../src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h" 1
 # 11 "../src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h"
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 1 3 4
-# 27 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 1 3 4
-# 27 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-typedef long long __m64 __attribute__((__vector_size__(8)));
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 1 3 4
+# 31 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h" 1 3 4
+# 42 "/usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h" 3 4
 
-typedef long long __v1di __attribute__((__vector_size__(8)));
-typedef int __v2si __attribute__((__vector_size__(8)));
-typedef short __v4hi __attribute__((__vector_size__(8)));
-typedef char __v8qi __attribute__((__vector_size__(8)));
-# 44 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_empty(void)
-{
-    __builtin_ia32_emms();
-}
-# 61 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cvtsi32_si64(int __i)
-{
-    return (__m64)__builtin_ia32_vec_init_v2si(__i, 0);
-}
-# 78 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cvtsi64_si32(__m64 __m)
-{
-    return __builtin_ia32_vec_ext_v2si((__v2si)__m, 0);
-}
-# 94 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cvtsi64_m64(long long __i)
-{
-    return (__m64)__i;
-}
-# 110 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ long long __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cvtm64_si64(__m64 __m)
-{
-    return (long long)__m;
-}
-# 140 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_packs_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_packsswb((__v4hi)__m1, (__v4hi)__m2);
-}
-# 170 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_packs_pi32(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_packssdw((__v2si)__m1, (__v2si)__m2);
-}
-# 200 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_packs_pu16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_packuswb((__v4hi)__m1, (__v4hi)__m2);
-}
-# 227 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_unpackhi_pi8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_punpckhbw((__v8qi)__m1, (__v8qi)__m2);
-}
-# 250 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_unpackhi_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_punpckhwd((__v4hi)__m1, (__v4hi)__m2);
-}
-# 271 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_unpackhi_pi32(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_punpckhdq((__v2si)__m1, (__v2si)__m2);
-}
-# 298 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_unpacklo_pi8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_punpcklbw((__v8qi)__m1, (__v8qi)__m2);
-}
-# 321 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_unpacklo_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_punpcklwd((__v4hi)__m1, (__v4hi)__m2);
-}
-# 342 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_unpacklo_pi32(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_punpckldq((__v2si)__m1, (__v2si)__m2);
-}
-# 363 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_add_pi8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_paddb((__v8qi)__m1, (__v8qi)__m2);
-}
-# 384 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_add_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_paddw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 405 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_add_pi32(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_paddd((__v2si)__m1, (__v2si)__m2);
-}
-# 427 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_adds_pi8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_paddsb((__v8qi)__m1, (__v8qi)__m2);
-}
-# 450 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_adds_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_paddsw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 472 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_adds_pu8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_paddusb((__v8qi)__m1, (__v8qi)__m2);
-}
-# 494 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_adds_pu16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_paddusw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 515 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_sub_pi8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_psubb((__v8qi)__m1, (__v8qi)__m2);
-}
-# 536 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_sub_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_psubw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 557 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_sub_pi32(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_psubd((__v2si)__m1, (__v2si)__m2);
-}
-# 580 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_subs_pi8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_psubsb((__v8qi)__m1, (__v8qi)__m2);
-}
-# 603 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_subs_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_psubsw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 627 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_subs_pu8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_psubusb((__v8qi)__m1, (__v8qi)__m2);
-}
-# 651 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_subs_pu16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_psubusw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 678 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_madd_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pmaddwd((__v4hi)__m1, (__v4hi)__m2);
-}
-# 699 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_mulhi_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pmulhw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 720 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_mullo_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pmullw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 743 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_sll_pi16(__m64 __m, __m64 __count)
-{
-    return (__m64)__builtin_ia32_psllw((__v4hi)__m, __count);
-}
-# 765 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_slli_pi16(__m64 __m, int __count)
-{
-    return (__m64)__builtin_ia32_psllwi((__v4hi)__m, __count);
-}
-# 788 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_sll_pi32(__m64 __m, __m64 __count)
-{
-    return (__m64)__builtin_ia32_pslld((__v2si)__m, __count);
-}
-# 810 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_slli_pi32(__m64 __m, int __count)
-{
-    return (__m64)__builtin_ia32_pslldi((__v2si)__m, __count);
-}
-# 830 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_sll_si64(__m64 __m, __m64 __count)
-{
-    return (__m64)__builtin_ia32_psllq((__v1di)__m, __count);
-}
-# 850 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_slli_si64(__m64 __m, int __count)
-{
-    return (__m64)__builtin_ia32_psllqi((__v1di)__m, __count);
-}
-# 874 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_sra_pi16(__m64 __m, __m64 __count)
-{
-    return (__m64)__builtin_ia32_psraw((__v4hi)__m, __count);
-}
-# 897 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_srai_pi16(__m64 __m, int __count)
-{
-    return (__m64)__builtin_ia32_psrawi((__v4hi)__m, __count);
-}
-# 921 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_sra_pi32(__m64 __m, __m64 __count)
-{
-    return (__m64)__builtin_ia32_psrad((__v2si)__m, __count);
-}
-# 944 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_srai_pi32(__m64 __m, int __count)
-{
-    return (__m64)__builtin_ia32_psradi((__v2si)__m, __count);
-}
-# 967 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_srl_pi16(__m64 __m, __m64 __count)
-{
-    return (__m64)__builtin_ia32_psrlw((__v4hi)__m, __count);
-}
-# 989 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_srli_pi16(__m64 __m, int __count)
-{
-    return (__m64)__builtin_ia32_psrlwi((__v4hi)__m, __count);
-}
-# 1012 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_srl_pi32(__m64 __m, __m64 __count)
-{
-    return (__m64)__builtin_ia32_psrld((__v2si)__m, __count);
-}
-# 1034 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_srli_pi32(__m64 __m, int __count)
-{
-    return (__m64)__builtin_ia32_psrldi((__v2si)__m, __count);
-}
-# 1054 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_srl_si64(__m64 __m, __m64 __count)
-{
-    return (__m64)__builtin_ia32_psrlq((__v1di)__m, __count);
-}
-# 1075 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_srli_si64(__m64 __m, int __count)
-{
-    return (__m64)__builtin_ia32_psrlqi((__v1di)__m, __count);
-}
-# 1093 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_and_si64(__m64 __m1, __m64 __m2)
-{
-    return __builtin_ia32_pand((__v1di)__m1, (__v1di)__m2);
-}
-# 1114 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_andnot_si64(__m64 __m1, __m64 __m2)
-{
-    return __builtin_ia32_pandn((__v1di)__m1, (__v1di)__m2);
-}
-# 1132 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_or_si64(__m64 __m1, __m64 __m2)
-{
-    return __builtin_ia32_por((__v1di)__m1, (__v1di)__m2);
-}
-# 1150 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_xor_si64(__m64 __m1, __m64 __m2)
-{
-    return __builtin_ia32_pxor((__v1di)__m1, (__v1di)__m2);
-}
-# 1172 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cmpeq_pi8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pcmpeqb((__v8qi)__m1, (__v8qi)__m2);
-}
-# 1194 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cmpeq_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pcmpeqw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 1216 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cmpeq_pi32(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pcmpeqd((__v2si)__m1, (__v2si)__m2);
-}
-# 1238 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cmpgt_pi8(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pcmpgtb((__v8qi)__m1, (__v8qi)__m2);
-}
-# 1260 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cmpgt_pi16(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pcmpgtw((__v4hi)__m1, (__v4hi)__m2);
-}
-# 1282 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_cmpgt_pi32(__m64 __m1, __m64 __m2)
-{
-    return (__m64)__builtin_ia32_pcmpgtd((__v2si)__m1, (__v2si)__m2);
-}
-# 1295 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_setzero_si64(void)
-{
-    return (__m64){ 0LL };
-}
-# 1316 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_set_pi32(int __i1, int __i0)
-{
-    return (__m64)__builtin_ia32_vec_init_v2si(__i0, __i1);
-}
-# 1339 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_set_pi16(short __s3, short __s2, short __s1, short __s0)
-{
-    return (__m64)__builtin_ia32_vec_init_v4hi(__s0, __s1, __s2, __s3);
-}
-# 1370 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_set_pi8(char __b7, char __b6, char __b5, char __b4, char __b3, char __b2,
-            char __b1, char __b0)
-{
-    return (__m64)__builtin_ia32_vec_init_v8qi(__b0, __b1, __b2, __b3,
-                                               __b4, __b5, __b6, __b7);
-}
-# 1390 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_set1_pi32(int __i)
-{
-    return _mm_set_pi32(__i, __i);
-}
-# 1408 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_set1_pi16(short __w)
-{
-    return _mm_set_pi16(__w, __w, __w, __w);
-}
-# 1426 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_set1_pi8(char __b)
-{
-    return _mm_set_pi8(__b, __b, __b, __b, __b, __b, __b, __b);
-}
-# 1447 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_setr_pi32(int __i0, int __i1)
-{
-    return _mm_set_pi32(__i1, __i0);
-}
-# 1470 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_setr_pi16(short __w0, short __w1, short __w2, short __w3)
-{
-    return _mm_set_pi16(__w3, __w2, __w1, __w0);
-}
-# 1501 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("mmx")))
-_mm_setr_pi8(char __b0, char __b1, char __b2, char __b3, char __b4, char __b5,
-             char __b6, char __b7)
-{
-    return _mm_set_pi8(__b7, __b6, __b5, __b4, __b3, __b2, __b1, __b0);
-}
-# 28 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 2 3 4
-
-typedef int __v4si __attribute__((__vector_size__(16)));
-typedef float __v4sf __attribute__((__vector_size__(16)));
-typedef float __m128 __attribute__((__vector_size__(16)));
+# 42 "/usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h" 3 4
+typedef int __m64 __attribute__ ((__vector_size__ (8), __may_alias__));
 
 
-typedef unsigned int __v4su __attribute__((__vector_size__(16)));
+typedef int __v2si __attribute__ ((__vector_size__ (8)));
+typedef short __v4hi __attribute__ ((__vector_size__ (8)));
+typedef char __v8qi __attribute__ ((__vector_size__ (8)));
+typedef long long __v1di __attribute__ ((__vector_size__ (8)));
+typedef float __v2sf __attribute__ ((__vector_size__ (8)));
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_empty (void)
+{
+  __builtin_ia32_emms ();
+}
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_empty (void)
+{
+  _mm_empty ();
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi32_si64 (int __i)
+{
+  return (__m64) __builtin_ia32_vec_init_v2si (__i, 0);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_from_int (int __i)
+{
+  return _mm_cvtsi32_si64 (__i);
+}
 
 
 
 
 
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mm_malloc.h" 1 3 4
-# 27 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mm_malloc.h" 3 4
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_from_int64 (long long __i)
+{
+  return (__m64) __i;
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64_m64 (long long __i)
+{
+  return (__m64) __i;
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64x_si64 (long long __i)
+{
+  return (__m64) __i;
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_pi64x (long long __i)
+{
+  return (__m64) __i;
+}
+
+
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64_si32 (__m64 __i)
+{
+  return __builtin_ia32_vec_ext_v2si ((__v2si)__i, 0);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_to_int (__m64 __i)
+{
+  return _mm_cvtsi64_si32 (__i);
+}
+
+
+
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_to_int64 (__m64 __i)
+{
+  return (long long)__i;
+}
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtm64_si64 (__m64 __i)
+{
+  return (long long)__i;
+}
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64_si64x (__m64 __i)
+{
+  return (long long)__i;
+}
+
+
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_packs_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_packsswb ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_packsswb (__m64 __m1, __m64 __m2)
+{
+  return _mm_packs_pi16 (__m1, __m2);
+}
+
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_packs_pi32 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_packssdw ((__v2si)__m1, (__v2si)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_packssdw (__m64 __m1, __m64 __m2)
+{
+  return _mm_packs_pi32 (__m1, __m2);
+}
+
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_packs_pu16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_packuswb ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_packuswb (__m64 __m1, __m64 __m2)
+{
+  return _mm_packs_pu16 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_pi8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_punpckhbw ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_punpckhbw (__m64 __m1, __m64 __m2)
+{
+  return _mm_unpackhi_pi8 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_punpckhwd ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_punpckhwd (__m64 __m1, __m64 __m2)
+{
+  return _mm_unpackhi_pi16 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_pi32 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_punpckhdq ((__v2si)__m1, (__v2si)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_punpckhdq (__m64 __m1, __m64 __m2)
+{
+  return _mm_unpackhi_pi32 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_pi8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_punpcklbw ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_punpcklbw (__m64 __m1, __m64 __m2)
+{
+  return _mm_unpacklo_pi8 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_punpcklwd ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_punpcklwd (__m64 __m1, __m64 __m2)
+{
+  return _mm_unpacklo_pi16 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_pi32 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_punpckldq ((__v2si)__m1, (__v2si)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_punpckldq (__m64 __m1, __m64 __m2)
+{
+  return _mm_unpacklo_pi32 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_pi8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_paddb ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_paddb (__m64 __m1, __m64 __m2)
+{
+  return _mm_add_pi8 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_paddw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_paddw (__m64 __m1, __m64 __m2)
+{
+  return _mm_add_pi16 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_pi32 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_paddd ((__v2si)__m1, (__v2si)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_paddd (__m64 __m1, __m64 __m2)
+{
+  return _mm_add_pi32 (__m1, __m2);
+}
+# 319 "/usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h" 3 4
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_si64 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_paddq ((__v1di)__m1, (__v1di)__m2);
+}
+
+
+
+
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_adds_pi8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_paddsb ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_paddsb (__m64 __m1, __m64 __m2)
+{
+  return _mm_adds_pi8 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_adds_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_paddsw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_paddsw (__m64 __m1, __m64 __m2)
+{
+  return _mm_adds_pi16 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_adds_pu8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_paddusb ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_paddusb (__m64 __m1, __m64 __m2)
+{
+  return _mm_adds_pu8 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_adds_pu16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_paddusw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_paddusw (__m64 __m1, __m64 __m2)
+{
+  return _mm_adds_pu16 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_pi8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_psubb ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psubb (__m64 __m1, __m64 __m2)
+{
+  return _mm_sub_pi8 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_psubw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psubw (__m64 __m1, __m64 __m2)
+{
+  return _mm_sub_pi16 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_pi32 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_psubd ((__v2si)__m1, (__v2si)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psubd (__m64 __m1, __m64 __m2)
+{
+  return _mm_sub_pi32 (__m1, __m2);
+}
+# 431 "/usr/lib/gcc/x86_64-linux-gnu/6/include/mmintrin.h" 3 4
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_si64 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_psubq ((__v1di)__m1, (__v1di)__m2);
+}
+
+
+
+
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_subs_pi8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_psubsb ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psubsb (__m64 __m1, __m64 __m2)
+{
+  return _mm_subs_pi8 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_subs_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_psubsw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psubsw (__m64 __m1, __m64 __m2)
+{
+  return _mm_subs_pi16 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_subs_pu8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_psubusb ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psubusb (__m64 __m1, __m64 __m2)
+{
+  return _mm_subs_pu8 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_subs_pu16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_psubusw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psubusw (__m64 __m1, __m64 __m2)
+{
+  return _mm_subs_pu16 (__m1, __m2);
+}
+
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_madd_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pmaddwd ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pmaddwd (__m64 __m1, __m64 __m2)
+{
+  return _mm_madd_pi16 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mulhi_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pmulhw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pmulhw (__m64 __m1, __m64 __m2)
+{
+  return _mm_mulhi_pi16 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mullo_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pmullw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pmullw (__m64 __m1, __m64 __m2)
+{
+  return _mm_mullo_pi16 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sll_pi16 (__m64 __m, __m64 __count)
+{
+  return (__m64) __builtin_ia32_psllw ((__v4hi)__m, (__v4hi)__count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psllw (__m64 __m, __m64 __count)
+{
+  return _mm_sll_pi16 (__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_slli_pi16 (__m64 __m, int __count)
+{
+  return (__m64) __builtin_ia32_psllwi ((__v4hi)__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psllwi (__m64 __m, int __count)
+{
+  return _mm_slli_pi16 (__m, __count);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sll_pi32 (__m64 __m, __m64 __count)
+{
+  return (__m64) __builtin_ia32_pslld ((__v2si)__m, (__v2si)__count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pslld (__m64 __m, __m64 __count)
+{
+  return _mm_sll_pi32 (__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_slli_pi32 (__m64 __m, int __count)
+{
+  return (__m64) __builtin_ia32_pslldi ((__v2si)__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pslldi (__m64 __m, int __count)
+{
+  return _mm_slli_pi32 (__m, __count);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sll_si64 (__m64 __m, __m64 __count)
+{
+  return (__m64) __builtin_ia32_psllq ((__v1di)__m, (__v1di)__count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psllq (__m64 __m, __m64 __count)
+{
+  return _mm_sll_si64 (__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_slli_si64 (__m64 __m, int __count)
+{
+  return (__m64) __builtin_ia32_psllqi ((__v1di)__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psllqi (__m64 __m, int __count)
+{
+  return _mm_slli_si64 (__m, __count);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sra_pi16 (__m64 __m, __m64 __count)
+{
+  return (__m64) __builtin_ia32_psraw ((__v4hi)__m, (__v4hi)__count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psraw (__m64 __m, __m64 __count)
+{
+  return _mm_sra_pi16 (__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srai_pi16 (__m64 __m, int __count)
+{
+  return (__m64) __builtin_ia32_psrawi ((__v4hi)__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psrawi (__m64 __m, int __count)
+{
+  return _mm_srai_pi16 (__m, __count);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sra_pi32 (__m64 __m, __m64 __count)
+{
+  return (__m64) __builtin_ia32_psrad ((__v2si)__m, (__v2si)__count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psrad (__m64 __m, __m64 __count)
+{
+  return _mm_sra_pi32 (__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srai_pi32 (__m64 __m, int __count)
+{
+  return (__m64) __builtin_ia32_psradi ((__v2si)__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psradi (__m64 __m, int __count)
+{
+  return _mm_srai_pi32 (__m, __count);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srl_pi16 (__m64 __m, __m64 __count)
+{
+  return (__m64) __builtin_ia32_psrlw ((__v4hi)__m, (__v4hi)__count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psrlw (__m64 __m, __m64 __count)
+{
+  return _mm_srl_pi16 (__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srli_pi16 (__m64 __m, int __count)
+{
+  return (__m64) __builtin_ia32_psrlwi ((__v4hi)__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psrlwi (__m64 __m, int __count)
+{
+  return _mm_srli_pi16 (__m, __count);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srl_pi32 (__m64 __m, __m64 __count)
+{
+  return (__m64) __builtin_ia32_psrld ((__v2si)__m, (__v2si)__count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psrld (__m64 __m, __m64 __count)
+{
+  return _mm_srl_pi32 (__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srli_pi32 (__m64 __m, int __count)
+{
+  return (__m64) __builtin_ia32_psrldi ((__v2si)__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psrldi (__m64 __m, int __count)
+{
+  return _mm_srli_pi32 (__m, __count);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srl_si64 (__m64 __m, __m64 __count)
+{
+  return (__m64) __builtin_ia32_psrlq ((__v1di)__m, (__v1di)__count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psrlq (__m64 __m, __m64 __count)
+{
+  return _mm_srl_si64 (__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srli_si64 (__m64 __m, int __count)
+{
+  return (__m64) __builtin_ia32_psrlqi ((__v1di)__m, __count);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psrlqi (__m64 __m, int __count)
+{
+  return _mm_srli_si64 (__m, __count);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_and_si64 (__m64 __m1, __m64 __m2)
+{
+  return __builtin_ia32_pand (__m1, __m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pand (__m64 __m1, __m64 __m2)
+{
+  return _mm_and_si64 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_andnot_si64 (__m64 __m1, __m64 __m2)
+{
+  return __builtin_ia32_pandn (__m1, __m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pandn (__m64 __m1, __m64 __m2)
+{
+  return _mm_andnot_si64 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_or_si64 (__m64 __m1, __m64 __m2)
+{
+  return __builtin_ia32_por (__m1, __m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_por (__m64 __m1, __m64 __m2)
+{
+  return _mm_or_si64 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_xor_si64 (__m64 __m1, __m64 __m2)
+{
+  return __builtin_ia32_pxor (__m1, __m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pxor (__m64 __m1, __m64 __m2)
+{
+  return _mm_xor_si64 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_pi8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pcmpeqb ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pcmpeqb (__m64 __m1, __m64 __m2)
+{
+  return _mm_cmpeq_pi8 (__m1, __m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_pi8 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pcmpgtb ((__v8qi)__m1, (__v8qi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pcmpgtb (__m64 __m1, __m64 __m2)
+{
+  return _mm_cmpgt_pi8 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pcmpeqw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pcmpeqw (__m64 __m1, __m64 __m2)
+{
+  return _mm_cmpeq_pi16 (__m1, __m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_pi16 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pcmpgtw ((__v4hi)__m1, (__v4hi)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pcmpgtw (__m64 __m1, __m64 __m2)
+{
+  return _mm_cmpgt_pi16 (__m1, __m2);
+}
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_pi32 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pcmpeqd ((__v2si)__m1, (__v2si)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pcmpeqd (__m64 __m1, __m64 __m2)
+{
+  return _mm_cmpeq_pi32 (__m1, __m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_pi32 (__m64 __m1, __m64 __m2)
+{
+  return (__m64) __builtin_ia32_pcmpgtd ((__v2si)__m1, (__v2si)__m2);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pcmpgtd (__m64 __m1, __m64 __m2)
+{
+  return _mm_cmpgt_pi32 (__m1, __m2);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setzero_si64 (void)
+{
+  return (__m64)0LL;
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_pi32 (int __i1, int __i0)
+{
+  return (__m64) __builtin_ia32_vec_init_v2si (__i0, __i1);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_pi16 (short __w3, short __w2, short __w1, short __w0)
+{
+  return (__m64) __builtin_ia32_vec_init_v4hi (__w0, __w1, __w2, __w3);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_pi8 (char __b7, char __b6, char __b5, char __b4,
+      char __b3, char __b2, char __b1, char __b0)
+{
+  return (__m64) __builtin_ia32_vec_init_v8qi (__b0, __b1, __b2, __b3,
+            __b4, __b5, __b6, __b7);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_pi32 (int __i0, int __i1)
+{
+  return _mm_set_pi32 (__i1, __i0);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_pi16 (short __w0, short __w1, short __w2, short __w3)
+{
+  return _mm_set_pi16 (__w3, __w2, __w1, __w0);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_pi8 (char __b0, char __b1, char __b2, char __b3,
+       char __b4, char __b5, char __b6, char __b7)
+{
+  return _mm_set_pi8 (__b7, __b6, __b5, __b4, __b3, __b2, __b1, __b0);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_pi32 (int __i)
+{
+  return _mm_set_pi32 (__i, __i);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_pi16 (short __w)
+{
+  return _mm_set_pi16 (__w, __w, __w, __w);
+}
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_pi8 (char __b)
+{
+  return _mm_set_pi8 (__b, __b, __b, __b, __b, __b, __b, __b);
+}
+# 32 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 2 3 4
+
+
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/mm_malloc.h" 1 3 4
+# 27 "/usr/lib/gcc/x86_64-linux-gnu/6/include/mm_malloc.h" 3 4
 # 1 "/usr/include/stdlib.h" 1 3 4
-# 61 "/usr/include/stdlib.h" 3 4
-# 1 "/usr/include/Availability.h" 1 3 4
-# 206 "/usr/include/Availability.h" 3 4
-# 1 "/usr/include/AvailabilityInternal.h" 1 3 4
-# 207 "/usr/include/Availability.h" 2 3 4
-# 62 "/usr/include/stdlib.h" 2 3 4
-
-# 1 "/usr/include/_types.h" 1 3 4
-# 27 "/usr/include/_types.h" 3 4
-# 1 "/usr/include/sys/_types.h" 1 3 4
-# 33 "/usr/include/sys/_types.h" 3 4
-# 1 "/usr/include/machine/_types.h" 1 3 4
-# 32 "/usr/include/machine/_types.h" 3 4
-# 1 "/usr/include/i386/_types.h" 1 3 4
-# 37 "/usr/include/i386/_types.h" 3 4
-typedef signed char __int8_t;
-
-
-
-typedef unsigned char __uint8_t;
-typedef short __int16_t;
-typedef unsigned short __uint16_t;
-typedef int __int32_t;
-typedef unsigned int __uint32_t;
-typedef long long __int64_t;
-typedef unsigned long long __uint64_t;
-
-typedef long __darwin_intptr_t;
-typedef unsigned int __darwin_natural_t;
-# 70 "/usr/include/i386/_types.h" 3 4
-typedef int __darwin_ct_rune_t;
-
-
-
-
-
-typedef union {
- char __mbstate8[128];
- long long _mbstateL;
-} __mbstate_t;
-
-typedef __mbstate_t __darwin_mbstate_t;
-
-
-typedef long int __darwin_ptrdiff_t;
+# 32 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 1 3 4
+# 33 "/usr/include/stdlib.h" 2 3 4
 
 
 
@@ -731,253 +1180,34 @@ typedef long int __darwin_ptrdiff_t;
 
 
 
-typedef long unsigned int __darwin_size_t;
 
-
-
-
-
-typedef __builtin_va_list __darwin_va_list;
-
-
-
-
-
-typedef int __darwin_wchar_t;
-
-
-
-
-typedef __darwin_wchar_t __darwin_rune_t;
-
-
-typedef int __darwin_wint_t;
-
-
-
-
-typedef unsigned long __darwin_clock_t;
-typedef __uint32_t __darwin_socklen_t;
-typedef long __darwin_ssize_t;
-typedef long __darwin_time_t;
-# 33 "/usr/include/machine/_types.h" 2 3 4
-# 34 "/usr/include/sys/_types.h" 2 3 4
-# 55 "/usr/include/sys/_types.h" 3 4
-typedef __int64_t __darwin_blkcnt_t;
-typedef __int32_t __darwin_blksize_t;
-typedef __int32_t __darwin_dev_t;
-typedef unsigned int __darwin_fsblkcnt_t;
-typedef unsigned int __darwin_fsfilcnt_t;
-typedef __uint32_t __darwin_gid_t;
-typedef __uint32_t __darwin_id_t;
-typedef __uint64_t __darwin_ino64_t;
-
-typedef __darwin_ino64_t __darwin_ino_t;
-
-
-
-typedef __darwin_natural_t __darwin_mach_port_name_t;
-typedef __darwin_mach_port_name_t __darwin_mach_port_t;
-typedef __uint16_t __darwin_mode_t;
-typedef __int64_t __darwin_off_t;
-typedef __int32_t __darwin_pid_t;
-typedef __uint32_t __darwin_sigset_t;
-typedef __int32_t __darwin_suseconds_t;
-typedef __uint32_t __darwin_uid_t;
-typedef __uint32_t __darwin_useconds_t;
-typedef unsigned char __darwin_uuid_t[16];
-typedef char __darwin_uuid_string_t[37];
-
-
-# 1 "/usr/include/sys/_pthread/_pthread_types.h" 1 3 4
-# 57 "/usr/include/sys/_pthread/_pthread_types.h" 3 4
-struct __darwin_pthread_handler_rec {
- void (*__routine)(void *);
- void *__arg;
- struct __darwin_pthread_handler_rec *__next;
-};
-
-struct _opaque_pthread_attr_t {
- long __sig;
- char __opaque[56];
-};
-
-struct _opaque_pthread_cond_t {
- long __sig;
- char __opaque[40];
-};
-
-struct _opaque_pthread_condattr_t {
- long __sig;
- char __opaque[8];
-};
-
-struct _opaque_pthread_mutex_t {
- long __sig;
- char __opaque[56];
-};
-
-struct _opaque_pthread_mutexattr_t {
- long __sig;
- char __opaque[8];
-};
-
-struct _opaque_pthread_once_t {
- long __sig;
- char __opaque[8];
-};
-
-struct _opaque_pthread_rwlock_t {
- long __sig;
- char __opaque[192];
-};
-
-struct _opaque_pthread_rwlockattr_t {
- long __sig;
- char __opaque[16];
-};
-
-struct _opaque_pthread_t {
- long __sig;
- struct __darwin_pthread_handler_rec *__cleanup_stack;
- char __opaque[8176];
-};
-
-typedef struct _opaque_pthread_attr_t __darwin_pthread_attr_t;
-typedef struct _opaque_pthread_cond_t __darwin_pthread_cond_t;
-typedef struct _opaque_pthread_condattr_t __darwin_pthread_condattr_t;
-typedef unsigned long __darwin_pthread_key_t;
-typedef struct _opaque_pthread_mutex_t __darwin_pthread_mutex_t;
-typedef struct _opaque_pthread_mutexattr_t __darwin_pthread_mutexattr_t;
-typedef struct _opaque_pthread_once_t __darwin_pthread_once_t;
-typedef struct _opaque_pthread_rwlock_t __darwin_pthread_rwlock_t;
-typedef struct _opaque_pthread_rwlockattr_t __darwin_pthread_rwlockattr_t;
-typedef struct _opaque_pthread_t *__darwin_pthread_t;
-# 81 "/usr/include/sys/_types.h" 2 3 4
-# 28 "/usr/include/_types.h" 2 3 4
-# 40 "/usr/include/_types.h" 3 4
-typedef int __darwin_nl_item;
-typedef int __darwin_wctrans_t;
-
-typedef __uint32_t __darwin_wctype_t;
-# 64 "/usr/include/stdlib.h" 2 3 4
-
-# 1 "/usr/include/sys/wait.h" 1 3 4
-# 79 "/usr/include/sys/wait.h" 3 4
-typedef enum {
- P_ALL,
- P_PID,
- P_PGID
+# 1 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 1 3 4
+# 50 "/usr/include/x86_64-linux-gnu/bits/waitflags.h" 3 4
+typedef enum
+{
+  P_ALL,
+  P_PID,
+  P_PGID
 } idtype_t;
+# 42 "/usr/include/stdlib.h" 2 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/waitstatus.h" 1 3 4
+# 43 "/usr/include/stdlib.h" 2 3 4
+# 56 "/usr/include/stdlib.h" 3 4
+
+
+typedef struct
+  {
+    int quot;
+    int rem;
+  } div_t;
 
 
 
-
-
-
-# 1 "/usr/include/sys/_types/_pid_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_pid_t.h" 3 4
-typedef __darwin_pid_t pid_t;
-# 90 "/usr/include/sys/wait.h" 2 3 4
-# 1 "/usr/include/sys/_types/_id_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_id_t.h" 3 4
-typedef __darwin_id_t id_t;
-# 91 "/usr/include/sys/wait.h" 2 3 4
-# 109 "/usr/include/sys/wait.h" 3 4
-# 1 "/usr/include/sys/signal.h" 1 3 4
-# 73 "/usr/include/sys/signal.h" 3 4
-# 1 "/usr/include/sys/appleapiopts.h" 1 3 4
-# 74 "/usr/include/sys/signal.h" 2 3 4
-
-
-
-
-
-
-
-
-# 1 "/usr/include/machine/signal.h" 1 3 4
-# 32 "/usr/include/machine/signal.h" 3 4
-# 1 "/usr/include/i386/signal.h" 1 3 4
-# 39 "/usr/include/i386/signal.h" 3 4
-typedef int sig_atomic_t;
-# 33 "/usr/include/machine/signal.h" 2 3 4
-# 83 "/usr/include/sys/signal.h" 2 3 4
-# 146 "/usr/include/sys/signal.h" 3 4
-# 1 "/usr/include/machine/_mcontext.h" 1 3 4
-# 29 "/usr/include/machine/_mcontext.h" 3 4
-# 1 "/usr/include/i386/_mcontext.h" 1 3 4
-# 34 "/usr/include/i386/_mcontext.h" 3 4
-# 1 "/usr/include/mach/machine/_structs.h" 1 3 4
-# 33 "/usr/include/mach/machine/_structs.h" 3 4
-# 1 "/usr/include/mach/i386/_structs.h" 1 3 4
-# 36 "/usr/include/mach/i386/_structs.h" 3 4
-# 1 "/usr/include/machine/types.h" 1 3 4
-# 35 "/usr/include/machine/types.h" 3 4
-# 1 "/usr/include/i386/types.h" 1 3 4
-# 76 "/usr/include/i386/types.h" 3 4
-# 1 "/usr/include/sys/_types/_int8_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_int8_t.h" 3 4
-typedef signed char int8_t;
-# 77 "/usr/include/i386/types.h" 2 3 4
-# 1 "/usr/include/sys/_types/_int16_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_int16_t.h" 3 4
-typedef short int16_t;
-# 78 "/usr/include/i386/types.h" 2 3 4
-# 1 "/usr/include/sys/_types/_int32_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_int32_t.h" 3 4
-typedef int int32_t;
-# 79 "/usr/include/i386/types.h" 2 3 4
-# 1 "/usr/include/sys/_types/_int64_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_int64_t.h" 3 4
-typedef long long int64_t;
-# 80 "/usr/include/i386/types.h" 2 3 4
-
-# 1 "/usr/include/sys/_types/_u_int8_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_u_int8_t.h" 3 4
-typedef unsigned char u_int8_t;
-# 82 "/usr/include/i386/types.h" 2 3 4
-# 1 "/usr/include/sys/_types/_u_int16_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_u_int16_t.h" 3 4
-typedef unsigned short u_int16_t;
-# 83 "/usr/include/i386/types.h" 2 3 4
-# 1 "/usr/include/sys/_types/_u_int32_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_u_int32_t.h" 3 4
-typedef unsigned int u_int32_t;
-# 84 "/usr/include/i386/types.h" 2 3 4
-# 1 "/usr/include/sys/_types/_u_int64_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_u_int64_t.h" 3 4
-typedef unsigned long long u_int64_t;
-# 85 "/usr/include/i386/types.h" 2 3 4
-
-
-typedef int64_t register_t;
-
-
-
-
-
-# 1 "/usr/include/sys/_types/_intptr_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_intptr_t.h" 3 4
-# 1 "/usr/include/machine/types.h" 1 3 4
-# 31 "/usr/include/sys/_types/_intptr_t.h" 2 3 4
-
-typedef __darwin_intptr_t intptr_t;
-# 93 "/usr/include/i386/types.h" 2 3 4
-# 1 "/usr/include/sys/_types/_uintptr_t.h" 1 3 4
-# 30 "/usr/include/sys/_types/_uintptr_t.h" 3 4
-typedef unsigned long uintptr_t;
-# 94 "/usr/include/i386/types.h" 2 3 4
-
-
-
-typedef u_int64_t user_addr_t;
-typedef u_int64_t user_size_t;
-typedef int64_t user_ssize_t;
-typedef int64_t user_long_t;
-typedef u_int64_t user_ulong_t;
-typedef int64_t user_time_t;
-typedef int64_t user_off_t;
+typedef struct
+  {
+    long int quot;
+    long int rem;
+  } ldiv_t;
 
 
 
@@ -985,3622 +1215,3840 @@ typedef int64_t user_off_t;
 
 
 
-typedef u_int64_t syscall_arg_t;
-# 36 "/usr/include/machine/types.h" 2 3 4
-# 37 "/usr/include/mach/i386/_structs.h" 2 3 4
-# 46 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_i386_thread_state
+__extension__ typedef struct
+  {
+    long long int quot;
+    long long int rem;
+  } lldiv_t;
+
+
+# 100 "/usr/include/stdlib.h" 3 4
+extern size_t __ctype_get_mb_cur_max (void) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+extern double atof (const char *__nptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+extern int atoi (const char *__nptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+extern long int atol (const char *__nptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+__extension__ extern long long int atoll (const char *__nptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+
+extern double strtod (const char *__restrict __nptr,
+        char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern float strtof (const char *__restrict __nptr,
+       char **__restrict __endptr) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+extern long double strtold (const char *__restrict __nptr,
+       char **__restrict __endptr)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern long int strtol (const char *__restrict __nptr,
+   char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+extern unsigned long int strtoul (const char *__restrict __nptr,
+      char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+__extension__
+extern long long int strtoq (const char *__restrict __nptr,
+        char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+__extension__
+extern unsigned long long int strtouq (const char *__restrict __nptr,
+           char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+__extension__
+extern long long int strtoll (const char *__restrict __nptr,
+         char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+__extension__
+extern unsigned long long int strtoull (const char *__restrict __nptr,
+     char **__restrict __endptr, int __base)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+# 237 "/usr/include/stdlib.h" 3 4
+
+extern __inline __attribute__ ((__gnu_inline__)) int
+__attribute__ ((__nothrow__ , __leaf__)) atoi (const char *__nptr)
 {
-    unsigned int __eax;
-    unsigned int __ebx;
-    unsigned int __ecx;
-    unsigned int __edx;
-    unsigned int __edi;
-    unsigned int __esi;
-    unsigned int __ebp;
-    unsigned int __esp;
-    unsigned int __ss;
-    unsigned int __eflags;
-    unsigned int __eip;
-    unsigned int __cs;
-    unsigned int __ds;
-    unsigned int __es;
-    unsigned int __fs;
-    unsigned int __gs;
-};
-# 92 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_fp_control
+  return (int) strtol (__nptr, (char **) ((void *)0), 10);
+}
+extern __inline __attribute__ ((__gnu_inline__)) long int
+__attribute__ ((__nothrow__ , __leaf__)) atol (const char *__nptr)
 {
-    unsigned short __invalid :1,
-        __denorm :1,
-    __zdiv :1,
-    __ovrfl :1,
-    __undfl :1,
-    __precis :1,
-      :2,
-    __pc :2,
+  return strtol (__nptr, (char **) ((void *)0), 10);
+}
 
 
 
 
-
-    __rc :2,
-
-
-
-
-
-
-             :1,
-      :3;
-};
-typedef struct __darwin_fp_control __darwin_fp_control_t;
-# 150 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_fp_status
+__extension__ extern __inline __attribute__ ((__gnu_inline__)) long long int
+__attribute__ ((__nothrow__ , __leaf__)) atoll (const char *__nptr)
 {
-    unsigned short __invalid :1,
-        __denorm :1,
-    __zdiv :1,
-    __ovrfl :1,
-    __undfl :1,
-    __precis :1,
-    __stkflt :1,
-    __errsumm :1,
-    __c0 :1,
-    __c1 :1,
-    __c2 :1,
-    __tos :3,
-    __c3 :1,
-    __busy :1;
-};
-typedef struct __darwin_fp_status __darwin_fp_status_t;
-# 194 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_mmst_reg
+  return strtoll (__nptr, (char **) ((void *)0), 10);
+}
+
+# 266 "/usr/include/stdlib.h" 3 4
+extern char *l64a (long int __n) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+extern long int a64l (const char *__s)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1))) ;
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/sys/types.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/types.h" 1 3 4
+# 27 "/usr/include/x86_64-linux-gnu/bits/types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4
+
+
+typedef unsigned char __u_char;
+typedef unsigned short int __u_short;
+typedef unsigned int __u_int;
+typedef unsigned long int __u_long;
+
+
+typedef signed char __int8_t;
+typedef unsigned char __uint8_t;
+typedef signed short int __int16_t;
+typedef unsigned short int __uint16_t;
+typedef signed int __int32_t;
+typedef unsigned int __uint32_t;
+
+typedef signed long int __int64_t;
+typedef unsigned long int __uint64_t;
+
+
+
+
+
+
+
+typedef long int __quad_t;
+typedef unsigned long int __u_quad_t;
+# 121 "/usr/include/x86_64-linux-gnu/bits/types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/typesizes.h" 1 3 4
+# 122 "/usr/include/x86_64-linux-gnu/bits/types.h" 2 3 4
+
+
+typedef unsigned long int __dev_t;
+typedef unsigned int __uid_t;
+typedef unsigned int __gid_t;
+typedef unsigned long int __ino_t;
+typedef unsigned long int __ino64_t;
+typedef unsigned int __mode_t;
+typedef unsigned long int __nlink_t;
+typedef long int __off_t;
+typedef long int __off64_t;
+typedef int __pid_t;
+typedef struct { int __val[2]; } __fsid_t;
+typedef long int __clock_t;
+typedef unsigned long int __rlim_t;
+typedef unsigned long int __rlim64_t;
+typedef unsigned int __id_t;
+typedef long int __time_t;
+typedef unsigned int __useconds_t;
+typedef long int __suseconds_t;
+
+typedef int __daddr_t;
+typedef int __key_t;
+
+
+typedef int __clockid_t;
+
+
+typedef void * __timer_t;
+
+
+typedef long int __blksize_t;
+
+
+
+
+typedef long int __blkcnt_t;
+typedef long int __blkcnt64_t;
+
+
+typedef unsigned long int __fsblkcnt_t;
+typedef unsigned long int __fsblkcnt64_t;
+
+
+typedef unsigned long int __fsfilcnt_t;
+typedef unsigned long int __fsfilcnt64_t;
+
+
+typedef long int __fsword_t;
+
+typedef long int __ssize_t;
+
+
+typedef long int __syscall_slong_t;
+
+typedef unsigned long int __syscall_ulong_t;
+
+
+
+typedef __off64_t __loff_t;
+typedef __quad_t *__qaddr_t;
+typedef char *__caddr_t;
+
+
+typedef long int __intptr_t;
+
+
+typedef unsigned int __socklen_t;
+# 30 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+typedef __u_char u_char;
+typedef __u_short u_short;
+typedef __u_int u_int;
+typedef __u_long u_long;
+typedef __quad_t quad_t;
+typedef __u_quad_t u_quad_t;
+typedef __fsid_t fsid_t;
+
+
+
+
+typedef __loff_t loff_t;
+
+
+
+typedef __ino_t ino_t;
+# 60 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+typedef __dev_t dev_t;
+
+
+
+
+typedef __gid_t gid_t;
+
+
+
+
+typedef __mode_t mode_t;
+
+
+
+
+typedef __nlink_t nlink_t;
+
+
+
+
+typedef __uid_t uid_t;
+
+
+
+
+
+typedef __off_t off_t;
+# 98 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+typedef __pid_t pid_t;
+
+
+
+
+
+typedef __id_t id_t;
+
+
+
+
+typedef __ssize_t ssize_t;
+
+
+
+
+
+typedef __daddr_t daddr_t;
+typedef __caddr_t caddr_t;
+
+
+
+
+
+typedef __key_t key_t;
+# 132 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+# 1 "/usr/include/time.h" 1 3 4
+# 57 "/usr/include/time.h" 3 4
+
+
+typedef __clock_t clock_t;
+
+
+
+# 73 "/usr/include/time.h" 3 4
+
+
+typedef __time_t time_t;
+
+
+
+# 91 "/usr/include/time.h" 3 4
+typedef __clockid_t clockid_t;
+# 103 "/usr/include/time.h" 3 4
+typedef __timer_t timer_t;
+# 133 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+# 146 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 1 3 4
+# 147 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+typedef unsigned long int ulong;
+typedef unsigned short int ushort;
+typedef unsigned int uint;
+# 194 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+typedef int int8_t __attribute__ ((__mode__ (__QI__)));
+typedef int int16_t __attribute__ ((__mode__ (__HI__)));
+typedef int int32_t __attribute__ ((__mode__ (__SI__)));
+typedef int int64_t __attribute__ ((__mode__ (__DI__)));
+
+
+typedef unsigned int u_int8_t __attribute__ ((__mode__ (__QI__)));
+typedef unsigned int u_int16_t __attribute__ ((__mode__ (__HI__)));
+typedef unsigned int u_int32_t __attribute__ ((__mode__ (__SI__)));
+typedef unsigned int u_int64_t __attribute__ ((__mode__ (__DI__)));
+
+typedef int register_t __attribute__ ((__mode__ (__word__)));
+# 216 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+# 1 "/usr/include/endian.h" 1 3 4
+# 36 "/usr/include/endian.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/endian.h" 1 3 4
+# 37 "/usr/include/endian.h" 2 3 4
+# 60 "/usr/include/endian.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 1 3 4
+# 28 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 29 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 2 3 4
+
+
+
+
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/byteswap-16.h" 1 3 4
+# 36 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 2 3 4
+# 44 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
+static __inline unsigned int
+__bswap_32 (unsigned int __bsx)
 {
- char __mmst_reg[10];
- char __mmst_rsrv[6];
-};
-# 213 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_xmm_reg
+  return __builtin_bswap32 (__bsx);
+}
+# 108 "/usr/include/x86_64-linux-gnu/bits/byteswap.h" 3 4
+static __inline __uint64_t
+__bswap_64 (__uint64_t __bsx)
 {
- char __xmm_reg[16];
-};
-# 229 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_ymm_reg
-{
- char __ymm_reg[32];
-};
-# 245 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_zmm_reg
-{
- char __zmm_reg[64];
-};
-# 259 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_opmask_reg
-{
- char __opmask_reg[8];
-};
-# 281 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_i386_float_state
-{
- int __fpu_reserved[2];
- struct __darwin_fp_control __fpu_fcw;
- struct __darwin_fp_status __fpu_fsw;
- __uint8_t __fpu_ftw;
- __uint8_t __fpu_rsrv1;
- __uint16_t __fpu_fop;
- __uint32_t __fpu_ip;
- __uint16_t __fpu_cs;
- __uint16_t __fpu_rsrv2;
- __uint32_t __fpu_dp;
- __uint16_t __fpu_ds;
- __uint16_t __fpu_rsrv3;
- __uint32_t __fpu_mxcsr;
- __uint32_t __fpu_mxcsrmask;
- struct __darwin_mmst_reg __fpu_stmm0;
- struct __darwin_mmst_reg __fpu_stmm1;
- struct __darwin_mmst_reg __fpu_stmm2;
- struct __darwin_mmst_reg __fpu_stmm3;
- struct __darwin_mmst_reg __fpu_stmm4;
- struct __darwin_mmst_reg __fpu_stmm5;
- struct __darwin_mmst_reg __fpu_stmm6;
- struct __darwin_mmst_reg __fpu_stmm7;
- struct __darwin_xmm_reg __fpu_xmm0;
- struct __darwin_xmm_reg __fpu_xmm1;
- struct __darwin_xmm_reg __fpu_xmm2;
- struct __darwin_xmm_reg __fpu_xmm3;
- struct __darwin_xmm_reg __fpu_xmm4;
- struct __darwin_xmm_reg __fpu_xmm5;
- struct __darwin_xmm_reg __fpu_xmm6;
- struct __darwin_xmm_reg __fpu_xmm7;
- char __fpu_rsrv4[14*16];
- int __fpu_reserved1;
-};
+  return __builtin_bswap64 (__bsx);
+}
+# 61 "/usr/include/endian.h" 2 3 4
+# 217 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
 
 
-struct __darwin_i386_avx_state
-{
- int __fpu_reserved[2];
- struct __darwin_fp_control __fpu_fcw;
- struct __darwin_fp_status __fpu_fsw;
- __uint8_t __fpu_ftw;
- __uint8_t __fpu_rsrv1;
- __uint16_t __fpu_fop;
- __uint32_t __fpu_ip;
- __uint16_t __fpu_cs;
- __uint16_t __fpu_rsrv2;
- __uint32_t __fpu_dp;
- __uint16_t __fpu_ds;
- __uint16_t __fpu_rsrv3;
- __uint32_t __fpu_mxcsr;
- __uint32_t __fpu_mxcsrmask;
- struct __darwin_mmst_reg __fpu_stmm0;
- struct __darwin_mmst_reg __fpu_stmm1;
- struct __darwin_mmst_reg __fpu_stmm2;
- struct __darwin_mmst_reg __fpu_stmm3;
- struct __darwin_mmst_reg __fpu_stmm4;
- struct __darwin_mmst_reg __fpu_stmm5;
- struct __darwin_mmst_reg __fpu_stmm6;
- struct __darwin_mmst_reg __fpu_stmm7;
- struct __darwin_xmm_reg __fpu_xmm0;
- struct __darwin_xmm_reg __fpu_xmm1;
- struct __darwin_xmm_reg __fpu_xmm2;
- struct __darwin_xmm_reg __fpu_xmm3;
- struct __darwin_xmm_reg __fpu_xmm4;
- struct __darwin_xmm_reg __fpu_xmm5;
- struct __darwin_xmm_reg __fpu_xmm6;
- struct __darwin_xmm_reg __fpu_xmm7;
- char __fpu_rsrv4[14*16];
- int __fpu_reserved1;
- char __avx_reserved1[64];
- struct __darwin_xmm_reg __fpu_ymmh0;
- struct __darwin_xmm_reg __fpu_ymmh1;
- struct __darwin_xmm_reg __fpu_ymmh2;
- struct __darwin_xmm_reg __fpu_ymmh3;
- struct __darwin_xmm_reg __fpu_ymmh4;
- struct __darwin_xmm_reg __fpu_ymmh5;
- struct __darwin_xmm_reg __fpu_ymmh6;
- struct __darwin_xmm_reg __fpu_ymmh7;
-};
+# 1 "/usr/include/x86_64-linux-gnu/sys/select.h" 1 3 4
+# 30 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/select.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/select.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 23 "/usr/include/x86_64-linux-gnu/bits/select.h" 2 3 4
+# 31 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
 
 
-struct __darwin_i386_avx512_state
-{
- int __fpu_reserved[2];
- struct __darwin_fp_control __fpu_fcw;
- struct __darwin_fp_status __fpu_fsw;
- __uint8_t __fpu_ftw;
- __uint8_t __fpu_rsrv1;
- __uint16_t __fpu_fop;
- __uint32_t __fpu_ip;
- __uint16_t __fpu_cs;
- __uint16_t __fpu_rsrv2;
- __uint32_t __fpu_dp;
- __uint16_t __fpu_ds;
- __uint16_t __fpu_rsrv3;
- __uint32_t __fpu_mxcsr;
- __uint32_t __fpu_mxcsrmask;
- struct __darwin_mmst_reg __fpu_stmm0;
- struct __darwin_mmst_reg __fpu_stmm1;
- struct __darwin_mmst_reg __fpu_stmm2;
- struct __darwin_mmst_reg __fpu_stmm3;
- struct __darwin_mmst_reg __fpu_stmm4;
- struct __darwin_mmst_reg __fpu_stmm5;
- struct __darwin_mmst_reg __fpu_stmm6;
- struct __darwin_mmst_reg __fpu_stmm7;
- struct __darwin_xmm_reg __fpu_xmm0;
- struct __darwin_xmm_reg __fpu_xmm1;
- struct __darwin_xmm_reg __fpu_xmm2;
- struct __darwin_xmm_reg __fpu_xmm3;
- struct __darwin_xmm_reg __fpu_xmm4;
- struct __darwin_xmm_reg __fpu_xmm5;
- struct __darwin_xmm_reg __fpu_xmm6;
- struct __darwin_xmm_reg __fpu_xmm7;
- char __fpu_rsrv4[14*16];
- int __fpu_reserved1;
- char __avx_reserved1[64];
- struct __darwin_xmm_reg __fpu_ymmh0;
- struct __darwin_xmm_reg __fpu_ymmh1;
- struct __darwin_xmm_reg __fpu_ymmh2;
- struct __darwin_xmm_reg __fpu_ymmh3;
- struct __darwin_xmm_reg __fpu_ymmh4;
- struct __darwin_xmm_reg __fpu_ymmh5;
- struct __darwin_xmm_reg __fpu_ymmh6;
- struct __darwin_xmm_reg __fpu_ymmh7;
- struct __darwin_opmask_reg __fpu_k0;
- struct __darwin_opmask_reg __fpu_k1;
- struct __darwin_opmask_reg __fpu_k2;
- struct __darwin_opmask_reg __fpu_k3;
- struct __darwin_opmask_reg __fpu_k4;
- struct __darwin_opmask_reg __fpu_k5;
- struct __darwin_opmask_reg __fpu_k6;
- struct __darwin_opmask_reg __fpu_k7;
- struct __darwin_ymm_reg __fpu_zmmh0;
- struct __darwin_ymm_reg __fpu_zmmh1;
- struct __darwin_ymm_reg __fpu_zmmh2;
- struct __darwin_ymm_reg __fpu_zmmh3;
- struct __darwin_ymm_reg __fpu_zmmh4;
- struct __darwin_ymm_reg __fpu_zmmh5;
- struct __darwin_ymm_reg __fpu_zmmh6;
- struct __darwin_ymm_reg __fpu_zmmh7;
-};
-# 575 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_i386_exception_state
-{
- __uint16_t __trapno;
- __uint16_t __cpu;
- __uint32_t __err;
- __uint32_t __faultvaddr;
-};
-# 595 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_x86_debug_state32
-{
- unsigned int __dr0;
- unsigned int __dr1;
- unsigned int __dr2;
- unsigned int __dr3;
- unsigned int __dr4;
- unsigned int __dr5;
- unsigned int __dr6;
- unsigned int __dr7;
-};
-# 627 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_x86_thread_state64
-{
- __uint64_t __rax;
- __uint64_t __rbx;
- __uint64_t __rcx;
- __uint64_t __rdx;
- __uint64_t __rdi;
- __uint64_t __rsi;
- __uint64_t __rbp;
- __uint64_t __rsp;
- __uint64_t __r8;
- __uint64_t __r9;
- __uint64_t __r10;
- __uint64_t __r11;
- __uint64_t __r12;
- __uint64_t __r13;
- __uint64_t __r14;
- __uint64_t __r15;
- __uint64_t __rip;
- __uint64_t __rflags;
- __uint64_t __cs;
- __uint64_t __fs;
- __uint64_t __gs;
-};
-# 682 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_x86_float_state64
-{
- int __fpu_reserved[2];
- struct __darwin_fp_control __fpu_fcw;
- struct __darwin_fp_status __fpu_fsw;
- __uint8_t __fpu_ftw;
- __uint8_t __fpu_rsrv1;
- __uint16_t __fpu_fop;
+# 1 "/usr/include/x86_64-linux-gnu/bits/sigset.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/sigset.h" 3 4
+typedef int __sig_atomic_t;
 
 
- __uint32_t __fpu_ip;
- __uint16_t __fpu_cs;
 
- __uint16_t __fpu_rsrv2;
 
+typedef struct
+  {
+    unsigned long int __val[(1024 / (8 * sizeof (unsigned long int)))];
+  } __sigset_t;
+# 34 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
 
- __uint32_t __fpu_dp;
- __uint16_t __fpu_ds;
 
- __uint16_t __fpu_rsrv3;
- __uint32_t __fpu_mxcsr;
- __uint32_t __fpu_mxcsrmask;
- struct __darwin_mmst_reg __fpu_stmm0;
- struct __darwin_mmst_reg __fpu_stmm1;
- struct __darwin_mmst_reg __fpu_stmm2;
- struct __darwin_mmst_reg __fpu_stmm3;
- struct __darwin_mmst_reg __fpu_stmm4;
- struct __darwin_mmst_reg __fpu_stmm5;
- struct __darwin_mmst_reg __fpu_stmm6;
- struct __darwin_mmst_reg __fpu_stmm7;
- struct __darwin_xmm_reg __fpu_xmm0;
- struct __darwin_xmm_reg __fpu_xmm1;
- struct __darwin_xmm_reg __fpu_xmm2;
- struct __darwin_xmm_reg __fpu_xmm3;
- struct __darwin_xmm_reg __fpu_xmm4;
- struct __darwin_xmm_reg __fpu_xmm5;
- struct __darwin_xmm_reg __fpu_xmm6;
- struct __darwin_xmm_reg __fpu_xmm7;
- struct __darwin_xmm_reg __fpu_xmm8;
- struct __darwin_xmm_reg __fpu_xmm9;
- struct __darwin_xmm_reg __fpu_xmm10;
- struct __darwin_xmm_reg __fpu_xmm11;
- struct __darwin_xmm_reg __fpu_xmm12;
- struct __darwin_xmm_reg __fpu_xmm13;
- struct __darwin_xmm_reg __fpu_xmm14;
- struct __darwin_xmm_reg __fpu_xmm15;
- char __fpu_rsrv4[6*16];
- int __fpu_reserved1;
-};
 
+typedef __sigset_t sigset_t;
 
-struct __darwin_x86_avx_state64
-{
- int __fpu_reserved[2];
- struct __darwin_fp_control __fpu_fcw;
- struct __darwin_fp_status __fpu_fsw;
- __uint8_t __fpu_ftw;
- __uint8_t __fpu_rsrv1;
- __uint16_t __fpu_fop;
 
 
- __uint32_t __fpu_ip;
- __uint16_t __fpu_cs;
 
- __uint16_t __fpu_rsrv2;
 
 
- __uint32_t __fpu_dp;
- __uint16_t __fpu_ds;
 
- __uint16_t __fpu_rsrv3;
- __uint32_t __fpu_mxcsr;
- __uint32_t __fpu_mxcsrmask;
- struct __darwin_mmst_reg __fpu_stmm0;
- struct __darwin_mmst_reg __fpu_stmm1;
- struct __darwin_mmst_reg __fpu_stmm2;
- struct __darwin_mmst_reg __fpu_stmm3;
- struct __darwin_mmst_reg __fpu_stmm4;
- struct __darwin_mmst_reg __fpu_stmm5;
- struct __darwin_mmst_reg __fpu_stmm6;
- struct __darwin_mmst_reg __fpu_stmm7;
- struct __darwin_xmm_reg __fpu_xmm0;
- struct __darwin_xmm_reg __fpu_xmm1;
- struct __darwin_xmm_reg __fpu_xmm2;
- struct __darwin_xmm_reg __fpu_xmm3;
- struct __darwin_xmm_reg __fpu_xmm4;
- struct __darwin_xmm_reg __fpu_xmm5;
- struct __darwin_xmm_reg __fpu_xmm6;
- struct __darwin_xmm_reg __fpu_xmm7;
- struct __darwin_xmm_reg __fpu_xmm8;
- struct __darwin_xmm_reg __fpu_xmm9;
- struct __darwin_xmm_reg __fpu_xmm10;
- struct __darwin_xmm_reg __fpu_xmm11;
- struct __darwin_xmm_reg __fpu_xmm12;
- struct __darwin_xmm_reg __fpu_xmm13;
- struct __darwin_xmm_reg __fpu_xmm14;
- struct __darwin_xmm_reg __fpu_xmm15;
- char __fpu_rsrv4[6*16];
- int __fpu_reserved1;
- char __avx_reserved1[64];
- struct __darwin_xmm_reg __fpu_ymmh0;
- struct __darwin_xmm_reg __fpu_ymmh1;
- struct __darwin_xmm_reg __fpu_ymmh2;
- struct __darwin_xmm_reg __fpu_ymmh3;
- struct __darwin_xmm_reg __fpu_ymmh4;
- struct __darwin_xmm_reg __fpu_ymmh5;
- struct __darwin_xmm_reg __fpu_ymmh6;
- struct __darwin_xmm_reg __fpu_ymmh7;
- struct __darwin_xmm_reg __fpu_ymmh8;
- struct __darwin_xmm_reg __fpu_ymmh9;
- struct __darwin_xmm_reg __fpu_ymmh10;
- struct __darwin_xmm_reg __fpu_ymmh11;
- struct __darwin_xmm_reg __fpu_ymmh12;
- struct __darwin_xmm_reg __fpu_ymmh13;
- struct __darwin_xmm_reg __fpu_ymmh14;
- struct __darwin_xmm_reg __fpu_ymmh15;
-};
+# 1 "/usr/include/time.h" 1 3 4
+# 120 "/usr/include/time.h" 3 4
+struct timespec
+  {
+    __time_t tv_sec;
+    __syscall_slong_t tv_nsec;
+  };
+# 46 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
 
-
-struct __darwin_x86_avx512_state64
-{
- int __fpu_reserved[2];
- struct __darwin_fp_control __fpu_fcw;
- struct __darwin_fp_status __fpu_fsw;
- __uint8_t __fpu_ftw;
- __uint8_t __fpu_rsrv1;
- __uint16_t __fpu_fop;
-
-
- __uint32_t __fpu_ip;
- __uint16_t __fpu_cs;
-
- __uint16_t __fpu_rsrv2;
-
-
- __uint32_t __fpu_dp;
- __uint16_t __fpu_ds;
-
- __uint16_t __fpu_rsrv3;
- __uint32_t __fpu_mxcsr;
- __uint32_t __fpu_mxcsrmask;
- struct __darwin_mmst_reg __fpu_stmm0;
- struct __darwin_mmst_reg __fpu_stmm1;
- struct __darwin_mmst_reg __fpu_stmm2;
- struct __darwin_mmst_reg __fpu_stmm3;
- struct __darwin_mmst_reg __fpu_stmm4;
- struct __darwin_mmst_reg __fpu_stmm5;
- struct __darwin_mmst_reg __fpu_stmm6;
- struct __darwin_mmst_reg __fpu_stmm7;
- struct __darwin_xmm_reg __fpu_xmm0;
- struct __darwin_xmm_reg __fpu_xmm1;
- struct __darwin_xmm_reg __fpu_xmm2;
- struct __darwin_xmm_reg __fpu_xmm3;
- struct __darwin_xmm_reg __fpu_xmm4;
- struct __darwin_xmm_reg __fpu_xmm5;
- struct __darwin_xmm_reg __fpu_xmm6;
- struct __darwin_xmm_reg __fpu_xmm7;
- struct __darwin_xmm_reg __fpu_xmm8;
- struct __darwin_xmm_reg __fpu_xmm9;
- struct __darwin_xmm_reg __fpu_xmm10;
- struct __darwin_xmm_reg __fpu_xmm11;
- struct __darwin_xmm_reg __fpu_xmm12;
- struct __darwin_xmm_reg __fpu_xmm13;
- struct __darwin_xmm_reg __fpu_xmm14;
- struct __darwin_xmm_reg __fpu_xmm15;
- char __fpu_rsrv4[6*16];
- int __fpu_reserved1;
- char __avx_reserved1[64];
- struct __darwin_xmm_reg __fpu_ymmh0;
- struct __darwin_xmm_reg __fpu_ymmh1;
- struct __darwin_xmm_reg __fpu_ymmh2;
- struct __darwin_xmm_reg __fpu_ymmh3;
- struct __darwin_xmm_reg __fpu_ymmh4;
- struct __darwin_xmm_reg __fpu_ymmh5;
- struct __darwin_xmm_reg __fpu_ymmh6;
- struct __darwin_xmm_reg __fpu_ymmh7;
- struct __darwin_xmm_reg __fpu_ymmh8;
- struct __darwin_xmm_reg __fpu_ymmh9;
- struct __darwin_xmm_reg __fpu_ymmh10;
- struct __darwin_xmm_reg __fpu_ymmh11;
- struct __darwin_xmm_reg __fpu_ymmh12;
- struct __darwin_xmm_reg __fpu_ymmh13;
- struct __darwin_xmm_reg __fpu_ymmh14;
- struct __darwin_xmm_reg __fpu_ymmh15;
- struct __darwin_opmask_reg __fpu_k0;
- struct __darwin_opmask_reg __fpu_k1;
- struct __darwin_opmask_reg __fpu_k2;
- struct __darwin_opmask_reg __fpu_k3;
- struct __darwin_opmask_reg __fpu_k4;
- struct __darwin_opmask_reg __fpu_k5;
- struct __darwin_opmask_reg __fpu_k6;
- struct __darwin_opmask_reg __fpu_k7;
- struct __darwin_ymm_reg __fpu_zmmh0;
- struct __darwin_ymm_reg __fpu_zmmh1;
- struct __darwin_ymm_reg __fpu_zmmh2;
- struct __darwin_ymm_reg __fpu_zmmh3;
- struct __darwin_ymm_reg __fpu_zmmh4;
- struct __darwin_ymm_reg __fpu_zmmh5;
- struct __darwin_ymm_reg __fpu_zmmh6;
- struct __darwin_ymm_reg __fpu_zmmh7;
- struct __darwin_ymm_reg __fpu_zmmh8;
- struct __darwin_ymm_reg __fpu_zmmh9;
- struct __darwin_ymm_reg __fpu_zmmh10;
- struct __darwin_ymm_reg __fpu_zmmh11;
- struct __darwin_ymm_reg __fpu_zmmh12;
- struct __darwin_ymm_reg __fpu_zmmh13;
- struct __darwin_ymm_reg __fpu_zmmh14;
- struct __darwin_ymm_reg __fpu_zmmh15;
- struct __darwin_zmm_reg __fpu_zmm16;
- struct __darwin_zmm_reg __fpu_zmm17;
- struct __darwin_zmm_reg __fpu_zmm18;
- struct __darwin_zmm_reg __fpu_zmm19;
- struct __darwin_zmm_reg __fpu_zmm20;
- struct __darwin_zmm_reg __fpu_zmm21;
- struct __darwin_zmm_reg __fpu_zmm22;
- struct __darwin_zmm_reg __fpu_zmm23;
- struct __darwin_zmm_reg __fpu_zmm24;
- struct __darwin_zmm_reg __fpu_zmm25;
- struct __darwin_zmm_reg __fpu_zmm26;
- struct __darwin_zmm_reg __fpu_zmm27;
- struct __darwin_zmm_reg __fpu_zmm28;
- struct __darwin_zmm_reg __fpu_zmm29;
- struct __darwin_zmm_reg __fpu_zmm30;
- struct __darwin_zmm_reg __fpu_zmm31;
-};
-# 1140 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_x86_exception_state64
-{
-    __uint16_t __trapno;
-    __uint16_t __cpu;
-    __uint32_t __err;
-    __uint64_t __faultvaddr;
-};
-# 1160 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_x86_debug_state64
-{
- __uint64_t __dr0;
- __uint64_t __dr1;
- __uint64_t __dr2;
- __uint64_t __dr3;
- __uint64_t __dr4;
- __uint64_t __dr5;
- __uint64_t __dr6;
- __uint64_t __dr7;
-};
-# 1188 "/usr/include/mach/i386/_structs.h" 3 4
-struct __darwin_x86_cpmu_state64
-{
- __uint64_t __ctrs[16];
-};
-# 34 "/usr/include/mach/machine/_structs.h" 2 3 4
-# 35 "/usr/include/i386/_mcontext.h" 2 3 4
-
-
-
-
-struct __darwin_mcontext32
-{
- struct __darwin_i386_exception_state __es;
- struct __darwin_i386_thread_state __ss;
- struct __darwin_i386_float_state __fs;
-};
-
-
-struct __darwin_mcontext_avx32
-{
- struct __darwin_i386_exception_state __es;
- struct __darwin_i386_thread_state __ss;
- struct __darwin_i386_avx_state __fs;
-};
-
-
-
-struct __darwin_mcontext_avx512_32
-{
- struct __darwin_i386_exception_state __es;
- struct __darwin_i386_thread_state __ss;
- struct __darwin_i386_avx512_state __fs;
-};
-# 97 "/usr/include/i386/_mcontext.h" 3 4
-struct __darwin_mcontext64
-{
- struct __darwin_x86_exception_state64 __es;
- struct __darwin_x86_thread_state64 __ss;
- struct __darwin_x86_float_state64 __fs;
-};
-
-
-struct __darwin_mcontext_avx64
-{
- struct __darwin_x86_exception_state64 __es;
- struct __darwin_x86_thread_state64 __ss;
- struct __darwin_x86_avx_state64 __fs;
-};
-
-
-
-struct __darwin_mcontext_avx512_64
-{
- struct __darwin_x86_exception_state64 __es;
- struct __darwin_x86_thread_state64 __ss;
- struct __darwin_x86_avx512_state64 __fs;
-};
-# 156 "/usr/include/i386/_mcontext.h" 3 4
-typedef struct __darwin_mcontext64 *mcontext_t;
-# 30 "/usr/include/machine/_mcontext.h" 2 3 4
-# 147 "/usr/include/sys/signal.h" 2 3 4
-
-# 1 "/usr/include/sys/_pthread/_pthread_attr_t.h" 1 3 4
-# 31 "/usr/include/sys/_pthread/_pthread_attr_t.h" 3 4
-typedef __darwin_pthread_attr_t pthread_attr_t;
-# 149 "/usr/include/sys/signal.h" 2 3 4
-
-# 1 "/usr/include/sys/_types/_sigaltstack.h" 1 3 4
-# 42 "/usr/include/sys/_types/_sigaltstack.h" 3 4
-struct __darwin_sigaltstack
-{
- void *ss_sp;
- __darwin_size_t ss_size;
- int ss_flags;
-};
-typedef struct __darwin_sigaltstack stack_t;
-# 151 "/usr/include/sys/signal.h" 2 3 4
-# 1 "/usr/include/sys/_types/_ucontext.h" 1 3 4
-# 39 "/usr/include/sys/_types/_ucontext.h" 3 4
-# 1 "/usr/include/machine/_mcontext.h" 1 3 4
-# 40 "/usr/include/sys/_types/_ucontext.h" 2 3 4
-
-
-struct __darwin_ucontext
-{
- int uc_onstack;
- __darwin_sigset_t uc_sigmask;
- struct __darwin_sigaltstack uc_stack;
- struct __darwin_ucontext *uc_link;
- __darwin_size_t uc_mcsize;
- struct __darwin_mcontext64 *uc_mcontext;
-
-
-
-};
-
-
-typedef struct __darwin_ucontext ucontext_t;
-# 152 "/usr/include/sys/signal.h" 2 3 4
-
-
-# 1 "/usr/include/sys/_types/_sigset_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_sigset_t.h" 3 4
-typedef __darwin_sigset_t sigset_t;
-# 155 "/usr/include/sys/signal.h" 2 3 4
-# 1 "/usr/include/sys/_types/_size_t.h" 1 3 4
-# 156 "/usr/include/sys/signal.h" 2 3 4
-# 1 "/usr/include/sys/_types/_uid_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_uid_t.h" 3 4
-typedef __darwin_uid_t uid_t;
-# 157 "/usr/include/sys/signal.h" 2 3 4
-
-union sigval {
-
- int sival_int;
- void *sival_ptr;
-};
-
-
-
-
-
-struct sigevent {
- int sigev_notify;
- int sigev_signo;
- union sigval sigev_value;
- void (*sigev_notify_function)(union sigval);
- pthread_attr_t *sigev_notify_attributes;
-};
-
-
-typedef struct __siginfo {
- int si_signo;
- int si_errno;
- int si_code;
- pid_t si_pid;
- uid_t si_uid;
- int si_status;
- void *si_addr;
- union sigval si_value;
- long si_band;
- unsigned long __pad[7];
-} siginfo_t;
-# 269 "/usr/include/sys/signal.h" 3 4
-union __sigaction_u {
- void (*__sa_handler)(int);
- void (*__sa_sigaction)(int, struct __siginfo *,
-         void *);
-};
-
-
-struct __sigaction {
- union __sigaction_u __sigaction_u;
- void (*sa_tramp)(void *, int, int, siginfo_t *, void *);
- sigset_t sa_mask;
- int sa_flags;
-};
-
-
-
-
-struct sigaction {
- union __sigaction_u __sigaction_u;
- sigset_t sa_mask;
- int sa_flags;
-};
-# 331 "/usr/include/sys/signal.h" 3 4
-typedef void (*sig_t)(int);
-# 348 "/usr/include/sys/signal.h" 3 4
-struct sigvec {
- void (*sv_handler)(int);
- int sv_mask;
- int sv_flags;
-};
-# 367 "/usr/include/sys/signal.h" 3 4
-struct sigstack {
- char *ss_sp;
- int ss_onstack;
-};
-# 390 "/usr/include/sys/signal.h" 3 4
-void (*signal(int, void (*)(int)))(int);
-# 110 "/usr/include/sys/wait.h" 2 3 4
-# 1 "/usr/include/sys/resource.h" 1 3 4
-# 72 "/usr/include/sys/resource.h" 3 4
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stdint.h" 1 3 4
-# 63 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stdint.h" 3 4
-# 1 "/usr/include/stdint.h" 1 3 4
-# 23 "/usr/include/stdint.h" 3 4
-# 1 "/usr/include/_types/_uint8_t.h" 1 3 4
-# 31 "/usr/include/_types/_uint8_t.h" 3 4
-typedef unsigned char uint8_t;
-# 24 "/usr/include/stdint.h" 2 3 4
-# 1 "/usr/include/_types/_uint16_t.h" 1 3 4
-# 31 "/usr/include/_types/_uint16_t.h" 3 4
-typedef unsigned short uint16_t;
-# 25 "/usr/include/stdint.h" 2 3 4
-# 1 "/usr/include/_types/_uint32_t.h" 1 3 4
-# 31 "/usr/include/_types/_uint32_t.h" 3 4
-typedef unsigned int uint32_t;
-# 26 "/usr/include/stdint.h" 2 3 4
-# 1 "/usr/include/_types/_uint64_t.h" 1 3 4
-# 31 "/usr/include/_types/_uint64_t.h" 3 4
-typedef unsigned long long uint64_t;
-# 27 "/usr/include/stdint.h" 2 3 4
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-typedef int32_t int_least32_t;
-typedef int64_t int_least64_t;
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-typedef uint32_t uint_least32_t;
-typedef uint64_t uint_least64_t;
-
-
-
-typedef int8_t int_fast8_t;
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef int64_t int_fast64_t;
-typedef uint8_t uint_fast8_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-typedef uint64_t uint_fast64_t;
-# 58 "/usr/include/stdint.h" 3 4
-# 1 "/usr/include/_types/_intmax_t.h" 1 3 4
-# 32 "/usr/include/_types/_intmax_t.h" 3 4
-typedef long int intmax_t;
-# 59 "/usr/include/stdint.h" 2 3 4
-# 1 "/usr/include/_types/_uintmax_t.h" 1 3 4
-# 32 "/usr/include/_types/_uintmax_t.h" 3 4
-typedef long unsigned int uintmax_t;
-# 60 "/usr/include/stdint.h" 2 3 4
-# 64 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/stdint.h" 2 3 4
-# 73 "/usr/include/sys/resource.h" 2 3 4
-
-
-
-
-
-
-
-# 1 "/usr/include/sys/_types/_timeval.h" 1 3 4
-# 34 "/usr/include/sys/_types/_timeval.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/time.h" 1 3 4
+# 30 "/usr/include/x86_64-linux-gnu/bits/time.h" 3 4
 struct timeval
+  {
+    __time_t tv_sec;
+    __suseconds_t tv_usec;
+  };
+# 48 "/usr/include/x86_64-linux-gnu/sys/select.h" 2 3 4
+
+
+typedef __suseconds_t suseconds_t;
+
+
+
+
+
+typedef long int __fd_mask;
+# 66 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+typedef struct
+  {
+
+
+
+
+
+
+    __fd_mask __fds_bits[1024 / (8 * (int) sizeof (__fd_mask))];
+
+
+  } fd_set;
+
+
+
+
+
+
+typedef __fd_mask fd_mask;
+# 98 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+
+# 108 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+extern int select (int __nfds, fd_set *__restrict __readfds,
+     fd_set *__restrict __writefds,
+     fd_set *__restrict __exceptfds,
+     struct timeval *__restrict __timeout);
+# 120 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+extern int pselect (int __nfds, fd_set *__restrict __readfds,
+      fd_set *__restrict __writefds,
+      fd_set *__restrict __exceptfds,
+      const struct timespec *__restrict __timeout,
+      const __sigset_t *__restrict __sigmask);
+# 133 "/usr/include/x86_64-linux-gnu/sys/select.h" 3 4
+
+# 220 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+# 1 "/usr/include/x86_64-linux-gnu/sys/sysmacros.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/sys/sysmacros.h" 3 4
+
+
+__extension__
+extern unsigned int gnu_dev_major (unsigned long long int __dev)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+__extension__
+extern unsigned int gnu_dev_minor (unsigned long long int __dev)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+__extension__
+extern unsigned long long int gnu_dev_makedev (unsigned int __major,
+            unsigned int __minor)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__));
+
+
+__extension__ extern __inline __attribute__ ((__gnu_inline__)) __attribute__ ((__const__)) unsigned int
+__attribute__ ((__nothrow__ , __leaf__)) gnu_dev_major (unsigned long long int __dev)
 {
- __darwin_time_t tv_sec;
- __darwin_suseconds_t tv_usec;
-};
-# 81 "/usr/include/sys/resource.h" 2 3 4
-
-
-
-
-
-
-
-
-typedef __uint64_t rlim_t;
-# 152 "/usr/include/sys/resource.h" 3 4
-struct rusage {
- struct timeval ru_utime;
- struct timeval ru_stime;
-# 163 "/usr/include/sys/resource.h" 3 4
- long ru_maxrss;
-
- long ru_ixrss;
- long ru_idrss;
- long ru_isrss;
- long ru_minflt;
- long ru_majflt;
- long ru_nswap;
- long ru_inblock;
- long ru_oublock;
- long ru_msgsnd;
- long ru_msgrcv;
- long ru_nsignals;
- long ru_nvcsw;
- long ru_nivcsw;
-
-
-};
-# 193 "/usr/include/sys/resource.h" 3 4
-typedef void *rusage_info_t;
-
-struct rusage_info_v0 {
- uint8_t ri_uuid[16];
- uint64_t ri_user_time;
- uint64_t ri_system_time;
- uint64_t ri_pkg_idle_wkups;
- uint64_t ri_interrupt_wkups;
- uint64_t ri_pageins;
- uint64_t ri_wired_size;
- uint64_t ri_resident_size;
- uint64_t ri_phys_footprint;
- uint64_t ri_proc_start_abstime;
- uint64_t ri_proc_exit_abstime;
-};
-
-struct rusage_info_v1 {
- uint8_t ri_uuid[16];
- uint64_t ri_user_time;
- uint64_t ri_system_time;
- uint64_t ri_pkg_idle_wkups;
- uint64_t ri_interrupt_wkups;
- uint64_t ri_pageins;
- uint64_t ri_wired_size;
- uint64_t ri_resident_size;
- uint64_t ri_phys_footprint;
- uint64_t ri_proc_start_abstime;
- uint64_t ri_proc_exit_abstime;
- uint64_t ri_child_user_time;
- uint64_t ri_child_system_time;
- uint64_t ri_child_pkg_idle_wkups;
- uint64_t ri_child_interrupt_wkups;
- uint64_t ri_child_pageins;
- uint64_t ri_child_elapsed_abstime;
-};
-
-struct rusage_info_v2 {
- uint8_t ri_uuid[16];
- uint64_t ri_user_time;
- uint64_t ri_system_time;
- uint64_t ri_pkg_idle_wkups;
- uint64_t ri_interrupt_wkups;
- uint64_t ri_pageins;
- uint64_t ri_wired_size;
- uint64_t ri_resident_size;
- uint64_t ri_phys_footprint;
- uint64_t ri_proc_start_abstime;
- uint64_t ri_proc_exit_abstime;
- uint64_t ri_child_user_time;
- uint64_t ri_child_system_time;
- uint64_t ri_child_pkg_idle_wkups;
- uint64_t ri_child_interrupt_wkups;
- uint64_t ri_child_pageins;
- uint64_t ri_child_elapsed_abstime;
- uint64_t ri_diskio_bytesread;
- uint64_t ri_diskio_byteswritten;
-};
-
-struct rusage_info_v3 {
- uint8_t ri_uuid[16];
- uint64_t ri_user_time;
- uint64_t ri_system_time;
- uint64_t ri_pkg_idle_wkups;
- uint64_t ri_interrupt_wkups;
- uint64_t ri_pageins;
- uint64_t ri_wired_size;
- uint64_t ri_resident_size;
- uint64_t ri_phys_footprint;
- uint64_t ri_proc_start_abstime;
- uint64_t ri_proc_exit_abstime;
- uint64_t ri_child_user_time;
- uint64_t ri_child_system_time;
- uint64_t ri_child_pkg_idle_wkups;
- uint64_t ri_child_interrupt_wkups;
- uint64_t ri_child_pageins;
- uint64_t ri_child_elapsed_abstime;
- uint64_t ri_diskio_bytesread;
- uint64_t ri_diskio_byteswritten;
- uint64_t ri_cpu_time_qos_default;
- uint64_t ri_cpu_time_qos_maintenance;
- uint64_t ri_cpu_time_qos_background;
- uint64_t ri_cpu_time_qos_utility;
- uint64_t ri_cpu_time_qos_legacy;
- uint64_t ri_cpu_time_qos_user_initiated;
- uint64_t ri_cpu_time_qos_user_interactive;
- uint64_t ri_billed_system_time;
- uint64_t ri_serviced_system_time;
-};
-
-struct rusage_info_v4 {
- uint8_t ri_uuid[16];
- uint64_t ri_user_time;
- uint64_t ri_system_time;
- uint64_t ri_pkg_idle_wkups;
- uint64_t ri_interrupt_wkups;
- uint64_t ri_pageins;
- uint64_t ri_wired_size;
- uint64_t ri_resident_size;
- uint64_t ri_phys_footprint;
- uint64_t ri_proc_start_abstime;
- uint64_t ri_proc_exit_abstime;
- uint64_t ri_child_user_time;
- uint64_t ri_child_system_time;
- uint64_t ri_child_pkg_idle_wkups;
- uint64_t ri_child_interrupt_wkups;
- uint64_t ri_child_pageins;
- uint64_t ri_child_elapsed_abstime;
- uint64_t ri_diskio_bytesread;
- uint64_t ri_diskio_byteswritten;
- uint64_t ri_cpu_time_qos_default;
- uint64_t ri_cpu_time_qos_maintenance;
- uint64_t ri_cpu_time_qos_background;
- uint64_t ri_cpu_time_qos_utility;
- uint64_t ri_cpu_time_qos_legacy;
- uint64_t ri_cpu_time_qos_user_initiated;
- uint64_t ri_cpu_time_qos_user_interactive;
- uint64_t ri_billed_system_time;
- uint64_t ri_serviced_system_time;
- uint64_t ri_logical_writes;
- uint64_t ri_lifetime_max_phys_footprint;
- uint64_t ri_instructions;
- uint64_t ri_cycles;
- uint64_t ri_billed_energy;
- uint64_t ri_serviced_energy;
-
- uint64_t ri_unused[2];
-};
-
-typedef struct rusage_info_v4 rusage_info_current;
-# 365 "/usr/include/sys/resource.h" 3 4
-struct rlimit {
- rlim_t rlim_cur;
- rlim_t rlim_max;
-};
-# 393 "/usr/include/sys/resource.h" 3 4
-struct proc_rlimit_control_wakeupmon {
- uint32_t wm_flags;
- int32_t wm_rate;
-};
-# 425 "/usr/include/sys/resource.h" 3 4
-int getpriority(int, id_t);
-
-int getiopolicy_np(int, int) __attribute__((availability(macosx,introduced=10.5)));
-
-int getrlimit(int, struct rlimit *) __asm("_" "getrlimit" );
-int getrusage(int, struct rusage *);
-int setpriority(int, id_t, int);
-
-int setiopolicy_np(int, int, int) __attribute__((availability(macosx,introduced=10.5)));
-
-int setrlimit(int, const struct rlimit *) __asm("_" "setrlimit" );
-# 111 "/usr/include/sys/wait.h" 2 3 4
-# 186 "/usr/include/sys/wait.h" 3 4
-# 1 "/usr/include/machine/endian.h" 1 3 4
-# 35 "/usr/include/machine/endian.h" 3 4
-# 1 "/usr/include/i386/endian.h" 1 3 4
-# 99 "/usr/include/i386/endian.h" 3 4
-# 1 "/usr/include/sys/_endian.h" 1 3 4
-# 130 "/usr/include/sys/_endian.h" 3 4
-# 1 "/usr/include/libkern/_OSByteOrder.h" 1 3 4
-# 66 "/usr/include/libkern/_OSByteOrder.h" 3 4
-# 1 "/usr/include/libkern/i386/_OSByteOrder.h" 1 3 4
-# 44 "/usr/include/libkern/i386/_OSByteOrder.h" 3 4
-static inline
-__uint16_t
-_OSSwapInt16(
-    __uint16_t _data
-)
-{
-    return ((__uint16_t)((_data << 8) | (_data >> 8)));
+  return ((__dev >> 8) & 0xfff) | ((unsigned int) (__dev >> 32) & ~0xfff);
 }
 
-static inline
-__uint32_t
-_OSSwapInt32(
-    __uint32_t _data
-)
+__extension__ extern __inline __attribute__ ((__gnu_inline__)) __attribute__ ((__const__)) unsigned int
+__attribute__ ((__nothrow__ , __leaf__)) gnu_dev_minor (unsigned long long int __dev)
 {
+  return (__dev & 0xff) | ((unsigned int) (__dev >> 12) & ~0xff);
+}
 
-    return __builtin_bswap32(_data);
-
-
-
-
+__extension__ extern __inline __attribute__ ((__gnu_inline__)) __attribute__ ((__const__)) unsigned long long int
+__attribute__ ((__nothrow__ , __leaf__)) gnu_dev_makedev (unsigned int __major, unsigned int __minor)
+{
+  return ((__minor & 0xff) | ((__major & 0xfff) << 8)
+   | (((unsigned long long int) (__minor & ~0xff)) << 12)
+   | (((unsigned long long int) (__major & ~0xfff)) << 32));
 }
 
 
-static inline
-__uint64_t
-_OSSwapInt64(
-    __uint64_t _data
-)
+# 223 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+
+
+typedef __blksize_t blksize_t;
+
+
+
+
+
+
+typedef __blkcnt_t blkcnt_t;
+
+
+
+typedef __fsblkcnt_t fsblkcnt_t;
+
+
+
+typedef __fsfilcnt_t fsfilcnt_t;
+# 270 "/usr/include/x86_64-linux-gnu/sys/types.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 1 3 4
+# 21 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/wordsize.h" 1 3 4
+# 22 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 2 3 4
+# 60 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4
+typedef unsigned long int pthread_t;
+
+
+union pthread_attr_t
 {
-    return __builtin_bswap64(_data);
-}
-# 67 "/usr/include/libkern/_OSByteOrder.h" 2 3 4
-# 131 "/usr/include/sys/_endian.h" 2 3 4
-# 100 "/usr/include/i386/endian.h" 2 3 4
-# 36 "/usr/include/machine/endian.h" 2 3 4
-# 187 "/usr/include/sys/wait.h" 2 3 4
-
-
-
-
-
-
-
-union wait {
- int w_status;
-
-
-
- struct {
-
-  unsigned int w_Termsig:7,
-    w_Coredump:1,
-    w_Retcode:8,
-    w_Filler:16;
-
-
-
-
-
-
-
- } w_T;
-
-
-
-
-
- struct {
-
-  unsigned int w_Stopval:8,
-    w_Stopsig:8,
-    w_Filler:16;
-
-
-
-
-
-
- } w_S;
+  char __size[56];
+  long int __align;
 };
-# 248 "/usr/include/sys/wait.h" 3 4
-pid_t wait(int *) __asm("_" "wait" );
-pid_t waitpid(pid_t, int *, int) __asm("_" "waitpid" );
 
-int waitid(idtype_t, id_t, siginfo_t *, int) __asm("_" "waitid" );
+typedef union pthread_attr_t pthread_attr_t;
 
 
-pid_t wait3(int *, int, struct rusage *);
-pid_t wait4(pid_t, int *, int, struct rusage *);
-# 66 "/usr/include/stdlib.h" 2 3 4
+
+
+
+typedef struct __pthread_internal_list
+{
+  struct __pthread_internal_list *__prev;
+  struct __pthread_internal_list *__next;
+} __pthread_list_t;
+# 90 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4
+typedef union
+{
+  struct __pthread_mutex_s
+  {
+    int __lock;
+    unsigned int __count;
+    int __owner;
+
+    unsigned int __nusers;
+
+
+
+    int __kind;
+
+    short __spins;
+    short __elision;
+    __pthread_list_t __list;
+# 125 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4
+  } __data;
+  char __size[40];
+  long int __align;
+} pthread_mutex_t;
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_mutexattr_t;
+
+
+
+
+typedef union
+{
+  struct
+  {
+    int __lock;
+    unsigned int __futex;
+    __extension__ unsigned long long int __total_seq;
+    __extension__ unsigned long long int __wakeup_seq;
+    __extension__ unsigned long long int __woken_seq;
+    void *__mutex;
+    unsigned int __nwaiters;
+    unsigned int __broadcast_seq;
+  } __data;
+  char __size[48];
+  __extension__ long long int __align;
+} pthread_cond_t;
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_condattr_t;
+
+
+
+typedef unsigned int pthread_key_t;
+
+
+
+typedef int pthread_once_t;
+
+
+
+
+
+typedef union
+{
+
+  struct
+  {
+    int __lock;
+    unsigned int __nr_readers;
+    unsigned int __readers_wakeup;
+    unsigned int __writer_wakeup;
+    unsigned int __nr_readers_queued;
+    unsigned int __nr_writers_queued;
+    int __writer;
+    int __shared;
+    signed char __rwelision;
+
+
+
+
+    unsigned char __pad1[7];
+
+
+    unsigned long int __pad2;
+
+
+    unsigned int __flags;
+
+  } __data;
+# 220 "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h" 3 4
+  char __size[56];
+  long int __align;
+} pthread_rwlock_t;
+
+typedef union
+{
+  char __size[8];
+  long int __align;
+} pthread_rwlockattr_t;
+
+
+
+
+
+typedef volatile int pthread_spinlock_t;
+
+
+
+
+typedef union
+{
+  char __size[32];
+  long int __align;
+} pthread_barrier_t;
+
+typedef union
+{
+  char __size[4];
+  int __align;
+} pthread_barrierattr_t;
+# 271 "/usr/include/x86_64-linux-gnu/sys/types.h" 2 3 4
+
+
+
+# 276 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+
+
+extern long int random (void) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern void srandom (unsigned int __seed) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+extern char *initstate (unsigned int __seed, char *__statebuf,
+   size_t __statelen) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+
+extern char *setstate (char *__statebuf) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+
+struct random_data
+  {
+    int32_t *fptr;
+    int32_t *rptr;
+    int32_t *state;
+    int rand_type;
+    int rand_deg;
+    int rand_sep;
+    int32_t *end_ptr;
+  };
+
+extern int random_r (struct random_data *__restrict __buf,
+       int32_t *__restrict __result) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int srandom_r (unsigned int __seed, struct random_data *__buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+extern int initstate_r (unsigned int __seed, char *__restrict __statebuf,
+   size_t __statelen,
+   struct random_data *__restrict __buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2, 4)));
+
+extern int setstate_r (char *__restrict __statebuf,
+         struct random_data *__restrict __buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+extern int rand (void) __attribute__ ((__nothrow__ , __leaf__));
+
+extern void srand (unsigned int __seed) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern int rand_r (unsigned int *__seed) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+extern double drand48 (void) __attribute__ ((__nothrow__ , __leaf__));
+extern double erand48 (unsigned short int __xsubi[3]) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern long int lrand48 (void) __attribute__ ((__nothrow__ , __leaf__));
+extern long int nrand48 (unsigned short int __xsubi[3])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern long int mrand48 (void) __attribute__ ((__nothrow__ , __leaf__));
+extern long int jrand48 (unsigned short int __xsubi[3])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+extern void srand48 (long int __seedval) __attribute__ ((__nothrow__ , __leaf__));
+extern unsigned short int *seed48 (unsigned short int __seed16v[3])
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+extern void lcong48 (unsigned short int __param[7]) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+struct drand48_data
+  {
+    unsigned short int __x[3];
+    unsigned short int __old_x[3];
+    unsigned short int __c;
+    unsigned short int __init;
+    __extension__ unsigned long long int __a;
+
+  };
+
+
+extern int drand48_r (struct drand48_data *__restrict __buffer,
+        double *__restrict __result) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern int erand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        double *__restrict __result) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int lrand48_r (struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern int nrand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int mrand48_r (struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+extern int jrand48_r (unsigned short int __xsubi[3],
+        struct drand48_data *__restrict __buffer,
+        long int *__restrict __result)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int srand48_r (long int __seedval, struct drand48_data *__buffer)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+extern int seed48_r (unsigned short int __seed16v[3],
+       struct drand48_data *__buffer) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int lcong48_r (unsigned short int __param[7],
+        struct drand48_data *__buffer)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+
+
+
+
+
+
+extern void *malloc (size_t __size) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) ;
+
+extern void *calloc (size_t __nmemb, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) ;
+
+
+
+
+
+
+
+
+
+
+extern void *realloc (void *__ptr, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__warn_unused_result__));
+
+extern void free (void *__ptr) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+extern void cfree (void *__ptr) __attribute__ ((__nothrow__ , __leaf__));
+
+
 
 # 1 "/usr/include/alloca.h" 1 3 4
-# 29 "/usr/include/alloca.h" 3 4
-# 1 "/usr/include/sys/_types/_size_t.h" 1 3 4
-# 30 "/usr/include/alloca.h" 2 3 4
-
-
-void *alloca(size_t);
-# 68 "/usr/include/stdlib.h" 2 3 4
+# 24 "/usr/include/alloca.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/stddef.h" 1 3 4
+# 25 "/usr/include/alloca.h" 2 3 4
 
 
 
 
 
-# 1 "/usr/include/sys/_types/_size_t.h" 1 3 4
-# 74 "/usr/include/stdlib.h" 2 3 4
 
 
-# 1 "/usr/include/sys/_types/_ct_rune_t.h" 1 3 4
-# 32 "/usr/include/sys/_types/_ct_rune_t.h" 3 4
-typedef __darwin_ct_rune_t ct_rune_t;
-# 77 "/usr/include/stdlib.h" 2 3 4
-# 1 "/usr/include/sys/_types/_rune_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_rune_t.h" 3 4
-typedef __darwin_rune_t rune_t;
-# 78 "/usr/include/stdlib.h" 2 3 4
+extern void *alloca (size_t __size) __attribute__ ((__nothrow__ , __leaf__));
 
 
-# 1 "/usr/include/sys/_types/_wchar_t.h" 1 3 4
-# 81 "/usr/include/stdlib.h" 2 3 4
 
-typedef struct {
- int quot;
- int rem;
-} div_t;
 
-typedef struct {
- long quot;
- long rem;
-} ldiv_t;
 
 
-typedef struct {
- long long quot;
- long long rem;
-} lldiv_t;
+# 454 "/usr/include/stdlib.h" 2 3 4
 
 
 
-# 1 "/usr/include/sys/_types/_null.h" 1 3 4
-# 100 "/usr/include/stdlib.h" 2 3 4
-# 117 "/usr/include/stdlib.h" 3 4
-extern int __mb_cur_max;
-# 136 "/usr/include/stdlib.h" 3 4
-void abort(void) __attribute__((noreturn));
-int abs(int) __attribute__((const));
-int atexit(void (* _Nonnull)(void));
-double atof(const char *);
-int atoi(const char *);
-long atol(const char *);
 
-long long
-  atoll(const char *);
 
-void *bsearch(const void *__key, const void *__base, size_t __nel,
-     size_t __width, int (* _Nonnull __compar)(const void *, const void *));
-void *calloc(size_t __count, size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(1,2)));
-div_t div(int, int) __attribute__((const));
-void exit(int) __attribute__((noreturn));
-void free(void *);
-char *getenv(const char *);
-long labs(long) __attribute__((const));
-ldiv_t ldiv(long, long) __attribute__((const));
+extern void *valloc (size_t __size) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) ;
 
-long long
-  llabs(long long);
-lldiv_t lldiv(long long, long long);
 
-void *malloc(size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(1)));
-int mblen(const char *__s, size_t __n);
-size_t mbstowcs(wchar_t * restrict , const char * restrict, size_t);
-int mbtowc(wchar_t * restrict, const char * restrict, size_t);
-int posix_memalign(void **__memptr, size_t __alignment, size_t __size) __attribute__((availability(macosx,introduced=10.6)));
-void qsort(void *__base, size_t __nel, size_t __width,
-     int (* _Nonnull __compar)(const void *, const void *));
-int rand(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
-void *realloc(void *__ptr, size_t __size) __attribute__((__warn_unused_result__)) __attribute__((alloc_size(2)));
-void srand(unsigned) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
-double strtod(const char *, char **) __asm("_" "strtod" );
-float strtof(const char *, char **) __asm("_" "strtof" );
-long strtol(const char *__str, char **__endptr, int __base);
-long double
-  strtold(const char *, char **);
 
-long long
-  strtoll(const char *__str, char **__endptr, int __base);
 
-unsigned long
-  strtoul(const char *__str, char **__endptr, int __base);
+extern int posix_memalign (void **__memptr, size_t __alignment, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
 
-unsigned long long
-  strtoull(const char *__str, char **__endptr, int __base);
-# 192 "/usr/include/stdlib.h" 3 4
-__attribute__((__availability__(swift, unavailable, message="Use posix_spawn APIs or NSTask instead.")))
-__attribute__((availability(macos,introduced=10.0))) __attribute__((availability(ios,unavailable)))
-__attribute__((availability(watchos,unavailable))) __attribute__((availability(tvos,unavailable)))
-int system(const char *) __asm("_" "system" );
 
 
 
-size_t wcstombs(char * restrict, const wchar_t * restrict, size_t);
-int wctomb(char *, wchar_t);
+extern void *aligned_alloc (size_t __alignment, size_t __size)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__malloc__)) __attribute__ ((__alloc_size__ (2))) ;
 
 
-void _Exit(int) __attribute__((noreturn));
-long a64l(const char *);
-double drand48(void);
-char *ecvt(double, int, int *restrict, int *restrict);
-double erand48(unsigned short[3]);
-char *fcvt(double, int, int *restrict, int *restrict);
-char *gcvt(double, int, char *);
-int getsubopt(char **, char * const *, char **);
-int grantpt(int);
 
-char *initstate(unsigned, char *, size_t);
 
+extern void abort (void) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
 
 
-long jrand48(unsigned short[3]) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
-char *l64a(long);
-void lcong48(unsigned short[7]);
-long lrand48(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
-char *mktemp(char *);
-int mkstemp(char *);
-long mrand48(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
-long nrand48(unsigned short[3]) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
-int posix_openpt(int);
-char *ptsname(int);
 
+extern int atexit (void (*__func) (void)) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
 
-int ptsname_r(int fildes, char *buffer, size_t buflen) __attribute__((availability(macos,introduced=10.13.4))) __attribute__((availability(ios,introduced=11.3))) __attribute__((availability(tvos,introduced=11.3))) __attribute__((availability(watchos,introduced=4.3)));
 
 
-int putenv(char *) __asm("_" "putenv" );
-long random(void) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
-int rand_r(unsigned *) __attribute__((__availability__(swift, unavailable, message="Use arc4random instead.")));
 
-char *realpath(const char * restrict, char * restrict) __asm("_" "realpath" "$DARWIN_EXTSN");
 
 
 
-unsigned short
- *seed48(unsigned short[3]);
-int setenv(const char * __name, const char * __value, int __overwrite) __asm("_" "setenv" );
+extern int at_quick_exit (void (*__func) (void)) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
 
-void setkey(const char *) __asm("_" "setkey" );
 
 
 
-char *setstate(const char *);
-void srand48(long);
 
-void srandom(unsigned);
 
 
+extern int on_exit (void (*__func) (int __status, void *__arg), void *__arg)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
 
-int unlockpt(int);
 
-int unsetenv(const char *) __asm("_" "unsetenv" );
-# 266 "/usr/include/stdlib.h" 3 4
-# 1 "/usr/include/sys/_types/_dev_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_dev_t.h" 3 4
-typedef __darwin_dev_t dev_t;
-# 267 "/usr/include/stdlib.h" 2 3 4
-# 1 "/usr/include/sys/_types/_mode_t.h" 1 3 4
-# 31 "/usr/include/sys/_types/_mode_t.h" 3 4
-typedef __darwin_mode_t mode_t;
-# 268 "/usr/include/stdlib.h" 2 3 4
 
 
-uint32_t arc4random(void);
-void arc4random_addrandom(unsigned char * , int )
-    __attribute__((availability(macosx,introduced=10.0))) __attribute__((availability(macosx,deprecated=10.12,message="use arc4random_stir")))
-    __attribute__((availability(ios,introduced=2.0))) __attribute__((availability(ios,deprecated=10.0,message="use arc4random_stir")))
-    __attribute__((availability(tvos,introduced=2.0))) __attribute__((availability(tvos,deprecated=10.0,message="use arc4random_stir")))
-    __attribute__((availability(watchos,introduced=1.0))) __attribute__((availability(watchos,deprecated=3.0,message="use arc4random_stir")));
-void arc4random_buf(void * __buf, size_t __nbytes) __attribute__((availability(macosx,introduced=10.7)));
-void arc4random_stir(void);
-uint32_t
-  arc4random_uniform(uint32_t __upper_bound) __attribute__((availability(macosx,introduced=10.7)));
 
-int atexit_b(void (^ _Nonnull)(void)) __attribute__((availability(macosx,introduced=10.6)));
-void *bsearch_b(const void *__key, const void *__base, size_t __nel,
-     size_t __width, int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
+extern void exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
 
 
-char *cgetcap(char *, const char *, int);
-int cgetclose(void);
-int cgetent(char **, char **, const char *);
-int cgetfirst(char **, char **);
-int cgetmatch(const char *, const char *);
-int cgetnext(char **, char **);
-int cgetnum(char *, const char *, long *);
-int cgetset(const char *);
-int cgetstr(char *, const char *, char **);
-int cgetustr(char *, const char *, char **);
 
-int daemon(int, int) __asm("_" "daemon" "$1050") __attribute__((availability(macosx,introduced=10.0,deprecated=10.5,message="Use posix_spawn APIs instead."))) __attribute__((availability(watchos,unavailable))) __attribute__((availability(tvos,unavailable)));
-char *devname(dev_t, mode_t);
-char *devname_r(dev_t, mode_t, char *buf, int len);
-char *getbsize(int *, long *);
-int getloadavg(double [], int);
-const char
- *getprogname(void);
 
-int heapsort(void *__base, size_t __nel, size_t __width,
-     int (* _Nonnull __compar)(const void *, const void *));
 
-int heapsort_b(void *__base, size_t __nel, size_t __width,
-     int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
+extern void quick_exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
 
-int mergesort(void *__base, size_t __nel, size_t __width,
-     int (* _Nonnull __compar)(const void *, const void *));
 
-int mergesort_b(void *__base, size_t __nel, size_t __width,
-     int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void psort(void *__base, size_t __nel, size_t __width,
-     int (* _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void psort_b(void *__base, size_t __nel, size_t __width,
-     int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void psort_r(void *__base, size_t __nel, size_t __width, void *,
-     int (* _Nonnull __compar)(void *, const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void qsort_b(void *__base, size_t __nel, size_t __width,
-     int (^ _Nonnull __compar)(const void *, const void *)) __attribute__((availability(macosx,introduced=10.6)));
 
-void qsort_r(void *__base, size_t __nel, size_t __width, void *,
-     int (* _Nonnull __compar)(void *, const void *, const void *));
-int radixsort(const unsigned char **__base, int __nel, const unsigned char *__table,
-     unsigned __endbyte);
-void setprogname(const char *);
-int sradixsort(const unsigned char **__base, int __nel, const unsigned char *__table,
-     unsigned __endbyte);
-void sranddev(void);
-void srandomdev(void);
-void *reallocf(void *__ptr, size_t __size) __attribute__((alloc_size(2)));
+extern void _Exit (int __status) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
 
-long long
-  strtoq(const char *__str, char **__endptr, int __base);
-unsigned long long
-  strtouq(const char *__str, char **__endptr, int __base);
 
-extern char *suboptarg;
-void *valloc(size_t) __attribute__((alloc_size(1)));
-# 28 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mm_malloc.h" 2 3 4
 
 
 
 
+extern char *getenv (const char *__name) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
 
-extern int posix_memalign(void **__memptr, size_t __alignment, size_t __size);
-# 44 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/mm_malloc.h" 3 4
-static __inline__ void *__attribute__((__always_inline__, __nodebug__,
-                                       __malloc__))
-_mm_malloc(size_t __size, size_t __align)
+# 539 "/usr/include/stdlib.h" 3 4
+extern int putenv (char *__string) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+extern int setenv (const char *__name, const char *__value, int __replace)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (2)));
+
+
+extern int unsetenv (const char *__name) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+
+
+
+
+
+
+extern int clearenv (void) __attribute__ ((__nothrow__ , __leaf__));
+# 567 "/usr/include/stdlib.h" 3 4
+extern char *mktemp (char *__template) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 580 "/usr/include/stdlib.h" 3 4
+extern int mkstemp (char *__template) __attribute__ ((__nonnull__ (1))) ;
+# 602 "/usr/include/stdlib.h" 3 4
+extern int mkstemps (char *__template, int __suffixlen) __attribute__ ((__nonnull__ (1))) ;
+# 623 "/usr/include/stdlib.h" 3 4
+extern char *mkdtemp (char *__template) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+# 672 "/usr/include/stdlib.h" 3 4
+
+
+
+
+
+extern int system (const char *__command) ;
+
+# 694 "/usr/include/stdlib.h" 3 4
+extern char *realpath (const char *__restrict __name,
+         char *__restrict __resolved) __attribute__ ((__nothrow__ , __leaf__)) ;
+
+
+
+
+
+
+typedef int (*__compar_fn_t) (const void *, const void *);
+# 712 "/usr/include/stdlib.h" 3 4
+
+
+
+extern void *bsearch (const void *__key, const void *__base,
+        size_t __nmemb, size_t __size, __compar_fn_t __compar)
+     __attribute__ ((__nonnull__ (1, 2, 5))) ;
+
+
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 1 3 4
+# 19 "/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h" 3 4
+extern __inline __attribute__ ((__gnu_inline__)) void *
+bsearch (const void *__key, const void *__base, size_t __nmemb, size_t __size,
+  __compar_fn_t __compar)
+{
+  size_t __l, __u, __idx;
+  const void *__p;
+  int __comparison;
+
+  __l = 0;
+  __u = __nmemb;
+  while (__l < __u)
+    {
+      __idx = (__l + __u) / 2;
+      __p = (void *) (((const char *) __base) + (__idx * __size));
+      __comparison = (*__compar) (__key, __p);
+      if (__comparison < 0)
+ __u = __idx;
+      else if (__comparison > 0)
+ __l = __idx + 1;
+      else
+ return (void *) __p;
+    }
+
+  return ((void *)0);
+}
+# 721 "/usr/include/stdlib.h" 2 3 4
+
+
+
+
+extern void qsort (void *__base, size_t __nmemb, size_t __size,
+     __compar_fn_t __compar) __attribute__ ((__nonnull__ (1, 4)));
+# 735 "/usr/include/stdlib.h" 3 4
+extern int abs (int __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+extern long int labs (long int __x) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+
+
+
+__extension__ extern long long int llabs (long long int __x)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+
+
+
+
+
+
+
+extern div_t div (int __numer, int __denom)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+extern ldiv_t ldiv (long int __numer, long int __denom)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+
+
+
+
+__extension__ extern lldiv_t lldiv (long long int __numer,
+        long long int __denom)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__const__)) ;
+
+# 772 "/usr/include/stdlib.h" 3 4
+extern char *ecvt (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4))) ;
+
+
+
+
+extern char *fcvt (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4))) ;
+
+
+
+
+extern char *gcvt (double __value, int __ndigit, char *__buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3))) ;
+
+
+
+
+extern char *qecvt (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4))) ;
+extern char *qfcvt (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4))) ;
+extern char *qgcvt (long double __value, int __ndigit, char *__buf)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3))) ;
+
+
+
+
+extern int ecvt_r (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign, char *__restrict __buf,
+     size_t __len) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4, 5)));
+extern int fcvt_r (double __value, int __ndigit, int *__restrict __decpt,
+     int *__restrict __sign, char *__restrict __buf,
+     size_t __len) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4, 5)));
+
+extern int qecvt_r (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign,
+      char *__restrict __buf, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4, 5)));
+extern int qfcvt_r (long double __value, int __ndigit,
+      int *__restrict __decpt, int *__restrict __sign,
+      char *__restrict __buf, size_t __len)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (3, 4, 5)));
+
+
+
+
+
+
+extern int mblen (const char *__s, size_t __n) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int mbtowc (wchar_t *__restrict __pwc,
+     const char *__restrict __s, size_t __n) __attribute__ ((__nothrow__ , __leaf__));
+
+
+extern int wctomb (char *__s, wchar_t __wchar) __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+extern size_t mbstowcs (wchar_t *__restrict __pwcs,
+   const char *__restrict __s, size_t __n) __attribute__ ((__nothrow__ , __leaf__));
+
+extern size_t wcstombs (char *__restrict __s,
+   const wchar_t *__restrict __pwcs, size_t __n)
+     __attribute__ ((__nothrow__ , __leaf__));
+
+
+
+
+
+
+
+
+extern int rpmatch (const char *__response) __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1))) ;
+# 859 "/usr/include/stdlib.h" 3 4
+extern int getsubopt (char **__restrict __optionp,
+        char *const *__restrict __tokens,
+        char **__restrict __valuep)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1, 2, 3))) ;
+# 911 "/usr/include/stdlib.h" 3 4
+extern int getloadavg (double __loadavg[], int __nelem)
+     __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__nonnull__ (1)));
+# 921 "/usr/include/stdlib.h" 3 4
+# 1 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 1 3 4
+# 24 "/usr/include/x86_64-linux-gnu/bits/stdlib-float.h" 3 4
+
+extern __inline __attribute__ ((__gnu_inline__)) double
+__attribute__ ((__nothrow__ , __leaf__)) atof (const char *__nptr)
+{
+  return strtod (__nptr, (char **) ((void *)0));
+}
+
+# 922 "/usr/include/stdlib.h" 2 3 4
+# 934 "/usr/include/stdlib.h" 3 4
+
+# 28 "/usr/lib/gcc/x86_64-linux-gnu/6/include/mm_malloc.h" 2 3 4
+
+
+
+
+extern int posix_memalign (void **, size_t, size_t);
+
+
+
+
+static __inline void *
+_mm_malloc (size_t size, size_t alignment)
+{
+  void *ptr;
+  if (alignment == 1)
+    return malloc (size);
+  if (alignment == 2 || (sizeof (void *) == 8 && alignment == 4))
+    alignment = sizeof (void *);
+  if (posix_memalign (&ptr, alignment, size) == 0)
+    return ptr;
+  else
+    return ((void *)0);
+}
+
+static __inline void
+_mm_free (void * ptr)
+{
+  free (ptr);
+}
+# 35 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 2 3 4
+
+
+enum _mm_hint
+{
+
+  _MM_HINT_ET0 = 7,
+  _MM_HINT_ET1 = 6,
+  _MM_HINT_T0 = 3,
+  _MM_HINT_T1 = 2,
+  _MM_HINT_T2 = 1,
+  _MM_HINT_NTA = 0
+};
+
+
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_prefetch (const void *__P, enum _mm_hint __I)
+{
+  __builtin_prefetch (__P, (__I & 0x4) >> 2, __I & 0x3);
+}
+# 69 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 3 4
+typedef float __m128 __attribute__ ((__vector_size__ (16), __may_alias__));
+
+
+typedef float __v4sf __attribute__ ((__vector_size__ (16)));
+# 106 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 3 4
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_undefined_ps (void)
+{
+  __m128 __Y = __Y;
+  return __Y;
+}
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setzero_ps (void)
+{
+  return __extension__ (__m128){ 0.0f, 0.0f, 0.0f, 0.0f };
+}
+
+
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_ss (__m128 __A, __m128 __B)
+{
+  return (__m128) __builtin_ia32_addss ((__v4sf)__A, (__v4sf)__B);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_ss (__m128 __A, __m128 __B)
+{
+  return (__m128) __builtin_ia32_subss ((__v4sf)__A, (__v4sf)__B);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mul_ss (__m128 __A, __m128 __B)
+{
+  return (__m128) __builtin_ia32_mulss ((__v4sf)__A, (__v4sf)__B);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_div_ss (__m128 __A, __m128 __B)
+{
+  return (__m128) __builtin_ia32_divss ((__v4sf)__A, (__v4sf)__B);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sqrt_ss (__m128 __A)
+{
+  return (__m128) __builtin_ia32_sqrtss ((__v4sf)__A);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_rcp_ss (__m128 __A)
+{
+  return (__m128) __builtin_ia32_rcpss ((__v4sf)__A);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_rsqrt_ss (__m128 __A)
+{
+  return (__m128) __builtin_ia32_rsqrtss ((__v4sf)__A);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_min_ss (__m128 __A, __m128 __B)
+{
+  return (__m128) __builtin_ia32_minss ((__v4sf)__A, (__v4sf)__B);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_max_ss (__m128 __A, __m128 __B)
+{
+  return (__m128) __builtin_ia32_maxss ((__v4sf)__A, (__v4sf)__B);
+}
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_ps (__m128 __A, __m128 __B)
+{
+  return (__m128) ((__v4sf)__A + (__v4sf)__B);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_ps (__m128 __A, __m128 __B)
+{
+  return (__m128) ((__v4sf)__A - (__v4sf)__B);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mul_ps (__m128 __A, __m128 __B)
 {
-  if (__align == 1) {
-    return malloc(__size);
-  }
+  return (__m128) ((__v4sf)__A * (__v4sf)__B);
+}
 
-  if (!(__align & (__align - 1)) && __align < sizeof(void *))
-    __align = sizeof(void *);
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_div_ps (__m128 __A, __m128 __B)
+{
+  return (__m128) ((__v4sf)__A / (__v4sf)__B);
+}
 
-  void *__mallocedMemory;
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sqrt_ps (__m128 __A)
+{
+  return (__m128) __builtin_ia32_sqrtps ((__v4sf)__A);
+}
 
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_rcp_ps (__m128 __A)
+{
+  return (__m128) __builtin_ia32_rcpps ((__v4sf)__A);
+}
 
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_rsqrt_ps (__m128 __A)
+{
+  return (__m128) __builtin_ia32_rsqrtps ((__v4sf)__A);
+}
 
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_min_ps (__m128 __A, __m128 __B)
+{
+  return (__m128) __builtin_ia32_minps ((__v4sf)__A, (__v4sf)__B);
+}
 
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_max_ps (__m128 __A, __m128 __B)
+{
+  return (__m128) __builtin_ia32_maxps ((__v4sf)__A, (__v4sf)__B);
+}
 
-  if (posix_memalign(&__mallocedMemory, __align, __size))
-    return 0;
 
 
-  return __mallocedMemory;
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_and_ps (__m128 __A, __m128 __B)
+{
+  return __builtin_ia32_andps (__A, __B);
 }
 
-static __inline__ void __attribute__((__always_inline__, __nodebug__))
-_mm_free(void *__p)
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_andnot_ps (__m128 __A, __m128 __B)
 {
-  free(__p);
+  return __builtin_ia32_andnps (__A, __B);
 }
-# 40 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 2 3 4
-# 60 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_add_ss(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_or_ps (__m128 __A, __m128 __B)
 {
-  __a[0] += __b[0];
-  return __a;
+  return __builtin_ia32_orps (__A, __B);
 }
-# 80 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_add_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_xor_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)((__v4sf)__a + (__v4sf)__b);
+  return __builtin_ia32_xorps (__A, __B);
 }
-# 102 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_sub_ss(__m128 __a, __m128 __b)
+
+
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_ss (__m128 __A, __m128 __B)
 {
-  __a[0] -= __b[0];
-  return __a;
+  return (__m128) __builtin_ia32_cmpeqss ((__v4sf)__A, (__v4sf)__B);
 }
-# 123 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_sub_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmplt_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)((__v4sf)__a - (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpltss ((__v4sf)__A, (__v4sf)__B);
 }
-# 145 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_mul_ss(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmple_ss (__m128 __A, __m128 __B)
 {
-  __a[0] *= __b[0];
-  return __a;
+  return (__m128) __builtin_ia32_cmpless ((__v4sf)__A, (__v4sf)__B);
 }
-# 165 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_mul_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)((__v4sf)__a * (__v4sf)__b);
+  return (__m128) __builtin_ia32_movss ((__v4sf) __A,
+     (__v4sf)
+     __builtin_ia32_cmpltss ((__v4sf) __B,
+        (__v4sf)
+        __A));
 }
-# 187 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_div_ss(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpge_ss (__m128 __A, __m128 __B)
 {
-  __a[0] /= __b[0];
-  return __a;
+  return (__m128) __builtin_ia32_movss ((__v4sf) __A,
+     (__v4sf)
+     __builtin_ia32_cmpless ((__v4sf) __B,
+        (__v4sf)
+        __A));
 }
-# 206 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_div_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpneq_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)((__v4sf)__a / (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpneqss ((__v4sf)__A, (__v4sf)__B);
 }
-# 224 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_sqrt_ss(__m128 __a)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnlt_ss (__m128 __A, __m128 __B)
 {
-  __m128 __c = __builtin_ia32_sqrtss((__v4sf)__a);
-  return (__m128) { __c[0], __a[1], __a[2], __a[3] };
+  return (__m128) __builtin_ia32_cmpnltss ((__v4sf)__A, (__v4sf)__B);
 }
-# 242 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_sqrt_ps(__m128 __a)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnle_ss (__m128 __A, __m128 __B)
 {
-  return __builtin_ia32_sqrtps((__v4sf)__a);
+  return (__m128) __builtin_ia32_cmpnless ((__v4sf)__A, (__v4sf)__B);
 }
-# 260 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_rcp_ss(__m128 __a)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpngt_ss (__m128 __A, __m128 __B)
 {
-  __m128 __c = __builtin_ia32_rcpss((__v4sf)__a);
-  return (__m128) { __c[0], __a[1], __a[2], __a[3] };
+  return (__m128) __builtin_ia32_movss ((__v4sf) __A,
+     (__v4sf)
+     __builtin_ia32_cmpnltss ((__v4sf) __B,
+         (__v4sf)
+         __A));
 }
-# 278 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_rcp_ps(__m128 __a)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnge_ss (__m128 __A, __m128 __B)
 {
-  return __builtin_ia32_rcpps((__v4sf)__a);
+  return (__m128) __builtin_ia32_movss ((__v4sf) __A,
+     (__v4sf)
+     __builtin_ia32_cmpnless ((__v4sf) __B,
+         (__v4sf)
+         __A));
 }
-# 297 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_rsqrt_ss(__m128 __a)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpord_ss (__m128 __A, __m128 __B)
 {
-  __m128 __c = __builtin_ia32_rsqrtss((__v4sf)__a);
-  return (__m128) { __c[0], __a[1], __a[2], __a[3] };
+  return (__m128) __builtin_ia32_cmpordss ((__v4sf)__A, (__v4sf)__B);
 }
-# 315 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_rsqrt_ps(__m128 __a)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpunord_ss (__m128 __A, __m128 __B)
 {
-  return __builtin_ia32_rsqrtps((__v4sf)__a);
+  return (__m128) __builtin_ia32_cmpunordss ((__v4sf)__A, (__v4sf)__B);
 }
-# 338 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_min_ss(__m128 __a, __m128 __b)
+
+
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_ps (__m128 __A, __m128 __B)
 {
-  return __builtin_ia32_minss((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpeqps ((__v4sf)__A, (__v4sf)__B);
 }
-# 357 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_min_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmplt_ps (__m128 __A, __m128 __B)
 {
-  return __builtin_ia32_minps((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpltps ((__v4sf)__A, (__v4sf)__B);
 }
-# 380 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_max_ss(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmple_ps (__m128 __A, __m128 __B)
 {
-  return __builtin_ia32_maxss((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpleps ((__v4sf)__A, (__v4sf)__B);
 }
-# 399 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_max_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_ps (__m128 __A, __m128 __B)
 {
-  return __builtin_ia32_maxps((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpgtps ((__v4sf)__A, (__v4sf)__B);
 }
-# 417 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_and_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpge_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)((__v4su)__a & (__v4su)__b);
+  return (__m128) __builtin_ia32_cmpgeps ((__v4sf)__A, (__v4sf)__B);
 }
-# 439 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_andnot_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpneq_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)(~(__v4su)__a & (__v4su)__b);
+  return (__m128) __builtin_ia32_cmpneqps ((__v4sf)__A, (__v4sf)__B);
 }
-# 457 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_or_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnlt_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)((__v4su)__a | (__v4su)__b);
+  return (__m128) __builtin_ia32_cmpnltps ((__v4sf)__A, (__v4sf)__B);
 }
-# 476 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_xor_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnle_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)((__v4su)__a ^ (__v4su)__b);
+  return (__m128) __builtin_ia32_cmpnleps ((__v4sf)__A, (__v4sf)__B);
 }
-# 498 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpeq_ss(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpngt_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpeqss((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpngtps ((__v4sf)__A, (__v4sf)__B);
 }
-# 516 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpeq_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnge_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpeqps((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpngeps ((__v4sf)__A, (__v4sf)__B);
 }
-# 539 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmplt_ss(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpord_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpltss((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpordps ((__v4sf)__A, (__v4sf)__B);
 }
-# 558 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmplt_ps(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpunord_ps (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpltps((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cmpunordps ((__v4sf)__A, (__v4sf)__B);
 }
-# 582 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmple_ss(__m128 __a, __m128 __b)
+
+
+
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comieq_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpless((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_comieq ((__v4sf)__A, (__v4sf)__B);
 }
-# 601 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmple_ps(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comilt_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpleps((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_comilt ((__v4sf)__A, (__v4sf)__B);
 }
-# 624 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpgt_ss(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comile_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_shufflevector((__v4sf)__a,
-                                         (__v4sf)__builtin_ia32_cmpltss((__v4sf)__b, (__v4sf)__a),
-                                         4, 1, 2, 3);
+  return __builtin_ia32_comile ((__v4sf)__A, (__v4sf)__B);
 }
-# 645 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpgt_ps(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comigt_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpltps((__v4sf)__b, (__v4sf)__a);
+  return __builtin_ia32_comigt ((__v4sf)__A, (__v4sf)__B);
 }
-# 669 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpge_ss(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comige_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_shufflevector((__v4sf)__a,
-                                         (__v4sf)__builtin_ia32_cmpless((__v4sf)__b, (__v4sf)__a),
-                                         4, 1, 2, 3);
+  return __builtin_ia32_comige ((__v4sf)__A, (__v4sf)__B);
 }
-# 690 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpge_ps(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comineq_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpleps((__v4sf)__b, (__v4sf)__a);
+  return __builtin_ia32_comineq ((__v4sf)__A, (__v4sf)__B);
 }
-# 713 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpneq_ss(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomieq_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpneqss((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_ucomieq ((__v4sf)__A, (__v4sf)__B);
 }
-# 732 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpneq_ps(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomilt_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpneqps((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_ucomilt ((__v4sf)__A, (__v4sf)__B);
 }
-# 756 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpnlt_ss(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomile_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpnltss((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_ucomile ((__v4sf)__A, (__v4sf)__B);
 }
-# 776 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpnlt_ps(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomigt_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpnltps((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_ucomigt ((__v4sf)__A, (__v4sf)__B);
 }
-# 801 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpnle_ss(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomige_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpnless((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_ucomige ((__v4sf)__A, (__v4sf)__B);
 }
-# 821 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpnle_ps(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomineq_ss (__m128 __A, __m128 __B)
 {
-  return (__m128)__builtin_ia32_cmpnleps((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_ucomineq ((__v4sf)__A, (__v4sf)__B);
 }
-# 846 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpngt_ss(__m128 __a, __m128 __b)
+
+
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtss_si32 (__m128 __A)
 {
-  return (__m128)__builtin_shufflevector((__v4sf)__a,
-                                         (__v4sf)__builtin_ia32_cmpnltss((__v4sf)__b, (__v4sf)__a),
-                                         4, 1, 2, 3);
+  return __builtin_ia32_cvtss2si ((__v4sf) __A);
 }
-# 868 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpngt_ps(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvt_ss2si (__m128 __A)
 {
-  return (__m128)__builtin_ia32_cmpnltps((__v4sf)__b, (__v4sf)__a);
+  return _mm_cvtss_si32 (__A);
 }
-# 893 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpnge_ss(__m128 __a, __m128 __b)
+
+
+
+
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtss_si64 (__m128 __A)
 {
-  return (__m128)__builtin_shufflevector((__v4sf)__a,
-                                         (__v4sf)__builtin_ia32_cmpnless((__v4sf)__b, (__v4sf)__a),
-                                         4, 1, 2, 3);
+  return __builtin_ia32_cvtss2si64 ((__v4sf) __A);
 }
-# 915 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpnge_ps(__m128 __a, __m128 __b)
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtss_si64x (__m128 __A)
 {
-  return (__m128)__builtin_ia32_cmpnleps((__v4sf)__b, (__v4sf)__a);
+  return __builtin_ia32_cvtss2si64 ((__v4sf) __A);
 }
-# 940 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpord_ss(__m128 __a, __m128 __b)
+
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtps_pi32 (__m128 __A)
 {
-  return (__m128)__builtin_ia32_cmpordss((__v4sf)__a, (__v4sf)__b);
+  return (__m64) __builtin_ia32_cvtps2pi ((__v4sf) __A);
 }
-# 960 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpord_ps(__m128 __a, __m128 __b)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvt_ps2pi (__m128 __A)
 {
-  return (__m128)__builtin_ia32_cmpordps((__v4sf)__a, (__v4sf)__b);
+  return _mm_cvtps_pi32 (__A);
 }
-# 985 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpunord_ss(__m128 __a, __m128 __b)
+
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttss_si32 (__m128 __A)
 {
-  return (__m128)__builtin_ia32_cmpunordss((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_cvttss2si ((__v4sf) __A);
 }
-# 1005 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cmpunord_ps(__m128 __a, __m128 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtt_ss2si (__m128 __A)
 {
-  return (__m128)__builtin_ia32_cmpunordps((__v4sf)__a, (__v4sf)__b);
+  return _mm_cvttss_si32 (__A);
 }
-# 1026 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_comieq_ss(__m128 __a, __m128 __b)
+
+
+
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttss_si64 (__m128 __A)
 {
-  return __builtin_ia32_comieq((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_cvttss2si64 ((__v4sf) __A);
 }
-# 1048 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_comilt_ss(__m128 __a, __m128 __b)
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttss_si64x (__m128 __A)
 {
-  return __builtin_ia32_comilt((__v4sf)__a, (__v4sf)__b);
+  return __builtin_ia32_cvttss2si64 ((__v4sf) __A);
 }
-# 1069 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_comile_ss(__m128 __a, __m128 __b)
+
+
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttps_pi32 (__m128 __A)
 {
-  return __builtin_ia32_comile((__v4sf)__a, (__v4sf)__b);
+  return (__m64) __builtin_ia32_cvttps2pi ((__v4sf) __A);
 }
-# 1090 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_comigt_ss(__m128 __a, __m128 __b)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtt_ps2pi (__m128 __A)
 {
-  return __builtin_ia32_comigt((__v4sf)__a, (__v4sf)__b);
+  return _mm_cvttps_pi32 (__A);
 }
-# 1111 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_comige_ss(__m128 __a, __m128 __b)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi32_ss (__m128 __A, int __B)
 {
-  return __builtin_ia32_comige((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cvtsi2ss ((__v4sf) __A, __B);
 }
-# 1132 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_comineq_ss(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvt_si2ss (__m128 __A, int __B)
 {
-  return __builtin_ia32_comineq((__v4sf)__a, (__v4sf)__b);
+  return _mm_cvtsi32_ss (__A, __B);
 }
-# 1153 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_ucomieq_ss(__m128 __a, __m128 __b)
+
+
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64_ss (__m128 __A, long long __B)
 {
-  return __builtin_ia32_ucomieq((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cvtsi642ss ((__v4sf) __A, __B);
 }
-# 1174 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_ucomilt_ss(__m128 __a, __m128 __b)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64x_ss (__m128 __A, long long __B)
 {
-  return __builtin_ia32_ucomilt((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cvtsi642ss ((__v4sf) __A, __B);
 }
-# 1196 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_ucomile_ss(__m128 __a, __m128 __b)
+
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpi32_ps (__m128 __A, __m64 __B)
 {
-  return __builtin_ia32_ucomile((__v4sf)__a, (__v4sf)__b);
+  return (__m128) __builtin_ia32_cvtpi2ps ((__v4sf) __A, (__v2si)__B);
 }
-# 1218 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_ucomigt_ss(__m128 __a, __m128 __b)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvt_pi2ps (__m128 __A, __m64 __B)
 {
-  return __builtin_ia32_ucomigt((__v4sf)__a, (__v4sf)__b);
+  return _mm_cvtpi32_ps (__A, __B);
 }
-# 1240 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_ucomige_ss(__m128 __a, __m128 __b)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpi16_ps (__m64 __A)
 {
-  return __builtin_ia32_ucomige((__v4sf)__a, (__v4sf)__b);
+  __v4hi __sign;
+  __v2si __hisi, __losi;
+  __v4sf __zero, __ra, __rb;
+
+
+
+
+  __sign = __builtin_ia32_pcmpgtw ((__v4hi)0LL, (__v4hi)__A);
+
+
+  __losi = (__v2si) __builtin_ia32_punpcklwd ((__v4hi)__A, __sign);
+  __hisi = (__v2si) __builtin_ia32_punpckhwd ((__v4hi)__A, __sign);
+
+
+  __zero = (__v4sf) _mm_setzero_ps ();
+  __ra = __builtin_ia32_cvtpi2ps (__zero, __losi);
+  __rb = __builtin_ia32_cvtpi2ps (__ra, __hisi);
+
+  return (__m128) __builtin_ia32_movlhps (__ra, __rb);
 }
-# 1261 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_ucomineq_ss(__m128 __a, __m128 __b)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpu16_ps (__m64 __A)
 {
-  return __builtin_ia32_ucomineq((__v4sf)__a, (__v4sf)__b);
+  __v2si __hisi, __losi;
+  __v4sf __zero, __ra, __rb;
+
+
+  __losi = (__v2si) __builtin_ia32_punpcklwd ((__v4hi)__A, (__v4hi)0LL);
+  __hisi = (__v2si) __builtin_ia32_punpckhwd ((__v4hi)__A, (__v4hi)0LL);
+
+
+  __zero = (__v4sf) _mm_setzero_ps ();
+  __ra = __builtin_ia32_cvtpi2ps (__zero, __losi);
+  __rb = __builtin_ia32_cvtpi2ps (__ra, __hisi);
+
+  return (__m128) __builtin_ia32_movlhps (__ra, __rb);
 }
-# 1279 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtss_si32(__m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpi8_ps (__m64 __A)
 {
-  return __builtin_ia32_cvtss2si((__v4sf)__a);
+  __v8qi __sign;
+
+
+
+
+  __sign = __builtin_ia32_pcmpgtb ((__v8qi)0LL, (__v8qi)__A);
+
+
+  __A = (__m64) __builtin_ia32_punpcklbw ((__v8qi)__A, __sign);
+
+  return _mm_cvtpi16_ps(__A);
 }
-# 1297 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvt_ss2si(__m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpu8_ps(__m64 __A)
 {
-  return _mm_cvtss_si32(__a);
+  __A = (__m64) __builtin_ia32_punpcklbw ((__v8qi)__A, (__v8qi)0LL);
+  return _mm_cvtpu16_ps(__A);
 }
-# 1317 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ long long __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtss_si64(__m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpi32x2_ps(__m64 __A, __m64 __B)
 {
-  return __builtin_ia32_cvtss2si64((__v4sf)__a);
+  __v4sf __zero = (__v4sf) _mm_setzero_ps ();
+  __v4sf __sfa = __builtin_ia32_cvtpi2ps (__zero, (__v2si)__A);
+  __v4sf __sfb = __builtin_ia32_cvtpi2ps (__sfa, (__v2si)__B);
+  return (__m128) __builtin_ia32_movlhps (__sfa, __sfb);
 }
-# 1335 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtps_pi32(__m128 __a)
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtps_pi16(__m128 __A)
 {
-  return (__m64)__builtin_ia32_cvtps2pi((__v4sf)__a);
+  __v4sf __hisf = (__v4sf)__A;
+  __v4sf __losf = __builtin_ia32_movhlps (__hisf, __hisf);
+  __v2si __hisi = __builtin_ia32_cvtps2pi (__hisf);
+  __v2si __losi = __builtin_ia32_cvtps2pi (__losf);
+  return (__m64) __builtin_ia32_packssdw (__hisi, __losi);
 }
-# 1351 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvt_ps2pi(__m128 __a)
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtps_pi8(__m128 __A)
 {
-  return _mm_cvtps_pi32(__a);
+  __v4hi __tmp = (__v4hi) _mm_cvtps_pi16 (__A);
+  return (__m64) __builtin_ia32_packsswb (__tmp, (__v4hi)0LL);
 }
-# 1370 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvttss_si32(__m128 __a)
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_shuffle_ps (__m128 __A, __m128 __B, int const __mask)
 {
-  return __builtin_ia32_cvttss2si((__v4sf)__a);
+  return (__m128) __builtin_ia32_shufps ((__v4sf)__A, (__v4sf)__B, __mask);
 }
-# 1389 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtt_ss2si(__m128 __a)
+
+
+
+
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_ps (__m128 __A, __m128 __B)
 {
-  return _mm_cvttss_si32(__a);
+  return (__m128) __builtin_ia32_unpckhps ((__v4sf)__A, (__v4sf)__B);
 }
-# 1409 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ long long __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvttss_si64(__m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_ps (__m128 __A, __m128 __B)
 {
-  return __builtin_ia32_cvttss2si64((__v4sf)__a);
+  return (__m128) __builtin_ia32_unpcklps ((__v4sf)__A, (__v4sf)__B);
 }
-# 1428 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvttps_pi32(__m128 __a)
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadh_pi (__m128 __A, __m64 const *__P)
 {
-  return (__m64)__builtin_ia32_cvttps2pi((__v4sf)__a);
+  return (__m128) __builtin_ia32_loadhps ((__v4sf)__A, (const __v2sf *)__P);
 }
-# 1445 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtt_ps2pi(__m128 __a)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storeh_pi (__m64 *__P, __m128 __A)
 {
-  return _mm_cvttps_pi32(__a);
+  __builtin_ia32_storehps ((__v2sf *)__P, (__v4sf)__A);
 }
-# 1467 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtsi32_ss(__m128 __a, int __b)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_movehl_ps (__m128 __A, __m128 __B)
 {
-  __a[0] = __b;
-  return __a;
+  return (__m128) __builtin_ia32_movhlps ((__v4sf)__A, (__v4sf)__B);
 }
-# 1490 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvt_si2ss(__m128 __a, int __b)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_movelh_ps (__m128 __A, __m128 __B)
 {
-  return _mm_cvtsi32_ss(__a, __b);
+  return (__m128) __builtin_ia32_movlhps ((__v4sf)__A, (__v4sf)__B);
 }
-# 1514 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtsi64_ss(__m128 __a, long long __b)
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadl_pi (__m128 __A, __m64 const *__P)
 {
-  __a[0] = __b;
-  return __a;
+  return (__m128) __builtin_ia32_loadlps ((__v4sf)__A, (const __v2sf *)__P);
 }
-# 1540 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtpi32_ps(__m128 __a, __m64 __b)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storel_pi (__m64 *__P, __m128 __A)
 {
-  return __builtin_ia32_cvtpi2ps((__v4sf)__a, (__v2si)__b);
+  __builtin_ia32_storelps ((__v2sf *)__P, (__v4sf)__A);
 }
-# 1563 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvt_pi2ps(__m128 __a, __m64 __b)
+
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_movemask_ps (__m128 __A)
 {
-  return _mm_cvtpi32_ps(__a, __b);
+  return __builtin_ia32_movmskps ((__v4sf)__A);
 }
-# 1580 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ float __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtss_f32(__m128 __a)
+
+
+extern __inline unsigned int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_getcsr (void)
 {
-  return __a[0];
+  return __builtin_ia32_stmxcsr ();
 }
-# 1601 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_loadh_pi(__m128 __a, const __m64 *__p)
+
+
+extern __inline unsigned int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_MM_GET_EXCEPTION_STATE (void)
 {
-  typedef float __mm_loadh_pi_v2f32 __attribute__((__vector_size__(8)));
-  struct __mm_loadh_pi_struct {
-    __mm_loadh_pi_v2f32 __u;
-  } __attribute__((__packed__, __may_alias__));
-  __mm_loadh_pi_v2f32 __b = ((struct __mm_loadh_pi_struct*)__p)->__u;
-  __m128 __bb = __builtin_shufflevector(__b, __b, 0, 1, 0, 1);
-  return __builtin_shufflevector(__a, __bb, 0, 1, 4, 5);
+  return _mm_getcsr() & 0x003f;
 }
-# 1628 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_loadl_pi(__m128 __a, const __m64 *__p)
+
+extern __inline unsigned int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_MM_GET_EXCEPTION_MASK (void)
 {
-  typedef float __mm_loadl_pi_v2f32 __attribute__((__vector_size__(8)));
-  struct __mm_loadl_pi_struct {
-    __mm_loadl_pi_v2f32 __u;
-  } __attribute__((__packed__, __may_alias__));
-  __mm_loadl_pi_v2f32 __b = ((struct __mm_loadl_pi_struct*)__p)->__u;
-  __m128 __bb = __builtin_shufflevector(__b, __b, 0, 1, 0, 1);
-  return __builtin_shufflevector(__a, __bb, 4, 5, 2, 3);
+  return _mm_getcsr() & 0x1f80;
 }
-# 1655 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_load_ss(const float *__p)
+
+extern __inline unsigned int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_MM_GET_ROUNDING_MODE (void)
 {
-  struct __mm_load_ss_struct {
-    float __u;
-  } __attribute__((__packed__, __may_alias__));
-  float __u = ((struct __mm_load_ss_struct*)__p)->__u;
-  return (__m128){ __u, 0, 0, 0 };
+  return _mm_getcsr() & 0x6000;
 }
-# 1677 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_load1_ps(const float *__p)
+
+extern __inline unsigned int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_MM_GET_FLUSH_ZERO_MODE (void)
 {
-  struct __mm_load1_ps_struct {
-    float __u;
-  } __attribute__((__packed__, __may_alias__));
-  float __u = ((struct __mm_load1_ps_struct*)__p)->__u;
-  return (__m128){ __u, __u, __u, __u };
+  return _mm_getcsr() & 0x8000;
 }
-# 1700 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_load_ps(const float *__p)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setcsr (unsigned int __I)
 {
-  return *(__m128*)__p;
+  __builtin_ia32_ldmxcsr (__I);
 }
-# 1717 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_loadu_ps(const float *__p)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_MM_SET_EXCEPTION_STATE(unsigned int __mask)
 {
-  struct __loadu_ps {
-    __m128 __v;
-  } __attribute__((__packed__, __may_alias__));
-  return ((struct __loadu_ps*)__p)->__v;
+  _mm_setcsr((_mm_getcsr() & ~0x003f) | __mask);
 }
-# 1739 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_loadr_ps(const float *__p)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_MM_SET_EXCEPTION_MASK (unsigned int __mask)
 {
-  __m128 __a = _mm_load_ps(__p);
-  return __builtin_shufflevector((__v4sf)__a, (__v4sf)__a, 3, 2, 1, 0);
+  _mm_setcsr((_mm_getcsr() & ~0x1f80) | __mask);
 }
-# 1753 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_undefined_ps(void)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_MM_SET_ROUNDING_MODE (unsigned int __mode)
 {
-  return (__m128)__builtin_ia32_undef128();
+  _mm_setcsr((_mm_getcsr() & ~0x6000) | __mode);
 }
-# 1773 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_set_ss(float __w)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_MM_SET_FLUSH_ZERO_MODE (unsigned int __mode)
 {
-  return (__m128){ __w, 0, 0, 0 };
+  _mm_setcsr((_mm_getcsr() & ~0x8000) | __mode);
 }
-# 1791 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_set1_ps(float __w)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_ss (float __F)
 {
-  return (__m128){ __w, __w, __w, __w };
+  return __extension__ (__m128)(__v4sf){ __F, 0.0f, 0.0f, 0.0f };
 }
-# 1810 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_set_ps1(float __w)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_ps (float __F)
 {
-    return _mm_set1_ps(__w);
+  return __extension__ (__m128)(__v4sf){ __F, __F, __F, __F };
 }
-# 1837 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_set_ps(float __z, float __y, float __x, float __w)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_ps1 (float __F)
 {
-  return (__m128){ __w, __x, __y, __z };
+  return _mm_set1_ps (__F);
 }
-# 1865 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_setr_ps(float __z, float __y, float __x, float __w)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load_ss (float const *__P)
 {
-  return (__m128){ __z, __y, __x, __w };
+  return _mm_set_ss (*__P);
 }
-# 1880 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_setzero_ps(void)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load1_ps (float const *__P)
 {
-  return (__m128){ 0, 0, 0, 0 };
+  return _mm_set1_ps (*__P);
 }
-# 1897 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_storeh_pi(__m64 *__p, __m128 __a)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load_ps1 (float const *__P)
 {
-  __builtin_ia32_storehps((__v2si *)__p, (__v4sf)__a);
+  return _mm_load1_ps (__P);
 }
-# 1914 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_storel_pi(__m64 *__p, __m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load_ps (float const *__P)
 {
-  __builtin_ia32_storelps((__v2si *)__p, (__v4sf)__a);
+  return (__m128) *(__v4sf *)__P;
 }
-# 1931 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_store_ss(float *__p, __m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadu_ps (float const *__P)
 {
-  struct __mm_store_ss_struct {
-    float __u;
-  } __attribute__((__packed__, __may_alias__));
-  ((struct __mm_store_ss_struct*)__p)->__u = __a[0];
+  return (__m128) __builtin_ia32_loadups (__P);
 }
-# 1952 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_storeu_ps(float *__p, __m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadr_ps (float const *__P)
 {
-  struct __storeu_ps {
-    __m128 __v;
-  } __attribute__((__packed__, __may_alias__));
-  ((struct __storeu_ps*)__p)->__v = __a;
+  __v4sf __tmp = *(__v4sf *)__P;
+  return (__m128) __builtin_ia32_shufps (__tmp, __tmp, (((0) << 6) | ((1) << 4) | ((2) << 2) | (3)));
 }
-# 1973 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_store_ps(float *__p, __m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_ps (const float __Z, const float __Y, const float __X, const float __W)
 {
-  *(__m128*)__p = __a;
+  return __extension__ (__m128)(__v4sf){ __W, __X, __Y, __Z };
 }
-# 1992 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_store1_ps(float *__p, __m128 __a)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_ps (float __Z, float __Y, float __X, float __W)
 {
-  __a = __builtin_shufflevector((__v4sf)__a, (__v4sf)__a, 0, 0, 0, 0);
-  _mm_store_ps(__p, __a);
+  return __extension__ (__m128)(__v4sf){ __Z, __Y, __X, __W };
 }
-# 2012 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_store_ps1(float *__p, __m128 __a)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store_ss (float *__P, __m128 __A)
 {
-  return _mm_store1_ps(__p, __a);
+  *__P = ((__v4sf)__A)[0];
 }
-# 2031 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_storer_ps(float *__p, __m128 __a)
+
+extern __inline float __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtss_f32 (__m128 __A)
 {
-  __a = __builtin_shufflevector((__v4sf)__a, (__v4sf)__a, 3, 2, 1, 0);
-  _mm_store_ps(__p, __a);
+  return ((__v4sf)__A)[0];
 }
-# 2089 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_stream_pi(__m64 *__p, __m64 __a)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store_ps (float *__P, __m128 __A)
 {
-  __builtin_ia32_movntq(__p, __a);
+  *(__v4sf *)__P = (__v4sf)__A;
 }
-# 2108 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_stream_ps(float *__p, __m128 __a)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storeu_ps (float *__P, __m128 __A)
 {
-  __builtin_nontemporal_store((__v4sf)__a, (__v4sf*)__p);
+  __builtin_ia32_storeups (__P, (__v4sf)__A);
 }
-# 2127 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-void _mm_sfence(void);
-# 2200 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_max_pi16(__m64 __a, __m64 __b)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store1_ps (float *__P, __m128 __A)
 {
-  return (__m64)__builtin_ia32_pmaxsw((__v4hi)__a, (__v4hi)__b);
+  __v4sf __va = (__v4sf)__A;
+  __v4sf __tmp = __builtin_ia32_shufps (__va, __va, (((0) << 6) | ((0) << 4) | ((0) << 2) | (0)));
+  _mm_storeu_ps (__P, __tmp);
 }
-# 2219 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_max_pu8(__m64 __a, __m64 __b)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store_ps1 (float *__P, __m128 __A)
 {
-  return (__m64)__builtin_ia32_pmaxub((__v8qi)__a, (__v8qi)__b);
+  _mm_store1_ps (__P, __A);
 }
-# 2238 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_min_pi16(__m64 __a, __m64 __b)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storer_ps (float *__P, __m128 __A)
 {
-  return (__m64)__builtin_ia32_pminsw((__v4hi)__a, (__v4hi)__b);
+  __v4sf __va = (__v4sf)__A;
+  __v4sf __tmp = __builtin_ia32_shufps (__va, __va, (((0) << 6) | ((1) << 4) | ((2) << 2) | (3)));
+  _mm_store_ps (__P, __tmp);
 }
-# 2257 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_min_pu8(__m64 __a, __m64 __b)
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_move_ss (__m128 __A, __m128 __B)
 {
-  return (__m64)__builtin_ia32_pminub((__v8qi)__a, (__v8qi)__b);
+  return (__m128) __builtin_ia32_movss ((__v4sf)__A, (__v4sf)__B);
 }
-# 2275 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_movemask_pi8(__m64 __a)
+
+
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_extract_pi16 (__m64 const __A, int const __N)
 {
-  return __builtin_ia32_pmovmskb((__v8qi)__a);
+  return __builtin_ia32_vec_ext_v4hi ((__v4hi)__A, __N);
 }
-# 2294 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_mulhi_pu16(__m64 __a, __m64 __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pextrw (__m64 const __A, int const __N)
 {
-  return (__m64)__builtin_ia32_pmulhuw((__v4hi)__a, (__v4hi)__b);
+  return _mm_extract_pi16 (__A, __N);
 }
-# 2357 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_maskmove_si64(__m64 __d, __m64 __n, char *__p)
+# 1037 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 3 4
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_insert_pi16 (__m64 const __A, int const __D, int const __N)
 {
-  __builtin_ia32_maskmovq((__v8qi)__d, (__v8qi)__n, __p);
+  return (__m64) __builtin_ia32_vec_set_v4hi ((__v4hi)__A, __D, __N);
 }
-# 2376 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_avg_pu8(__m64 __a, __m64 __b)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pinsrw (__m64 const __A, int const __D, int const __N)
 {
-  return (__m64)__builtin_ia32_pavgb((__v8qi)__a, (__v8qi)__b);
+  return _mm_insert_pi16 (__A, __D, __N);
 }
-# 2395 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_avg_pu16(__m64 __a, __m64 __b)
+# 1057 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 3 4
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_max_pi16 (__m64 __A, __m64 __B)
 {
-  return (__m64)__builtin_ia32_pavgw((__v4hi)__a, (__v4hi)__b);
+  return (__m64) __builtin_ia32_pmaxsw ((__v4hi)__A, (__v4hi)__B);
 }
-# 2417 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_sad_pu8(__m64 __a, __m64 __b)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pmaxsw (__m64 __A, __m64 __B)
 {
-  return (__m64)__builtin_ia32_psadbw((__v8qi)__a, (__v8qi)__b);
+  return _mm_max_pi16 (__A, __B);
 }
-# 2473 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-unsigned int _mm_getcsr(void);
-# 2525 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-void _mm_setcsr(unsigned int __i);
-# 2590 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_unpackhi_ps(__m128 __a, __m128 __b)
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_max_pu8 (__m64 __A, __m64 __B)
 {
-  return __builtin_shufflevector((__v4sf)__a, (__v4sf)__b, 2, 6, 3, 7);
+  return (__m64) __builtin_ia32_pmaxub ((__v8qi)__A, (__v8qi)__B);
 }
-# 2612 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_unpacklo_ps(__m128 __a, __m128 __b)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pmaxub (__m64 __A, __m64 __B)
 {
-  return __builtin_shufflevector((__v4sf)__a, (__v4sf)__b, 0, 4, 1, 5);
+  return _mm_max_pu8 (__A, __B);
 }
-# 2633 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_move_ss(__m128 __a, __m128 __b)
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_min_pi16 (__m64 __A, __m64 __B)
 {
-  return __builtin_shufflevector((__v4sf)__a, (__v4sf)__b, 4, 1, 2, 3);
+  return (__m64) __builtin_ia32_pminsw ((__v4hi)__A, (__v4hi)__B);
 }
-# 2654 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_movehl_ps(__m128 __a, __m128 __b)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pminsw (__m64 __A, __m64 __B)
 {
-  return __builtin_shufflevector((__v4sf)__a, (__v4sf)__b, 6, 7, 2, 3);
+  return _mm_min_pi16 (__A, __B);
 }
-# 2675 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_movelh_ps(__m128 __a, __m128 __b)
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_min_pu8 (__m64 __A, __m64 __B)
 {
-  return __builtin_shufflevector((__v4sf)__a, (__v4sf)__b, 0, 1, 4, 5);
+  return (__m64) __builtin_ia32_pminub ((__v8qi)__A, (__v8qi)__B);
 }
-# 2693 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtpi16_ps(__m64 __a)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pminub (__m64 __A, __m64 __B)
 {
-  __m64 __b, __c;
-  __m128 __r;
+  return _mm_min_pu8 (__A, __B);
+}
 
-  __b = _mm_setzero_si64();
-  __b = _mm_cmpgt_pi16(__b, __a);
-  __c = _mm_unpackhi_pi16(__a, __b);
-  __r = _mm_setzero_ps();
-  __r = _mm_cvtpi32_ps(__r, __c);
-  __r = _mm_movelh_ps(__r, __r);
-  __c = _mm_unpacklo_pi16(__a, __b);
-  __r = _mm_cvtpi32_ps(__r, __c);
 
-  return __r;
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_movemask_pi8 (__m64 __A)
+{
+  return __builtin_ia32_pmovmskb ((__v8qi)__A);
 }
-# 2723 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtpu16_ps(__m64 __a)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pmovmskb (__m64 __A)
 {
-  __m64 __b, __c;
-  __m128 __r;
+  return _mm_movemask_pi8 (__A);
+}
 
-  __b = _mm_setzero_si64();
-  __c = _mm_unpackhi_pi16(__a, __b);
-  __r = _mm_setzero_ps();
-  __r = _mm_cvtpi32_ps(__r, __c);
-  __r = _mm_movelh_ps(__r, __r);
-  __c = _mm_unpacklo_pi16(__a, __b);
-  __r = _mm_cvtpi32_ps(__r, __c);
 
-  return __r;
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mulhi_pu16 (__m64 __A, __m64 __B)
+{
+  return (__m64) __builtin_ia32_pmulhuw ((__v4hi)__A, (__v4hi)__B);
 }
-# 2752 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtpi8_ps(__m64 __a)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pmulhuw (__m64 __A, __m64 __B)
 {
-  __m64 __b;
+  return _mm_mulhi_pu16 (__A, __B);
+}
+
 
-  __b = _mm_setzero_si64();
-  __b = _mm_cmpgt_pi8(__b, __a);
-  __b = _mm_unpacklo_pi8(__a, __b);
+
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_shuffle_pi16 (__m64 __A, int const __N)
+{
+  return (__m64) __builtin_ia32_pshufw ((__v4hi)__A, __N);
+}
 
-  return _mm_cvtpi16_ps(__b);
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pshufw (__m64 __A, int const __N)
+{
+  return _mm_shuffle_pi16 (__A, __N);
+}
+# 1159 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 3 4
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_maskmove_si64 (__m64 __A, __m64 __N, char *__P)
+{
+  __builtin_ia32_maskmovq ((__v8qi)__A, (__v8qi)__N, __P);
 }
-# 2777 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtpu8_ps(__m64 __a)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_maskmovq (__m64 __A, __m64 __N, char *__P)
 {
-  __m64 __b;
+  _mm_maskmove_si64 (__A, __N, __P);
+}
 
-  __b = _mm_setzero_si64();
-  __b = _mm_unpacklo_pi8(__a, __b);
 
-  return _mm_cvtpi16_ps(__b);
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_avg_pu8 (__m64 __A, __m64 __B)
+{
+  return (__m64) __builtin_ia32_pavgb ((__v8qi)__A, (__v8qi)__B);
 }
-# 2804 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtpi32x2_ps(__m64 __a, __m64 __b)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pavgb (__m64 __A, __m64 __B)
 {
-  __m128 __c;
+  return _mm_avg_pu8 (__A, __B);
+}
 
-  __c = _mm_setzero_ps();
-  __c = _mm_cvtpi32_ps(__c, __b);
-  __c = _mm_movelh_ps(__c, __c);
 
-  return _mm_cvtpi32_ps(__c, __a);
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_avg_pu16 (__m64 __A, __m64 __B)
+{
+  return (__m64) __builtin_ia32_pavgw ((__v4hi)__A, (__v4hi)__B);
 }
-# 2833 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtps_pi16(__m128 __a)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_pavgw (__m64 __A, __m64 __B)
 {
-  __m64 __b, __c;
+  return _mm_avg_pu16 (__A, __B);
+}
+
 
-  __b = _mm_cvtps_pi32(__a);
-  __a = _mm_movehl_ps(__a, __a);
-  __c = _mm_cvtps_pi32(__a);
 
-  return _mm_packs_pi32(__b, __c);
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sad_pu8 (__m64 __A, __m64 __B)
+{
+  return (__m64) __builtin_ia32_psadbw ((__v8qi)__A, (__v8qi)__B);
 }
-# 2863 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_cvtps_pi8(__m128 __a)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_m_psadbw (__m64 __A, __m64 __B)
 {
-  __m64 __b, __c;
+  return _mm_sad_pu8 (__A, __B);
+}
 
-  __b = _mm_cvtps_pi16(__a);
-  __c = _mm_setzero_si64();
 
-  return _mm_packs_pi16(__b, __c);
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_stream_pi (__m64 *__P, __m64 __A)
+{
+  __builtin_ia32_movntq ((unsigned long long *)__P, (unsigned long long)__A);
 }
-# 2888 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse")))
-_mm_movemask_ps(__m128 __a)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_stream_ps (float *__P, __m128 __A)
 {
-  return __builtin_ia32_movmskps((__v4sf)__a);
+  __builtin_ia32_movntps (__P, (__v4sf)__A);
 }
-# 2969 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 3 4
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 1 3 4
-# 27 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 1 3 4
-# 28 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 2 3 4
 
-typedef double __m128d __attribute__((__vector_size__(16)));
-typedef long long __m128i __attribute__((__vector_size__(16)));
 
 
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sfence (void)
+{
+  __builtin_ia32_sfence ();
+}
+# 1249 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h" 1 3 4
+# 31 "/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h" 3 4
+# 1 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 1 3 4
+# 32 "/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h" 2 3 4
+# 40 "/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h" 3 4
 typedef double __v2df __attribute__ ((__vector_size__ (16)));
 typedef long long __v2di __attribute__ ((__vector_size__ (16)));
-typedef short __v8hi __attribute__((__vector_size__(16)));
-typedef char __v16qi __attribute__((__vector_size__(16)));
-
-
 typedef unsigned long long __v2du __attribute__ ((__vector_size__ (16)));
-typedef unsigned short __v8hu __attribute__((__vector_size__(16)));
-typedef unsigned char __v16qu __attribute__((__vector_size__(16)));
+typedef int __v4si __attribute__ ((__vector_size__ (16)));
+typedef unsigned int __v4su __attribute__ ((__vector_size__ (16)));
+typedef short __v8hi __attribute__ ((__vector_size__ (16)));
+typedef unsigned short __v8hu __attribute__ ((__vector_size__ (16)));
+typedef char __v16qi __attribute__ ((__vector_size__ (16)));
+typedef unsigned char __v16qu __attribute__ ((__vector_size__ (16)));
 
 
 
-typedef signed char __v16qs __attribute__((__vector_size__(16)));
+typedef long long __m128i __attribute__ ((__vector_size__ (16), __may_alias__));
+typedef double __m128d __attribute__ ((__vector_size__ (16), __may_alias__));
 
 
-# 1 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/f16cintrin.h" 1 3 4
-# 45 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/f16cintrin.h" 3 4
-static __inline float __attribute__((__always_inline__, __nodebug__, __target__("f16c")))
-_cvtsh_ss(unsigned short __a)
-{
-  __v8hi v = {(short)__a, 0, 0, 0, 0, 0, 0, 0};
-  __v4sf r = __builtin_ia32_vcvtph2ps(v);
-  return r[0];
-}
-# 116 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/f16cintrin.h" 3 4
-static __inline __m128 __attribute__((__always_inline__, __nodebug__, __target__("f16c")))
-_mm_cvtph_ps(__m128i __a)
-{
-  return (__m128)__builtin_ia32_vcvtph2ps((__v8hi)__a);
-}
-# 48 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 2 3 4
-# 67 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_add_sd(__m128d __a, __m128d __b)
-{
-  __a[0] += __b[0];
-  return __a;
-}
-# 86 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_add_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)((__v2df)__a + (__v2df)__b);
-}
-# 109 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sub_sd(__m128d __a, __m128d __b)
-{
-  __a[0] -= __b[0];
-  return __a;
-}
-# 128 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sub_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)((__v2df)__a - (__v2df)__b);
-}
-# 150 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_mul_sd(__m128d __a, __m128d __b)
-{
-  __a[0] *= __b[0];
-  return __a;
-}
-# 169 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_mul_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)((__v2df)__a * (__v2df)__b);
-}
-# 192 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_div_sd(__m128d __a, __m128d __b)
-{
-  __a[0] /= __b[0];
-  return __a;
-}
-# 212 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_div_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)((__v2df)__a / (__v2df)__b);
-}
-# 237 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sqrt_sd(__m128d __a, __m128d __b)
-{
-  __m128d __c = __builtin_ia32_sqrtsd((__v2df)__b);
-  return (__m128d) { __c[0], __a[1] };
-}
-# 255 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sqrt_pd(__m128d __a)
-{
-  return __builtin_ia32_sqrtpd((__v2df)__a);
-}
-# 279 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_min_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_minsd((__v2df)__a, (__v2df)__b);
-}
-# 299 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_min_pd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_minpd((__v2df)__a, (__v2df)__b);
-}
-# 323 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_max_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_maxsd((__v2df)__a, (__v2df)__b);
-}
-# 343 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_max_pd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_maxpd((__v2df)__a, (__v2df)__b);
-}
-# 361 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_and_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)((__v2du)__a & (__v2du)__b);
-}
-# 382 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_andnot_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)(~(__v2du)__a & (__v2du)__b);
-}
-# 400 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_or_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)((__v2du)__a | (__v2du)__b);
-}
-# 418 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_xor_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)((__v2du)__a ^ (__v2du)__b);
-}
-# 437 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpeq_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpeqpd((__v2df)__a, (__v2df)__b);
-}
-# 457 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmplt_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpltpd((__v2df)__a, (__v2df)__b);
-}
-# 478 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmple_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmplepd((__v2df)__a, (__v2df)__b);
-}
-# 499 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpgt_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpltpd((__v2df)__b, (__v2df)__a);
-}
-# 520 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpge_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmplepd((__v2df)__b, (__v2df)__a);
-}
-# 543 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpord_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpordpd((__v2df)__a, (__v2df)__b);
-}
-# 567 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpunord_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpunordpd((__v2df)__a, (__v2df)__b);
-}
-# 588 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpneq_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpneqpd((__v2df)__a, (__v2df)__b);
-}
-# 609 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpnlt_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpnltpd((__v2df)__a, (__v2df)__b);
-}
-# 630 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpnle_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpnlepd((__v2df)__a, (__v2df)__b);
-}
-# 651 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpngt_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpnltpd((__v2df)__b, (__v2df)__a);
-}
-# 672 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpnge_pd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpnlepd((__v2df)__b, (__v2df)__a);
-}
-# 695 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpeq_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpeqsd((__v2df)__a, (__v2df)__b);
-}
-# 720 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmplt_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpltsd((__v2df)__a, (__v2df)__b);
-}
-# 745 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmple_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmplesd((__v2df)__a, (__v2df)__b);
-}
-# 770 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpgt_sd(__m128d __a, __m128d __b)
-{
-  __m128d __c = __builtin_ia32_cmpltsd((__v2df)__b, (__v2df)__a);
-  return (__m128d) { __c[0], __a[1] };
-}
-# 796 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpge_sd(__m128d __a, __m128d __b)
-{
-  __m128d __c = __builtin_ia32_cmplesd((__v2df)__b, (__v2df)__a);
-  return (__m128d) { __c[0], __a[1] };
-}
-# 824 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpord_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpordsd((__v2df)__a, (__v2df)__b);
-}
-# 852 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpunord_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpunordsd((__v2df)__a, (__v2df)__b);
-}
-# 877 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpneq_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpneqsd((__v2df)__a, (__v2df)__b);
-}
-# 902 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpnlt_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpnltsd((__v2df)__a, (__v2df)__b);
-}
-# 927 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpnle_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d)__builtin_ia32_cmpnlesd((__v2df)__a, (__v2df)__b);
-}
-# 952 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpngt_sd(__m128d __a, __m128d __b)
-{
-  __m128d __c = __builtin_ia32_cmpnltsd((__v2df)__b, (__v2df)__a);
-  return (__m128d) { __c[0], __a[1] };
-}
-# 978 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpnge_sd(__m128d __a, __m128d __b)
-{
-  __m128d __c = __builtin_ia32_cmpnlesd((__v2df)__b, (__v2df)__a);
-  return (__m128d) { __c[0], __a[1] };
-}
-# 1003 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_comieq_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_comisdeq((__v2df)__a, (__v2df)__b);
-}
-# 1029 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_comilt_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_comisdlt((__v2df)__a, (__v2df)__b);
-}
-# 1055 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_comile_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_comisdle((__v2df)__a, (__v2df)__b);
-}
-# 1081 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_comigt_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_comisdgt((__v2df)__a, (__v2df)__b);
-}
-# 1107 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_comige_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_comisdge((__v2df)__a, (__v2df)__b);
-}
-# 1133 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_comineq_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_comisdneq((__v2df)__a, (__v2df)__b);
-}
-# 1157 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_ucomieq_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_ucomisdeq((__v2df)__a, (__v2df)__b);
-}
-# 1183 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_ucomilt_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_ucomisdlt((__v2df)__a, (__v2df)__b);
-}
-# 1209 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_ucomile_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_ucomisdle((__v2df)__a, (__v2df)__b);
-}
-# 1235 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_ucomigt_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_ucomisdgt((__v2df)__a, (__v2df)__b);
-}
-# 1261 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_ucomige_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_ucomisdge((__v2df)__a, (__v2df)__b);
-}
-# 1287 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_ucomineq_sd(__m128d __a, __m128d __b)
-{
-  return __builtin_ia32_ucomisdneq((__v2df)__a, (__v2df)__b);
-}
-# 1306 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtpd_ps(__m128d __a)
-{
-  return __builtin_ia32_cvtpd2ps((__v2df)__a);
-}
-# 1326 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtps_pd(__m128 __a)
-{
-  return (__m128d) __builtin_convertvector(
-      __builtin_shufflevector((__v4sf)__a, (__v4sf)__a, 0, 1), __v2df);
-}
-# 1349 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtepi32_pd(__m128i __a)
-{
-  return (__m128d) __builtin_convertvector(
-      __builtin_shufflevector((__v4si)__a, (__v4si)__a, 0, 1), __v2df);
-}
-# 1369 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtpd_epi32(__m128d __a)
-{
-  return __builtin_ia32_cvtpd2dq((__v2df)__a);
-}
-# 1386 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsd_si32(__m128d __a)
-{
-  return __builtin_ia32_cvtsd2si((__v2df)__a);
-}
-# 1411 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsd_ss(__m128 __a, __m128d __b)
-{
-  return (__m128)__builtin_ia32_cvtsd2ss((__v4sf)__a, (__v2df)__b);
-}
-# 1434 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsi32_sd(__m128d __a, int __b)
-{
-  __a[0] = __b;
-  return __a;
-}
-# 1460 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtss_sd(__m128d __a, __m128 __b)
-{
-  __a[0] = __b[0];
-  return __a;
-}
-# 1484 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvttpd_epi32(__m128d __a)
-{
-  return (__m128i)__builtin_ia32_cvttpd2dq((__v2df)__a);
-}
-# 1502 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvttsd_si32(__m128d __a)
-{
-  return __builtin_ia32_cvttsd2si((__v2df)__a);
-}
-# 1519 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtpd_pi32(__m128d __a)
-{
-  return (__m64)__builtin_ia32_cvtpd2pi((__v2df)__a);
-}
-# 1539 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvttpd_pi32(__m128d __a)
-{
-  return (__m64)__builtin_ia32_cvttpd2pi((__v2df)__a);
-}
-# 1556 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtpi32_pd(__m64 __a)
-{
-  return __builtin_ia32_cvtpi2pd((__v2si)__a);
-}
-# 1573 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ double __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsd_f64(__m128d __a)
-{
-  return __a[0];
-}
-# 1590 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_load_pd(double const *__dp)
-{
-  return *(__m128d*)__dp;
-}
-# 1608 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_load1_pd(double const *__dp)
-{
-  struct __mm_load1_pd_struct {
-    double __u;
-  } __attribute__((__packed__, __may_alias__));
-  double __u = ((struct __mm_load1_pd_struct*)__dp)->__u;
-  return (__m128d){ __u, __u };
-}
-# 1634 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_loadr_pd(double const *__dp)
-{
-  __m128d __u = *(__m128d*)__dp;
-  return __builtin_shufflevector((__v2df)__u, (__v2df)__u, 1, 0);
-}
-# 1652 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_loadu_pd(double const *__dp)
-{
-  struct __loadu_pd {
-    __m128d __v;
-  } __attribute__((__packed__, __may_alias__));
-  return ((struct __loadu_pd*)__dp)->__v;
-}
-# 1672 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_loadu_si64(void const *__a)
-{
-  struct __loadu_si64 {
-    long long __v;
-  } __attribute__((__packed__, __may_alias__));
-  long long __u = ((struct __loadu_si64*)__a)->__v;
-  return (__m128i){__u, 0L};
-}
-# 1693 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_load_sd(double const *__dp)
-{
-  struct __mm_load_sd_struct {
-    double __u;
-  } __attribute__((__packed__, __may_alias__));
-  double __u = ((struct __mm_load_sd_struct*)__dp)->__u;
-  return (__m128d){ __u, 0 };
-}
-# 1720 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_loadh_pd(__m128d __a, double const *__dp)
-{
-  struct __mm_loadh_pd_struct {
-    double __u;
-  } __attribute__((__packed__, __may_alias__));
-  double __u = ((struct __mm_loadh_pd_struct*)__dp)->__u;
-  return (__m128d){ __a[0], __u };
-}
-# 1747 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_loadl_pd(__m128d __a, double const *__dp)
-{
-  struct __mm_loadl_pd_struct {
-    double __u;
-  } __attribute__((__packed__, __may_alias__));
-  double __u = ((struct __mm_loadl_pd_struct*)__dp)->__u;
-  return (__m128d){ __u, __a[1] };
-}
-# 1768 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_undefined_pd(void)
-{
-  return (__m128d)__builtin_ia32_undef128();
-}
-# 1788 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set_sd(double __w)
-{
-  return (__m128d){ __w, 0 };
-}
-# 1806 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set1_pd(double __w)
-{
-  return (__m128d){ __w, __w };
-}
-# 1824 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set_pd1(double __w)
-{
-  return _mm_set1_pd(__w);
-}
-# 1844 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set_pd(double __w, double __x)
-{
-  return (__m128d){ __x, __w };
-}
-# 1865 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_setr_pd(double __w, double __x)
-{
-  return (__m128d){ __w, __x };
-}
-# 1880 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_setzero_pd(void)
-{
-  return (__m128d){ 0, 0 };
-}
-# 1901 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_move_sd(__m128d __a, __m128d __b)
-{
-  return (__m128d){ __b[0], __a[1] };
-}
-# 1918 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_store_sd(double *__dp, __m128d __a)
-{
-  struct __mm_store_sd_struct {
-    double __u;
-  } __attribute__((__packed__, __may_alias__));
-  ((struct __mm_store_sd_struct*)__dp)->__u = __a[0];
-}
-# 1940 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_store_pd(double *__dp, __m128d __a)
-{
-  *(__m128d*)__dp = __a;
-}
-# 1960 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_store1_pd(double *__dp, __m128d __a)
-{
-  __a = __builtin_shufflevector((__v2df)__a, (__v2df)__a, 0, 0);
-  _mm_store_pd(__dp, __a);
-}
-# 1981 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_store_pd1(double *__dp, __m128d __a)
-{
-  return _mm_store1_pd(__dp, __a);
-}
-# 1999 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_storeu_pd(double *__dp, __m128d __a)
-{
-  struct __storeu_pd {
-    __m128d __v;
-  } __attribute__((__packed__, __may_alias__));
-  ((struct __storeu_pd*)__dp)->__v = __a;
-}
-# 2022 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_storer_pd(double *__dp, __m128d __a)
-{
-  __a = __builtin_shufflevector((__v2df)__a, (__v2df)__a, 1, 0);
-  *(__m128d *)__dp = __a;
-}
-# 2040 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_storeh_pd(double *__dp, __m128d __a)
-{
-  struct __mm_storeh_pd_struct {
-    double __u;
-  } __attribute__((__packed__, __may_alias__));
-  ((struct __mm_storeh_pd_struct*)__dp)->__u = __a[1];
-}
-# 2060 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_storel_pd(double *__dp, __m128d __a)
-{
-  struct __mm_storeh_pd_struct {
-    double __u;
-  } __attribute__((__packed__, __may_alias__));
-  ((struct __mm_storeh_pd_struct*)__dp)->__u = __a[0];
-}
-# 2085 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_add_epi8(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v16qu)__a + (__v16qu)__b);
-}
-# 2107 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_add_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v8hu)__a + (__v8hu)__b);
-}
-# 2129 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_add_epi32(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v4su)__a + (__v4su)__b);
-}
-# 2147 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_add_si64(__m64 __a, __m64 __b)
-{
-  return (__m64)__builtin_ia32_paddq((__v1di)__a, (__v1di)__b);
-}
-# 2169 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_add_epi64(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v2du)__a + (__v2du)__b);
-}
-# 2190 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_adds_epi8(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_paddsb128((__v16qi)__a, (__v16qi)__b);
-}
-# 2212 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_adds_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_paddsw128((__v8hi)__a, (__v8hi)__b);
-}
-# 2233 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_adds_epu8(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_paddusb128((__v16qi)__a, (__v16qi)__b);
-}
-# 2254 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_adds_epu16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_paddusw128((__v8hi)__a, (__v8hi)__b);
-}
-# 2274 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_avg_epu8(__m128i __a, __m128i __b)
-{
-  typedef unsigned short __v16hu __attribute__ ((__vector_size__ (32)));
-  return (__m128i)__builtin_convertvector(
-               ((__builtin_convertvector((__v16qu)__a, __v16hu) +
-                 __builtin_convertvector((__v16qu)__b, __v16hu)) + 1)
-                 >> 1, __v16qu);
-}
-# 2298 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_avg_epu16(__m128i __a, __m128i __b)
-{
-  typedef unsigned int __v8su __attribute__ ((__vector_size__ (32)));
-  return (__m128i)__builtin_convertvector(
-               ((__builtin_convertvector((__v8hu)__a, __v8su) +
-                 __builtin_convertvector((__v8hu)__b, __v8su)) + 1)
-                 >> 1, __v8hu);
-}
-# 2328 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_madd_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_pmaddwd128((__v8hi)__a, (__v8hi)__b);
-}
-# 2348 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_max_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_pmaxsw128((__v8hi)__a, (__v8hi)__b);
-}
-# 2368 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_max_epu8(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_pmaxub128((__v16qi)__a, (__v16qi)__b);
-}
-# 2388 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_min_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_pminsw128((__v8hi)__a, (__v8hi)__b);
-}
-# 2408 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_min_epu8(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_pminub128((__v16qi)__a, (__v16qi)__b);
-}
-# 2428 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_mulhi_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_pmulhw128((__v8hi)__a, (__v8hi)__b);
-}
-# 2448 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_mulhi_epu16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_pmulhuw128((__v8hi)__a, (__v8hi)__b);
-}
-# 2468 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_mullo_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v8hu)__a * (__v8hu)__b);
-}
-# 2487 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_mul_su32(__m64 __a, __m64 __b)
-{
-  return __builtin_ia32_pmuludq((__v2si)__a, (__v2si)__b);
-}
-# 2506 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_mul_epu32(__m128i __a, __m128i __b)
-{
-  return __builtin_ia32_pmuludq128((__v4si)__a, (__v4si)__b);
-}
-# 2528 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sad_epu8(__m128i __a, __m128i __b)
-{
-  return __builtin_ia32_psadbw128((__v16qi)__a, (__v16qi)__b);
-}
-# 2546 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sub_epi8(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v16qu)__a - (__v16qu)__b);
-}
-# 2564 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sub_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v8hu)__a - (__v8hu)__b);
-}
-# 2582 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sub_epi32(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v4su)__a - (__v4su)__b);
-}
-# 2601 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sub_si64(__m64 __a, __m64 __b)
-{
-  return (__m64)__builtin_ia32_psubq((__v1di)__a, (__v1di)__b);
-}
-# 2619 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sub_epi64(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v2du)__a - (__v2du)__b);
-}
-# 2640 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_subs_epi8(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_psubsb128((__v16qi)__a, (__v16qi)__b);
-}
-# 2661 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_subs_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_psubsw128((__v8hi)__a, (__v8hi)__b);
-}
-# 2681 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_subs_epu8(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_psubusb128((__v16qi)__a, (__v16qi)__b);
-}
-# 2701 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_subs_epu16(__m128i __a, __m128i __b)
-{
-  return (__m128i)__builtin_ia32_psubusw128((__v8hi)__a, (__v8hi)__b);
-}
-# 2719 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_and_si128(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v2du)__a & (__v2du)__b);
-}
-# 2739 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_andnot_si128(__m128i __a, __m128i __b)
-{
-  return (__m128i)(~(__v2du)__a & (__v2du)__b);
-}
-# 2756 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_or_si128(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v2du)__a | (__v2du)__b);
-}
-# 2774 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_xor_si128(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v2du)__a ^ (__v2du)__b);
-}
-# 2834 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_slli_epi16(__m128i __a, int __count)
-{
-  return (__m128i)__builtin_ia32_psllwi128((__v8hi)__a, __count);
-}
-# 2853 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sll_epi16(__m128i __a, __m128i __count)
-{
-  return (__m128i)__builtin_ia32_psllw128((__v8hi)__a, (__v8hi)__count);
-}
-# 2872 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_slli_epi32(__m128i __a, int __count)
-{
-  return (__m128i)__builtin_ia32_pslldi128((__v4si)__a, __count);
-}
-# 2891 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sll_epi32(__m128i __a, __m128i __count)
-{
-  return (__m128i)__builtin_ia32_pslld128((__v4si)__a, (__v4si)__count);
-}
-# 2910 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_slli_epi64(__m128i __a, int __count)
-{
-  return __builtin_ia32_psllqi128((__v2di)__a, __count);
-}
-# 2929 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sll_epi64(__m128i __a, __m128i __count)
-{
-  return __builtin_ia32_psllq128((__v2di)__a, (__v2di)__count);
-}
-# 2949 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_srai_epi16(__m128i __a, int __count)
-{
-  return (__m128i)__builtin_ia32_psrawi128((__v8hi)__a, __count);
-}
-# 2969 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sra_epi16(__m128i __a, __m128i __count)
-{
-  return (__m128i)__builtin_ia32_psraw128((__v8hi)__a, (__v8hi)__count);
-}
-# 2989 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_srai_epi32(__m128i __a, int __count)
-{
-  return (__m128i)__builtin_ia32_psradi128((__v4si)__a, __count);
-}
-# 3009 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_sra_epi32(__m128i __a, __m128i __count)
-{
-  return (__m128i)__builtin_ia32_psrad128((__v4si)__a, (__v4si)__count);
-}
-# 3069 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_srli_epi16(__m128i __a, int __count)
-{
-  return (__m128i)__builtin_ia32_psrlwi128((__v8hi)__a, __count);
-}
-# 3088 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_srl_epi16(__m128i __a, __m128i __count)
-{
-  return (__m128i)__builtin_ia32_psrlw128((__v8hi)__a, (__v8hi)__count);
-}
-# 3107 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_srli_epi32(__m128i __a, int __count)
-{
-  return (__m128i)__builtin_ia32_psrldi128((__v4si)__a, __count);
-}
-# 3126 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_srl_epi32(__m128i __a, __m128i __count)
-{
-  return (__m128i)__builtin_ia32_psrld128((__v4si)__a, (__v4si)__count);
-}
-# 3145 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_srli_epi64(__m128i __a, int __count)
-{
-  return __builtin_ia32_psrlqi128((__v2di)__a, __count);
-}
-# 3164 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_srl_epi64(__m128i __a, __m128i __count)
-{
-  return __builtin_ia32_psrlq128((__v2di)__a, (__v2di)__count);
-}
-# 3183 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpeq_epi8(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v16qi)__a == (__v16qi)__b);
-}
-# 3202 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpeq_epi16(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v8hi)__a == (__v8hi)__b);
-}
-# 3221 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpeq_epi32(__m128i __a, __m128i __b)
-{
-  return (__m128i)((__v4si)__a == (__v4si)__b);
-}
-# 3241 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpgt_epi8(__m128i __a, __m128i __b)
-{
 
 
-  return (__m128i)((__v16qs)__a > (__v16qs)__b);
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_sd (double __F)
+{
+  return __extension__ (__m128d){ __F, 0.0 };
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_pd (double __F)
+{
+  return __extension__ (__m128d){ __F, __F };
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_pd1 (double __F)
+{
+  return _mm_set1_pd (__F);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_pd (double __W, double __X)
+{
+  return __extension__ (__m128d){ __X, __W };
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_pd (double __W, double __X)
+{
+  return __extension__ (__m128d){ __W, __X };
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_undefined_pd (void)
+{
+  __m128d __Y = __Y;
+  return __Y;
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setzero_pd (void)
+{
+  return __extension__ (__m128d){ 0.0, 0.0 };
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_move_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d) __builtin_ia32_movsd ((__v2df)__A, (__v2df)__B);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load_pd (double const *__P)
+{
+  return *(__m128d *)__P;
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadu_pd (double const *__P)
+{
+  return __builtin_ia32_loadupd (__P);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load1_pd (double const *__P)
+{
+  return _mm_set1_pd (*__P);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load_sd (double const *__P)
+{
+  return _mm_set_sd (*__P);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load_pd1 (double const *__P)
+{
+  return _mm_load1_pd (__P);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadr_pd (double const *__P)
+{
+  __m128d __tmp = _mm_load_pd (__P);
+  return __builtin_ia32_shufpd (__tmp, __tmp, (((0) << 1) | (1)));
+}
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store_pd (double *__P, __m128d __A)
+{
+  *(__m128d *)__P = __A;
+}
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storeu_pd (double *__P, __m128d __A)
+{
+  __builtin_ia32_storeupd (__P, __A);
+}
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store_sd (double *__P, __m128d __A)
+{
+  *__P = ((__v2df)__A)[0];
+}
+
+extern __inline double __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsd_f64 (__m128d __A)
+{
+  return ((__v2df)__A)[0];
+}
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storel_pd (double *__P, __m128d __A)
+{
+  _mm_store_sd (__P, __A);
+}
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storeh_pd (double *__P, __m128d __A)
+{
+  *__P = ((__v2df)__A)[1];
+}
+
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store1_pd (double *__P, __m128d __A)
+{
+  _mm_store_pd (__P, __builtin_ia32_shufpd (__A, __A, (((0) << 1) | (0))));
+}
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store_pd1 (double *__P, __m128d __A)
+{
+  _mm_store1_pd (__P, __A);
+}
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storer_pd (double *__P, __m128d __A)
+{
+  _mm_store_pd (__P, __builtin_ia32_shufpd (__A, __A, (((0) << 1) | (1))));
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi128_si32 (__m128i __A)
+{
+  return __builtin_ia32_vec_ext_v4si ((__v4si)__A, 0);
+}
+
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi128_si64 (__m128i __A)
+{
+  return ((__v2di)__A)[0];
+}
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi128_si64x (__m128i __A)
+{
+  return ((__v2di)__A)[0];
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d) ((__v2df)__A + (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_addsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d) ((__v2df)__A - (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_subsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mul_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d) ((__v2df)__A * (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mul_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_mulsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_div_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d) ((__v2df)__A / (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_div_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_divsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sqrt_pd (__m128d __A)
+{
+  return (__m128d)__builtin_ia32_sqrtpd ((__v2df)__A);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sqrt_sd (__m128d __A, __m128d __B)
+{
+  __v2df __tmp = __builtin_ia32_movsd ((__v2df)__A, (__v2df)__B);
+  return (__m128d)__builtin_ia32_sqrtsd ((__v2df)__tmp);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_min_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_minpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_min_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_minsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_max_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_maxpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_max_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_maxsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_and_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_andpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_andnot_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_andnpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_or_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_orpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_xor_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_xorpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpeqpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmplt_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpltpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmple_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmplepd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpgtpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpge_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpgepd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpneq_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpneqpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnlt_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpnltpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnle_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpnlepd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpngt_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpngtpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnge_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpngepd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpord_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpordpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpunord_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpunordpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpeqsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmplt_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpltsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmple_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmplesd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d) __builtin_ia32_movsd ((__v2df) __A,
+      (__v2df)
+      __builtin_ia32_cmpltsd ((__v2df) __B,
+         (__v2df)
+         __A));
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpge_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d) __builtin_ia32_movsd ((__v2df) __A,
+      (__v2df)
+      __builtin_ia32_cmplesd ((__v2df) __B,
+         (__v2df)
+         __A));
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpneq_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpneqsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnlt_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpnltsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnle_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpnlesd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpngt_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d) __builtin_ia32_movsd ((__v2df) __A,
+      (__v2df)
+      __builtin_ia32_cmpnltsd ((__v2df) __B,
+          (__v2df)
+          __A));
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpnge_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d) __builtin_ia32_movsd ((__v2df) __A,
+      (__v2df)
+      __builtin_ia32_cmpnlesd ((__v2df) __B,
+          (__v2df)
+          __A));
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpord_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpordsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpunord_sd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_cmpunordsd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comieq_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_comisdeq ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comilt_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_comisdlt ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comile_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_comisdle ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comigt_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_comisdgt ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comige_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_comisdge ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_comineq_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_comisdneq ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomieq_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_ucomisdeq ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomilt_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_ucomisdlt ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomile_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_ucomisdle ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomigt_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_ucomisdgt ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomige_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_ucomisdge ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_ucomineq_sd (__m128d __A, __m128d __B)
+{
+  return __builtin_ia32_ucomisdneq ((__v2df)__A, (__v2df)__B);
+}
+
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_epi64x (long long __q1, long long __q0)
+{
+  return __extension__ (__m128i)(__v2di){ __q0, __q1 };
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_epi64 (__m64 __q1, __m64 __q0)
+{
+  return _mm_set_epi64x ((long long)__q1, (long long)__q0);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_epi32 (int __q3, int __q2, int __q1, int __q0)
+{
+  return __extension__ (__m128i)(__v4si){ __q0, __q1, __q2, __q3 };
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_epi16 (short __q7, short __q6, short __q5, short __q4,
+        short __q3, short __q2, short __q1, short __q0)
+{
+  return __extension__ (__m128i)(__v8hi){
+    __q0, __q1, __q2, __q3, __q4, __q5, __q6, __q7 };
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set_epi8 (char __q15, char __q14, char __q13, char __q12,
+       char __q11, char __q10, char __q09, char __q08,
+       char __q07, char __q06, char __q05, char __q04,
+       char __q03, char __q02, char __q01, char __q00)
+{
+  return __extension__ (__m128i)(__v16qi){
+    __q00, __q01, __q02, __q03, __q04, __q05, __q06, __q07,
+    __q08, __q09, __q10, __q11, __q12, __q13, __q14, __q15
+  };
+}
+
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_epi64x (long long __A)
+{
+  return _mm_set_epi64x (__A, __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_epi64 (__m64 __A)
+{
+  return _mm_set_epi64 (__A, __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_epi32 (int __A)
+{
+  return _mm_set_epi32 (__A, __A, __A, __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_epi16 (short __A)
+{
+  return _mm_set_epi16 (__A, __A, __A, __A, __A, __A, __A, __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_set1_epi8 (char __A)
+{
+  return _mm_set_epi8 (__A, __A, __A, __A, __A, __A, __A, __A,
+         __A, __A, __A, __A, __A, __A, __A, __A);
+}
+
+
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_epi64 (__m64 __q0, __m64 __q1)
+{
+  return _mm_set_epi64 (__q1, __q0);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_epi32 (int __q0, int __q1, int __q2, int __q3)
+{
+  return _mm_set_epi32 (__q3, __q2, __q1, __q0);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_epi16 (short __q0, short __q1, short __q2, short __q3,
+         short __q4, short __q5, short __q6, short __q7)
+{
+  return _mm_set_epi16 (__q7, __q6, __q5, __q4, __q3, __q2, __q1, __q0);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setr_epi8 (char __q00, char __q01, char __q02, char __q03,
+        char __q04, char __q05, char __q06, char __q07,
+        char __q08, char __q09, char __q10, char __q11,
+        char __q12, char __q13, char __q14, char __q15)
+{
+  return _mm_set_epi8 (__q15, __q14, __q13, __q12, __q11, __q10, __q09, __q08,
+         __q07, __q06, __q05, __q04, __q03, __q02, __q01, __q00);
+}
+
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_load_si128 (__m128i const *__P)
+{
+  return *__P;
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadu_si128 (__m128i const *__P)
+{
+  return (__m128i) __builtin_ia32_loaddqu ((char const *)__P);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadl_epi64 (__m128i const *__P)
+{
+  return _mm_set_epi64 ((__m64)0LL, *(__m64 *)__P);
+}
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_store_si128 (__m128i *__P, __m128i __B)
+{
+  *__P = __B;
+}
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storeu_si128 (__m128i *__P, __m128i __B)
+{
+  __builtin_ia32_storedqu ((char *)__P, (__v16qi)__B);
+}
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_storel_epi64 (__m128i *__P, __m128i __B)
+{
+  *(long long *)__P = ((__v2di)__B)[0];
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_movepi64_pi64 (__m128i __B)
+{
+  return (__m64) ((__v2di)__B)[0];
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_movpi64_epi64 (__m64 __A)
+{
+  return _mm_set_epi64 ((__m64)0LL, __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_move_epi64 (__m128i __A)
+{
+  return (__m128i)__builtin_ia32_movq128 ((__v2di) __A);
+}
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_undefined_si128 (void)
+{
+  __m128i __Y = __Y;
+  return __Y;
+}
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_setzero_si128 (void)
+{
+  return __extension__ (__m128i)(__v4si){ 0, 0, 0, 0 };
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtepi32_pd (__m128i __A)
+{
+  return (__m128d)__builtin_ia32_cvtdq2pd ((__v4si) __A);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtepi32_ps (__m128i __A)
+{
+  return (__m128)__builtin_ia32_cvtdq2ps ((__v4si) __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpd_epi32 (__m128d __A)
+{
+  return (__m128i)__builtin_ia32_cvtpd2dq ((__v2df) __A);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpd_pi32 (__m128d __A)
+{
+  return (__m64)__builtin_ia32_cvtpd2pi ((__v2df) __A);
+}
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpd_ps (__m128d __A)
+{
+  return (__m128)__builtin_ia32_cvtpd2ps ((__v2df) __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttpd_epi32 (__m128d __A)
+{
+  return (__m128i)__builtin_ia32_cvttpd2dq ((__v2df) __A);
+}
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttpd_pi32 (__m128d __A)
+{
+  return (__m64)__builtin_ia32_cvttpd2pi ((__v2df) __A);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtpi32_pd (__m64 __A)
+{
+  return (__m128d)__builtin_ia32_cvtpi2pd ((__v2si) __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtps_epi32 (__m128 __A)
+{
+  return (__m128i)__builtin_ia32_cvtps2dq ((__v4sf) __A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttps_epi32 (__m128 __A)
+{
+  return (__m128i)__builtin_ia32_cvttps2dq ((__v4sf) __A);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtps_pd (__m128 __A)
+{
+  return (__m128d)__builtin_ia32_cvtps2pd ((__v4sf) __A);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsd_si32 (__m128d __A)
+{
+  return __builtin_ia32_cvtsd2si ((__v2df) __A);
+}
+
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsd_si64 (__m128d __A)
+{
+  return __builtin_ia32_cvtsd2si64 ((__v2df) __A);
+}
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsd_si64x (__m128d __A)
+{
+  return __builtin_ia32_cvtsd2si64 ((__v2df) __A);
+}
+
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttsd_si32 (__m128d __A)
+{
+  return __builtin_ia32_cvttsd2si ((__v2df) __A);
+}
+
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttsd_si64 (__m128d __A)
+{
+  return __builtin_ia32_cvttsd2si64 ((__v2df) __A);
+}
+
+
+extern __inline long long __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvttsd_si64x (__m128d __A)
+{
+  return __builtin_ia32_cvttsd2si64 ((__v2df) __A);
+}
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsd_ss (__m128 __A, __m128d __B)
+{
+  return (__m128)__builtin_ia32_cvtsd2ss ((__v4sf) __A, (__v2df) __B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi32_sd (__m128d __A, int __B)
+{
+  return (__m128d)__builtin_ia32_cvtsi2sd ((__v2df) __A, __B);
+}
+
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64_sd (__m128d __A, long long __B)
+{
+  return (__m128d)__builtin_ia32_cvtsi642sd ((__v2df) __A, __B);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64x_sd (__m128d __A, long long __B)
+{
+  return (__m128d)__builtin_ia32_cvtsi642sd ((__v2df) __A, __B);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtss_sd (__m128d __A, __m128 __B)
+{
+  return (__m128d)__builtin_ia32_cvtss2sd ((__v2df) __A, (__v4sf)__B);
+}
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_shuffle_pd(__m128d __A, __m128d __B, const int __mask)
+{
+  return (__m128d)__builtin_ia32_shufpd ((__v2df)__A, (__v2df)__B, __mask);
+}
+
+
+
+
+
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_unpckhpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_pd (__m128d __A, __m128d __B)
+{
+  return (__m128d)__builtin_ia32_unpcklpd ((__v2df)__A, (__v2df)__B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadh_pd (__m128d __A, double const *__B)
+{
+  return (__m128d)__builtin_ia32_loadhpd ((__v2df)__A, __B);
+}
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_loadl_pd (__m128d __A, double const *__B)
+{
+  return (__m128d)__builtin_ia32_loadlpd ((__v2df)__A, __B);
+}
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_movemask_pd (__m128d __A)
+{
+  return __builtin_ia32_movmskpd ((__v2df)__A);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_packs_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_packsswb128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_packs_epi32 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_packssdw128 ((__v4si)__A, (__v4si)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_packus_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_packuswb128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_epi8 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_punpckhbw128 ((__v16qi)__A, (__v16qi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_punpckhwd128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_epi32 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_punpckhdq128 ((__v4si)__A, (__v4si)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpackhi_epi64 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_punpckhqdq128 ((__v2di)__A, (__v2di)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_epi8 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_punpcklbw128 ((__v16qi)__A, (__v16qi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_punpcklwd128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_epi32 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_punpckldq128 ((__v4si)__A, (__v4si)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_unpacklo_epi64 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_punpcklqdq128 ((__v2di)__A, (__v2di)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_epi8 (__m128i __A, __m128i __B)
+{
+  return (__m128i) ((__v16qu)__A + (__v16qu)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i) ((__v8hu)__A + (__v8hu)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_epi32 (__m128i __A, __m128i __B)
+{
+  return (__m128i) ((__v4su)__A + (__v4su)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_add_epi64 (__m128i __A, __m128i __B)
+{
+  return (__m128i) ((__v2du)__A + (__v2du)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_adds_epi8 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_paddsb128 ((__v16qi)__A, (__v16qi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_adds_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_paddsw128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_adds_epu8 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_paddusb128 ((__v16qi)__A, (__v16qi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_adds_epu16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_paddusw128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_epi8 (__m128i __A, __m128i __B)
+{
+  return (__m128i) ((__v16qu)__A - (__v16qu)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i) ((__v8hu)__A - (__v8hu)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_epi32 (__m128i __A, __m128i __B)
+{
+  return (__m128i) ((__v4su)__A - (__v4su)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sub_epi64 (__m128i __A, __m128i __B)
+{
+  return (__m128i) ((__v2du)__A - (__v2du)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_subs_epi8 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_psubsb128 ((__v16qi)__A, (__v16qi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_subs_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_psubsw128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_subs_epu8 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_psubusb128 ((__v16qi)__A, (__v16qi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_subs_epu16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_psubusw128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_madd_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_pmaddwd128 ((__v8hi)__A, (__v8hi)__B);
+}
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mulhi_epi16 (__m128i __A, __m128i __B)
+{
+  return (__m128i)__builtin_ia32_pmulhw128 ((__v8hi)__A, (__v8hi)__B);
 }
-# 3264 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpgt_epi16(__m128i __a, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mullo_epi16 (__m128i __A, __m128i __B)
 {
-  return (__m128i)((__v8hi)__a > (__v8hi)__b);
+  return (__m128i) ((__v8hu)__A * (__v8hu)__B);
 }
-# 3285 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmpgt_epi32(__m128i __a, __m128i __b)
+
+extern __inline __m64 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mul_su32 (__m64 __A, __m64 __B)
 {
-  return (__m128i)((__v4si)__a > (__v4si)__b);
+  return (__m64)__builtin_ia32_pmuludq ((__v2si)__A, (__v2si)__B);
 }
-# 3306 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmplt_epi8(__m128i __a, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mul_epu32 (__m128i __A, __m128i __B)
 {
-  return _mm_cmpgt_epi8(__b, __a);
+  return (__m128i)__builtin_ia32_pmuludq128 ((__v4si)__A, (__v4si)__B);
 }
-# 3327 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmplt_epi16(__m128i __a, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_slli_epi16 (__m128i __A, int __B)
 {
-  return _mm_cmpgt_epi16(__b, __a);
+  return (__m128i)__builtin_ia32_psllwi128 ((__v8hi)__A, __B);
 }
-# 3348 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cmplt_epi32(__m128i __a, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_slli_epi32 (__m128i __A, int __B)
 {
-  return _mm_cmpgt_epi32(__b, __a);
+  return (__m128i)__builtin_ia32_pslldi128 ((__v4si)__A, __B);
 }
-# 3372 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsi64_sd(__m128d __a, long long __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_slli_epi64 (__m128i __A, int __B)
 {
-  __a[0] = __b;
-  return __a;
+  return (__m128i)__builtin_ia32_psllqi128 ((__v2di)__A, __B);
 }
-# 3390 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ long long __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsd_si64(__m128d __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srai_epi16 (__m128i __A, int __B)
 {
-  return __builtin_ia32_cvtsd2si64((__v2df)__a);
+  return (__m128i)__builtin_ia32_psrawi128 ((__v8hi)__A, __B);
 }
-# 3408 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ long long __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvttsd_si64(__m128d __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srai_epi32 (__m128i __A, int __B)
 {
-  return __builtin_ia32_cvttsd2si64((__v2df)__a);
+  return (__m128i)__builtin_ia32_psradi128 ((__v4si)__A, __B);
 }
-# 3424 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtepi32_ps(__m128i __a)
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_bsrli_si128 (__m128i __A, const int __N)
 {
-  return __builtin_ia32_cvtdq2ps((__v4si)__a);
+  return (__m128i)__builtin_ia32_psrldqi128 (__A, __N * 8);
 }
-# 3440 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtps_epi32(__m128 __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_bslli_si128 (__m128i __A, const int __N)
 {
-  return (__m128i)__builtin_ia32_cvtps2dq((__v4sf)__a);
+  return (__m128i)__builtin_ia32_pslldqi128 (__A, __N * 8);
 }
-# 3457 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvttps_epi32(__m128 __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srli_si128 (__m128i __A, const int __N)
 {
-  return (__m128i)__builtin_ia32_cvttps2dq((__v4sf)__a);
+  return (__m128i)__builtin_ia32_psrldqi128 (__A, __N * 8);
 }
-# 3473 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsi32_si128(int __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_slli_si128 (__m128i __A, const int __N)
 {
-  return (__m128i)(__v4si){ __a, 0, 0, 0 };
+  return (__m128i)__builtin_ia32_pslldqi128 (__A, __N * 8);
 }
-# 3490 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsi64_si128(long long __a)
+# 1201 "/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h" 3 4
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srli_epi16 (__m128i __A, int __B)
 {
-  return (__m128i){ __a, 0 };
+  return (__m128i)__builtin_ia32_psrlwi128 ((__v8hi)__A, __B);
 }
-# 3508 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsi128_si32(__m128i __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srli_epi32 (__m128i __A, int __B)
 {
-  __v4si __b = (__v4si)__a;
-  return __b[0];
+  return (__m128i)__builtin_ia32_psrldi128 ((__v4si)__A, __B);
 }
-# 3527 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ long long __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_cvtsi128_si64(__m128i __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srli_epi64 (__m128i __A, int __B)
 {
-  return __a[0];
+  return (__m128i)__builtin_ia32_psrlqi128 ((__v2di)__A, __B);
 }
-# 3544 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_load_si128(__m128i const *__p)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sll_epi16 (__m128i __A, __m128i __B)
 {
-  return *__p;
+  return (__m128i)__builtin_ia32_psllw128((__v8hi)__A, (__v8hi)__B);
 }
-# 3560 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_loadu_si128(__m128i const *__p)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sll_epi32 (__m128i __A, __m128i __B)
 {
-  struct __loadu_si128 {
-    __m128i __v;
-  } __attribute__((__packed__, __may_alias__));
-  return ((struct __loadu_si128*)__p)->__v;
+  return (__m128i)__builtin_ia32_pslld128((__v4si)__A, (__v4si)__B);
 }
-# 3581 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_loadl_epi64(__m128i const *__p)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sll_epi64 (__m128i __A, __m128i __B)
 {
-  struct __mm_loadl_epi64_struct {
-    long long __u;
-  } __attribute__((__packed__, __may_alias__));
-  return (__m128i) { ((struct __mm_loadl_epi64_struct*)__p)->__u, 0};
+  return (__m128i)__builtin_ia32_psllq128((__v2di)__A, (__v2di)__B);
 }
-# 3599 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_undefined_si128(void)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sra_epi16 (__m128i __A, __m128i __B)
 {
-  return (__m128i)__builtin_ia32_undef128();
+  return (__m128i)__builtin_ia32_psraw128 ((__v8hi)__A, (__v8hi)__B);
 }
-# 3621 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set_epi64x(long long __q1, long long __q0)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sra_epi32 (__m128i __A, __m128i __B)
 {
-  return (__m128i){ __q0, __q1 };
+  return (__m128i)__builtin_ia32_psrad128 ((__v4si)__A, (__v4si)__B);
 }
-# 3643 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set_epi64(__m64 __q1, __m64 __q0)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srl_epi16 (__m128i __A, __m128i __B)
 {
-  return (__m128i){ (long long)__q0, (long long)__q1 };
+  return (__m128i)__builtin_ia32_psrlw128 ((__v8hi)__A, (__v8hi)__B);
 }
-# 3671 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set_epi32(int __i3, int __i2, int __i1, int __i0)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srl_epi32 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v4si){ __i0, __i1, __i2, __i3};
+  return (__m128i)__builtin_ia32_psrld128 ((__v4si)__A, (__v4si)__B);
 }
-# 3711 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set_epi16(short __w7, short __w6, short __w5, short __w4, short __w3, short __w2, short __w1, short __w0)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_srl_epi64 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v8hi){ __w0, __w1, __w2, __w3, __w4, __w5, __w6, __w7 };
+  return (__m128i)__builtin_ia32_psrlq128 ((__v2di)__A, (__v2di)__B);
 }
-# 3759 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set_epi8(char __b15, char __b14, char __b13, char __b12, char __b11, char __b10, char __b9, char __b8, char __b7, char __b6, char __b5, char __b4, char __b3, char __b2, char __b1, char __b0)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_and_si128 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v16qi){ __b0, __b1, __b2, __b3, __b4, __b5, __b6, __b7, __b8, __b9, __b10, __b11, __b12, __b13, __b14, __b15 };
+  return (__m128i) ((__v2du)__A & (__v2du)__B);
 }
-# 3778 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set1_epi64x(long long __q)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_andnot_si128 (__m128i __A, __m128i __B)
 {
-  return (__m128i){ __q, __q };
+  return (__m128i)__builtin_ia32_pandn128 ((__v2di)__A, (__v2di)__B);
 }
-# 3797 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set1_epi64(__m64 __q)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_or_si128 (__m128i __A, __m128i __B)
 {
-  return (__m128i){ (long long)__q, (long long)__q };
+  return (__m128i) ((__v2du)__A | (__v2du)__B);
 }
-# 3816 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set1_epi32(int __i)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_xor_si128 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v4si){ __i, __i, __i, __i };
+  return (__m128i) ((__v2du)__A ^ (__v2du)__B);
 }
-# 3835 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set1_epi16(short __w)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_epi8 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v8hi){ __w, __w, __w, __w, __w, __w, __w, __w };
+  return (__m128i) ((__v16qi)__A == (__v16qi)__B);
 }
-# 3854 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_set1_epi8(char __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_epi16 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v16qi){ __b, __b, __b, __b, __b, __b, __b, __b, __b, __b, __b, __b, __b, __b, __b, __b };
+  return (__m128i) ((__v8hi)__A == (__v8hi)__B);
 }
-# 3874 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_setr_epi64(__m64 __q0, __m64 __q1)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpeq_epi32 (__m128i __A, __m128i __B)
 {
-  return (__m128i){ (long long)__q0, (long long)__q1 };
+  return (__m128i) ((__v4si)__A == (__v4si)__B);
 }
-# 3897 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_setr_epi32(int __i0, int __i1, int __i2, int __i3)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmplt_epi8 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v4si){ __i0, __i1, __i2, __i3};
+  return (__m128i) ((__v16qi)__A < (__v16qi)__B);
 }
-# 3928 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_setr_epi16(short __w0, short __w1, short __w2, short __w3, short __w4, short __w5, short __w6, short __w7)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmplt_epi16 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v8hi){ __w0, __w1, __w2, __w3, __w4, __w5, __w6, __w7 };
+  return (__m128i) ((__v8hi)__A < (__v8hi)__B);
 }
-# 3975 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_setr_epi8(char __b0, char __b1, char __b2, char __b3, char __b4, char __b5, char __b6, char __b7, char __b8, char __b9, char __b10, char __b11, char __b12, char __b13, char __b14, char __b15)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmplt_epi32 (__m128i __A, __m128i __B)
 {
-  return (__m128i)(__v16qi){ __b0, __b1, __b2, __b3, __b4, __b5, __b6, __b7, __b8, __b9, __b10, __b11, __b12, __b13, __b14, __b15 };
+  return (__m128i) ((__v4si)__A < (__v4si)__B);
 }
-# 3989 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_setzero_si128(void)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_epi8 (__m128i __A, __m128i __B)
 {
-  return (__m128i){ 0LL, 0LL };
+  return (__m128i) ((__v16qi)__A > (__v16qi)__B);
 }
-# 4007 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_store_si128(__m128i *__p, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_epi16 (__m128i __A, __m128i __B)
 {
-  *__p = __b;
+  return (__m128i) ((__v8hi)__A > (__v8hi)__B);
 }
-# 4023 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_storeu_si128(__m128i *__p, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cmpgt_epi32 (__m128i __A, __m128i __B)
 {
-  struct __storeu_si128 {
-    __m128i __v;
-  } __attribute__((__packed__, __may_alias__));
-  ((struct __storeu_si128*)__p)->__v = __b;
+  return (__m128i) ((__v4si)__A > (__v4si)__B);
 }
-# 4053 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_maskmoveu_si128(__m128i __d, __m128i __n, char *__p)
+
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_extract_epi16 (__m128i const __A, int const __N)
 {
-  __builtin_ia32_maskmovdqu((__v16qi)__d, (__v16qi)__n, __p);
+  return (unsigned short) __builtin_ia32_vec_ext_v8hi ((__v8hi)__A, __N);
 }
-# 4072 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_storel_epi64(__m128i *__p, __m128i __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_insert_epi16 (__m128i const __A, int const __D, int const __N)
 {
-  struct __mm_storel_epi64_struct {
-    long long __u;
-  } __attribute__((__packed__, __may_alias__));
-  ((struct __mm_storel_epi64_struct*)__p)->__u = __a[0];
+  return (__m128i) __builtin_ia32_vec_set_v8hi ((__v8hi)__A, __D, __N);
 }
-# 4095 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_stream_pd(double *__p, __m128d __a)
+# 1365 "/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h" 3 4
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_max_epi16 (__m128i __A, __m128i __B)
 {
-  __builtin_nontemporal_store((__v2df)__a, (__v2df*)__p);
+  return (__m128i)__builtin_ia32_pmaxsw128 ((__v8hi)__A, (__v8hi)__B);
 }
-# 4114 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_stream_si128(__m128i *__p, __m128i __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_max_epu8 (__m128i __A, __m128i __B)
 {
-  __builtin_nontemporal_store((__v2di)__a, (__v2di*)__p);
+  return (__m128i)__builtin_ia32_pmaxub128 ((__v16qi)__A, (__v16qi)__B);
 }
-# 4133 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_stream_si32(int *__p, int __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_min_epi16 (__m128i __A, __m128i __B)
 {
-  __builtin_ia32_movnti(__p, __a);
+  return (__m128i)__builtin_ia32_pminsw128 ((__v8hi)__A, (__v8hi)__B);
 }
-# 4153 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ void __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_stream_si64(long long *__p, long long __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_min_epu8 (__m128i __A, __m128i __B)
 {
-  __builtin_ia32_movnti64(__p, __a);
+  return (__m128i)__builtin_ia32_pminub128 ((__v16qi)__A, (__v16qi)__B);
 }
-# 4174 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-void _mm_clflush(void const * __p);
-# 4185 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-void _mm_lfence(void);
-# 4196 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-void _mm_mfence(void);
-# 4224 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_packs_epi16(__m128i __a, __m128i __b)
+
+extern __inline int __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_movemask_epi8 (__m128i __A)
 {
-  return (__m128i)__builtin_ia32_packsswb128((__v8hi)__a, (__v8hi)__b);
+  return __builtin_ia32_pmovmskb128 ((__v16qi)__A);
 }
-# 4252 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_packs_epi32(__m128i __a, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mulhi_epu16 (__m128i __A, __m128i __B)
 {
-  return (__m128i)__builtin_ia32_packssdw128((__v4si)__a, (__v4si)__b);
+  return (__m128i)__builtin_ia32_pmulhuw128 ((__v8hi)__A, (__v8hi)__B);
 }
-# 4280 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_packus_epi16(__m128i __a, __m128i __b)
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_shufflehi_epi16 (__m128i __A, const int __mask)
 {
-  return (__m128i)__builtin_ia32_packuswb128((__v8hi)__a, (__v8hi)__b);
+  return (__m128i)__builtin_ia32_pshufhw ((__v8hi)__A, __mask);
 }
-# 4308 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_extract_epi16(__m128i __a, int __imm)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_shufflelo_epi16 (__m128i __A, const int __mask)
 {
-  __v8hi __b = (__v8hi)__a;
-  return (unsigned short)__b[__imm & 7];
+  return (__m128i)__builtin_ia32_pshuflw ((__v8hi)__A, __mask);
 }
-# 4335 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_insert_epi16(__m128i __a, int __b, int __imm)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_shuffle_epi32 (__m128i __A, const int __mask)
 {
-  __v8hi __c = (__v8hi)__a;
-  __c[__imm & 7] = __b;
-  return (__m128i)__c;
+  return (__m128i)__builtin_ia32_pshufd ((__v4si)__A, __mask);
 }
-# 4355 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_movemask_epi8(__m128i __a)
+# 1428 "/usr/lib/gcc/x86_64-linux-gnu/6/include/emmintrin.h" 3 4
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_maskmoveu_si128 (__m128i __A, __m128i __B, char *__C)
 {
-  return __builtin_ia32_pmovmskb128((__v16qi)__a);
+  __builtin_ia32_maskmovdqu ((__v16qi)__A, (__v16qi)__B, __C);
 }
-# 4494 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpackhi_epi8(__m128i __a, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_avg_epu8 (__m128i __A, __m128i __B)
 {
-  return (__m128i)__builtin_shufflevector((__v16qi)__a, (__v16qi)__b, 8, 16+8, 9, 16+9, 10, 16+10, 11, 16+11, 12, 16+12, 13, 16+13, 14, 16+14, 15, 16+15);
+  return (__m128i)__builtin_ia32_pavgb128 ((__v16qi)__A, (__v16qi)__B);
 }
-# 4521 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpackhi_epi16(__m128i __a, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_avg_epu16 (__m128i __A, __m128i __B)
 {
-  return (__m128i)__builtin_shufflevector((__v8hi)__a, (__v8hi)__b, 4, 8+4, 5, 8+5, 6, 8+6, 7, 8+7);
+  return (__m128i)__builtin_ia32_pavgw128 ((__v8hi)__A, (__v8hi)__B);
 }
-# 4544 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpackhi_epi32(__m128i __a, __m128i __b)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_sad_epu8 (__m128i __A, __m128i __B)
 {
-  return (__m128i)__builtin_shufflevector((__v4si)__a, (__v4si)__b, 2, 4+2, 3, 4+3);
+  return (__m128i)__builtin_ia32_psadbw128 ((__v16qi)__A, (__v16qi)__B);
 }
-# 4565 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpackhi_epi64(__m128i __a, __m128i __b)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_stream_si32 (int *__A, int __B)
 {
-  return (__m128i)__builtin_shufflevector((__v2di)__a, (__v2di)__b, 1, 2+1);
+  __builtin_ia32_movnti (__A, __B);
 }
-# 4600 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpacklo_epi8(__m128i __a, __m128i __b)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_stream_si64 (long long int *__A, long long int __B)
 {
-  return (__m128i)__builtin_shufflevector((__v16qi)__a, (__v16qi)__b, 0, 16+0, 1, 16+1, 2, 16+2, 3, 16+3, 4, 16+4, 5, 16+5, 6, 16+6, 7, 16+7);
+  __builtin_ia32_movnti64 (__A, __B);
 }
-# 4628 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpacklo_epi16(__m128i __a, __m128i __b)
+
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_stream_si128 (__m128i *__A, __m128i __B)
 {
-  return (__m128i)__builtin_shufflevector((__v8hi)__a, (__v8hi)__b, 0, 8+0, 1, 8+1, 2, 8+2, 3, 8+3);
+  __builtin_ia32_movntdq ((__v2di *)__A, (__v2di)__B);
 }
-# 4651 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpacklo_epi32(__m128i __a, __m128i __b)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_stream_pd (double *__A, __m128d __B)
 {
-  return (__m128i)__builtin_shufflevector((__v4si)__a, (__v4si)__b, 0, 4+0, 1, 4+1);
+  __builtin_ia32_movntpd (__A, (__v2df)__B);
 }
-# 4672 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpacklo_epi64(__m128i __a, __m128i __b)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_clflush (void const *__A)
 {
-  return (__m128i)__builtin_shufflevector((__v2di)__a, (__v2di)__b, 0, 2+0);
+  __builtin_ia32_clflush (__A);
 }
-# 4689 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m64 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_movepi64_pi64(__m128i __a)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_lfence (void)
 {
-  return (__m64)__a[0];
+  __builtin_ia32_lfence ();
 }
-# 4706 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_movpi64_epi64(__m64 __a)
+
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_mfence (void)
 {
-  return (__m128i){ (long long)__a, 0 };
+  __builtin_ia32_mfence ();
 }
-# 4724 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_move_epi64(__m128i __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi32_si128 (int __A)
 {
-  return __builtin_shufflevector((__v2di)__a, (__m128i){ 0 }, 0, 2);
+  return _mm_set_epi32 (0, 0, 0, __A);
 }
-# 4745 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpackhi_pd(__m128d __a, __m128d __b)
+
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64_si128 (long long __A)
 {
-  return __builtin_shufflevector((__v2df)__a, (__v2df)__b, 1, 2+1);
+  return _mm_set_epi64x (0, __A);
 }
-# 4766 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_unpacklo_pd(__m128d __a, __m128d __b)
+
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_cvtsi64x_si128 (long long __A)
 {
-  return __builtin_shufflevector((__v2df)__a, (__v2df)__b, 0, 2+0);
+  return _mm_set_epi64x (0, __A);
 }
-# 4785 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ int __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_movemask_pd(__m128d __a)
+
+
+
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_castpd_ps(__m128d __A)
 {
-  return __builtin_ia32_movmskpd((__v2df)__a);
+  return (__m128) __A;
 }
-# 4832 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_castpd_ps(__m128d __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_castpd_si128(__m128d __A)
 {
-  return (__m128)__a;
+  return (__m128i) __A;
 }
-# 4849 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_castpd_si128(__m128d __a)
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_castps_pd(__m128 __A)
 {
-  return (__m128i)__a;
+  return (__m128d) __A;
 }
-# 4866 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_castps_pd(__m128 __a)
+
+extern __inline __m128i __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_castps_si128(__m128 __A)
 {
-  return (__m128d)__a;
+  return (__m128i) __A;
 }
-# 4883 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128i __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_castps_si128(__m128 __a)
+
+extern __inline __m128 __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_castsi128_ps(__m128i __A)
 {
-  return (__m128i)__a;
+  return (__m128) __A;
 }
-# 4900 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128 __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_castsi128_ps(__m128i __a)
+
+extern __inline __m128d __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_castsi128_pd(__m128i __A)
 {
-  return (__m128)__a;
+  return (__m128d) __A;
 }
-# 4917 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-static __inline__ __m128d __attribute__((__always_inline__, __nodebug__, __target__("sse2")))
-_mm_castsi128_pd(__m128i __a)
+# 1250 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 2 3 4
+# 1261 "/usr/lib/gcc/x86_64-linux-gnu/6/include/xmmintrin.h" 3 4
+extern __inline void __attribute__((__gnu_inline__, __always_inline__, __artificial__))
+_mm_pause (void)
 {
-  return (__m128d)__a;
+  __builtin_ia32_pause ();
 }
-# 4934 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/emmintrin.h" 3 4
-void _mm_pause(void);
-# 2970 "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include/xmmintrin.h" 2 3 4
 # 12 "../src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h" 2
+  
+# 12 "../src/atomic_ops/sysdeps/gcc/../standard_ao_double_t.h"
  typedef __m128 double_ptr_storage;
 
 

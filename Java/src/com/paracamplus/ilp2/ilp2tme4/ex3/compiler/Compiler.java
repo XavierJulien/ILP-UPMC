@@ -18,7 +18,6 @@ import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.FreeVariableCollector;
 import com.paracamplus.ilp2.ilp2tme4.ex3.compiler.GlobalVariableCollector;
 import com.paracamplus.ilp1.compiler.NoDestination;
 import com.paracamplus.ilp1.compiler.ReturnDestination;
-import com.paracamplus.ilp1.compiler.VoidDestination;
 import com.paracamplus.ilp1.compiler.interfaces.IASTCglobalVariable;
 import com.paracamplus.ilp1.compiler.interfaces.IGlobalVariableEnvironment;
 import com.paracamplus.ilp1.compiler.interfaces.IOperatorEnvironment;

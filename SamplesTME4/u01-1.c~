@@ -4,7 +4,6 @@
 
 /* Global variables */ 
 ILP_Object print;
-ILP_Object unless;
 
 /* Global prototypes */ 
 
@@ -13,18 +12,19 @@ ILP_Object unless;
 
 ILP_Object ilp_program () 
 { 
-{ 
-  ILP_Object ilptmp636; 
+ ILP_Object ilptmp636; 
+ilptmp636 = ILP_FALSE; 
+  if ( ! ILP_isEquivalentToTrue(ilptmp636) )
 { 
   ILP_Object ilptmp637; 
 ilptmp637 = ILP_Integer2ILP(1); 
-ilptmp636 = ILP_print(ilptmp637);
+return ILP_print(ilptmp637);
 }
-ilptmp636 = unless; 
-ilptmp636 = ILP_TRUE; 
-return ilptmp636; 
-} 
 
+ else { 
+return ILP_FALSE; 
+
+}
 } 
 
 static ILP_Object ilp_caught_program () {
