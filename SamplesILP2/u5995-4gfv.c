@@ -15,11 +15,11 @@ ILP_Object
 ilp__deuxfois (ILP_Closure ilp_useless, ILP_Object x1)
 {
   {
-    ILP_Object ilptmp277;
-    ILP_Object ilptmp278;
-    ilptmp277 = ILP_Integer2ILP (2);
-    ilptmp278 = x1;
-    return ILP_Times (ilptmp277, ilptmp278);
+    ILP_Object ilptmp135;
+    ILP_Object ilptmp136;
+    ilptmp135 = ILP_Integer2ILP (2);
+    ilptmp136 = x1;
+    return ILP_Times (ilptmp135, ilptmp136);
   }
 }
 
@@ -35,33 +35,33 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp279;
+    ILP_Object ilptmp137;
     {
-      ILP_Object ilptmp280;
-      ilptmp280 = (ILP_Object) & deuxfois_closure_object;
+      ILP_Object ilptmp138;
+      ilptmp138 = (ILP_Object) & deuxfois_closure_object;
 
       {
-	ILP_Object f2 = ilptmp280;
+	ILP_Object f2 = ilptmp138;
 	{
-	  ILP_Object ilptmp281;
-	  ilptmp281 = f2;
-	  ilptmp279 = (g = ilptmp281);
+	  ILP_Object ilptmp139;
+	  ilptmp139 = f2;
+	  ilptmp137 = (g = ilptmp139);
 	}
 
       }
     }
     {
-      ILP_Object ilptmp282;
-      ILP_Object ilptmp283;
+      ILP_Object ilptmp140;
+      ILP_Object ilptmp141;
       {
-	ILP_Object ilptmp284;
-	ilptmp284 = ILP_Integer2ILP (3000);
-	ilptmp282 = ILP_invoke (g, 1, ilptmp284);
+	ILP_Object ilptmp142;
+	ilptmp142 = ILP_Integer2ILP (3000);
+	ilptmp140 = ILP_invoke (g, 1, ilptmp142);
       }
-      ilptmp283 = ILP_Integer2ILP (5);
-      ilptmp279 = ILP_Minus (ilptmp282, ilptmp283);
+      ilptmp141 = ILP_Integer2ILP (5);
+      ilptmp137 = ILP_Minus (ilptmp140, ilptmp141);
     }
-    return ilptmp279;
+    return ilptmp137;
   }
 
 }

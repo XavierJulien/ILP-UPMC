@@ -18,11 +18,11 @@ ILP_Object ilp__foo(ILP_Closure ilp_useless
     ILP_Object x1,
     ILP_Object y2) {
 { 
-  ILP_Object ilptmp305; 
-  ILP_Object ilptmp306; 
-ilptmp305 = x1; 
-ilptmp306 = y2; 
-return ILP_Plus(ilptmp305, ilptmp306);
+  ILP_Object ilptmp153; 
+  ILP_Object ilptmp154; 
+ilptmp153 = x1; 
+ilptmp154 = y2; 
+return ILP_Plus(ilptmp153, ilptmp154);
 } 
 }
 struct ILP_Closure foo_closure_object = { 
@@ -36,36 +36,36 @@ struct ILP_Closure foo_closure_object = {
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp307; 
-  ILP_Object ilptmp308; 
+  ILP_Object ilptmp155; 
+  ILP_Object ilptmp156; 
 { 
-  ILP_Object ilptmp309; 
-ilptmp309 = ILP_TRUE; 
-  if ( ILP_isEquivalentToTrue(ilptmp309 ) ) {
-ilptmp307 = ILP_Integer2ILP(8); 
+  ILP_Object ilptmp157; 
+ilptmp157 = ILP_TRUE; 
+  if ( ILP_isEquivalentToTrue(ilptmp157 ) ) {
+ilptmp155 = ILP_Integer2ILP(8); 
 
   } else {
-ilptmp307 = ILP_Integer2ILP(1); 
+ilptmp155 = ILP_Integer2ILP(1); 
 
   }
 }
 { 
-  ILP_Object ilptmp310; 
-ilptmp310 = ILP_Integer2ILP(8); 
+  ILP_Object ilptmp158; 
+ilptmp158 = ILP_Integer2ILP(8); 
 
   {
-    ILP_Object x3 = ilptmp310;
+    ILP_Object x3 = ilptmp158;
 { 
-  ILP_Object ilptmp311; 
-  ILP_Object ilptmp312; 
-ilptmp311 = x3; 
-ilptmp312 = x3; 
-ilptmp308 = ILP_Times(ilptmp311, ilptmp312);
+  ILP_Object ilptmp159; 
+  ILP_Object ilptmp160; 
+ilptmp159 = x3; 
+ilptmp160 = x3; 
+ilptmp156 = ILP_Times(ilptmp159, ilptmp160);
 } 
 
   }
 }
-return ilp__foo(NULL , ilptmp307, ilptmp308);
+return ilp__foo(NULL , ilptmp155, ilptmp156);
 }
 
 } 

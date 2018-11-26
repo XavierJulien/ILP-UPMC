@@ -13,26 +13,26 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp513;
-    ILP_Object ilptmp514;
-    ilptmp513 = ILP_Integer2ILP (1);
-    ilptmp514 = ILP_Integer2ILP (2);
+    ILP_Object ilptmp307;
+    ILP_Object ilptmp308;
+    ilptmp307 = ILP_Integer2ILP (1);
+    ilptmp308 = ILP_Integer2ILP (2);
 
     {
-      ILP_Object x1 = ilptmp513;
-      ILP_Object y2 = ilptmp514;
+      ILP_Object x1 = ilptmp307;
+      ILP_Object y2 = ilptmp308;
       {
-	ILP_Object ilptmp515;
-	ilptmp515 = ILP_Integer2ILP (3);
+	ILP_Object ilptmp309;
+	ilptmp309 = ILP_Integer2ILP (3);
 
 	{
-	  ILP_Object y3 = ilptmp515;
+	  ILP_Object y3 = ilptmp309;
 	  {
-	    ILP_Object ilptmp516;
-	    ILP_Object ilptmp517;
-	    ilptmp516 = x1;
-	    ilptmp517 = y3;
-	    return ILP_Plus (ilptmp516, ilptmp517);
+	    ILP_Object ilptmp310;
+	    ILP_Object ilptmp311;
+	    ilptmp310 = x1;
+	    ilptmp311 = y3;
+	    return ILP_Plus (ilptmp310, ilptmp311);
 	  }
 
 	}

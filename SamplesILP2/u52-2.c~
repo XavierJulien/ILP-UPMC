@@ -12,33 +12,33 @@
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp37; 
-ilptmp37 = ILP_Integer2ILP(50); 
+  ILP_Object ilptmp15; 
+ilptmp15 = ILP_Integer2ILP(50); 
 
   {
-    ILP_Object x1 = ilptmp37;
+    ILP_Object x1 = ilptmp15;
 { 
-  ILP_Object ilptmp38; 
+  ILP_Object ilptmp16; 
 while ( 1 ) { 
-  ILP_Object ilptmp39; 
+  ILP_Object ilptmp17; 
 { 
-  ILP_Object ilptmp40; 
-  ILP_Object ilptmp41; 
-ilptmp40 = x1; 
-ilptmp41 = ILP_Integer2ILP(52); 
-ilptmp39 = ILP_LessThan(ilptmp40, ilptmp41);
+  ILP_Object ilptmp18; 
+  ILP_Object ilptmp19; 
+ilptmp18 = x1; 
+ilptmp19 = ILP_Integer2ILP(52); 
+ilptmp17 = ILP_LessThan(ilptmp18, ilptmp19);
 } 
-  if ( ILP_isEquivalentToTrue(ilptmp39) ) {
+  if ( ILP_isEquivalentToTrue(ilptmp17) ) {
 { 
-  ILP_Object ilptmp42; 
+  ILP_Object ilptmp20; 
 { 
-  ILP_Object ilptmp43; 
-  ILP_Object ilptmp44; 
-ilptmp43 = x1; 
-ilptmp44 = ILP_Integer2ILP(1); 
-ilptmp42 = ILP_Plus(ilptmp43, ilptmp44);
+  ILP_Object ilptmp21; 
+  ILP_Object ilptmp22; 
+ilptmp21 = x1; 
+ilptmp22 = ILP_Integer2ILP(1); 
+ilptmp20 = ILP_Plus(ilptmp21, ilptmp22);
 } 
-(void)(x1 = ilptmp42); 
+(void)(x1 = ilptmp20); 
 } 
 
 } else { 
@@ -46,9 +46,9 @@ ilptmp42 = ILP_Plus(ilptmp43, ilptmp44);
 
 }
 }
-ilptmp38 = ILP_FALSE; 
-ilptmp38 = x1; 
-return ilptmp38; 
+ilptmp16 = ILP_FALSE; 
+ilptmp16 = x1; 
+return ilptmp16; 
 } 
 
   }

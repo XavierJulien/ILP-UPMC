@@ -1,1 +1,4 @@
-if 2==2 then 3
+function f(x) ( let x = x + 2 in 2 * x );
+x = 12;
+let x = 3 * x in
+f(3 * x)

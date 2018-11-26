@@ -13,15 +13,15 @@ ILP_Object print;
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp611; 
+  ILP_Object ilptmp359; 
 { 
-  ILP_Object ilptmp612; 
-  ILP_Object ilptmp613; 
-ilptmp612 = ILP_Integer2ILP(4); 
-ilptmp613 = ILP_Integer2ILP(5); 
-ilptmp611 = ILP_Equal(ilptmp612, ilptmp613);
+  ILP_Object ilptmp360; 
+  ILP_Object ilptmp361; 
+ilptmp360 = ILP_Integer2ILP(4); 
+ilptmp361 = ILP_Integer2ILP(5); 
+ilptmp359 = ILP_Equal(ilptmp360, ilptmp361);
 } 
-return ILP_print(ilptmp611);
+return ILP_print(ilptmp359);
 }
 
 } 

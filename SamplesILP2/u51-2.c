@@ -14,52 +14,52 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp18;
-    ilptmp18 = ILP_Integer2ILP (49);
+    ILP_Object ilptmp4;
+    ilptmp4 = ILP_Integer2ILP (49);
 
     {
-      ILP_Object x1 = ilptmp18;
+      ILP_Object x1 = ilptmp4;
       {
-	ILP_Object ilptmp19;
+	ILP_Object ilptmp5;
 	{
-	  ILP_Object ilptmp20;
-	  ilptmp20 = x1;
-	  ilptmp19 = ILP_print (ilptmp20);
+	  ILP_Object ilptmp6;
+	  ilptmp6 = x1;
+	  ilptmp5 = ILP_print (ilptmp6);
 	}
 	{
-	  ILP_Object ilptmp21;
+	  ILP_Object ilptmp7;
 	  {
-	    ILP_Object ilptmp22;
-	    ILP_Object ilptmp23;
-	    ilptmp22 = x1;
-	    ilptmp23 = ILP_Integer2ILP (1);
-	    ilptmp21 = ILP_Plus (ilptmp22, ilptmp23);
+	    ILP_Object ilptmp8;
+	    ILP_Object ilptmp9;
+	    ilptmp8 = x1;
+	    ilptmp9 = ILP_Integer2ILP (1);
+	    ilptmp7 = ILP_Plus (ilptmp8, ilptmp9);
 	  }
-	  ilptmp19 = (x1 = ilptmp21);
+	  ilptmp5 = (x1 = ilptmp7);
 	}
 	{
-	  ILP_Object ilptmp24;
-	  ilptmp24 = x1;
-	  ilptmp19 = ILP_print (ilptmp24);
+	  ILP_Object ilptmp10;
+	  ilptmp10 = x1;
+	  ilptmp5 = ILP_print (ilptmp10);
 	}
 	{
-	  ILP_Object ilptmp25;
+	  ILP_Object ilptmp11;
 	  {
-	    ILP_Object ilptmp26;
-	    ILP_Object ilptmp27;
-	    ilptmp26 = x1;
-	    ilptmp27 = ILP_Integer2ILP (1);
-	    ilptmp25 = ILP_Plus (ilptmp26, ilptmp27);
+	    ILP_Object ilptmp12;
+	    ILP_Object ilptmp13;
+	    ilptmp12 = x1;
+	    ilptmp13 = ILP_Integer2ILP (1);
+	    ilptmp11 = ILP_Plus (ilptmp12, ilptmp13);
 	  }
-	  ilptmp19 = (x1 = ilptmp25);
+	  ilptmp5 = (x1 = ilptmp11);
 	}
 	{
-	  ILP_Object ilptmp28;
-	  ilptmp28 = x1;
-	  ilptmp19 = ILP_print (ilptmp28);
+	  ILP_Object ilptmp14;
+	  ilptmp14 = x1;
+	  ilptmp5 = ILP_print (ilptmp14);
 	}
-	ilptmp19 = x1;
-	return ilptmp19;
+	ilptmp5 = x1;
+	return ilptmp5;
       }
 
     }

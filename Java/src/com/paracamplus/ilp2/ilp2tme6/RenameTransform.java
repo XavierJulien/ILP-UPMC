@@ -24,7 +24,7 @@ import com.paracamplus.ilp1.interfaces.IASTexpression;
 
 public class RenameTransform extends CopyTransform<INormalizationEnvironment> implements IASTvisitor<IASTexpression, INormalizationEnvironment, CompilationException> {
     
-	public static int cpt = 0;
+	public static int cpt = 1;
     public RenameTransform(IASTfactory fact) {
     	super(fact);
 	}
@@ -39,7 +39,9 @@ public class RenameTransform extends CopyTransform<INormalizationEnvironment> im
     		for (int i = 0; i < vars.length; i++) {
     			IASTvariable v = vars[i];
     			IASTvariable newV = factory.newVariable(v.getName() + "_" + cpt++);
-    			data = data.extend(v, newV);
+    			System.out.println(newV.getName());
+    			//data = data.extend(v, newV);
+    			System.out.println("Aaa");
     		}
     		IASTexpression newBody = f.getBody().accept(this, data);
     		fcts2[j] = factory.newFunctionDefinition(f.getFunctionVariable(), newVars, newBody);
@@ -83,10 +85,10 @@ public class RenameTransform extends CopyTransform<INormalizationEnvironment> im
 		for(int i = 0; i < b.length;i++) {
 			IASTvariable v = b[i].getVariable();
 			IASTvariable newV = factory.newVariable(v.getName() + "_" + cpt++);
-			newData = newData.extend(v, newV);
-			
+			System.out.println(newV.getName());
+			//newData = newData.extend(v, newV);
 		}
-		return new ASTfactory().newBlock(iast.getBindings(), iast.getBody().accept(this, data));
+		return new ASTfactory().newBlock(iast.getBindings(), iast.getBody().accept(this, newData));
 	}
 
 }

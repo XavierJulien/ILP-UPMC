@@ -16,11 +16,11 @@ ILP_Object ilp__deuxfois(ILP_Closure ilp_useless
 ,
     ILP_Object x1) {
 { 
-  ILP_Object ilptmp84; 
-  ILP_Object ilptmp85; 
-ilptmp84 = ILP_Integer2ILP(2); 
-ilptmp85 = x1; 
-return ILP_Times(ilptmp84, ilptmp85);
+  ILP_Object ilptmp41; 
+  ILP_Object ilptmp42; 
+ilptmp41 = ILP_Integer2ILP(2); 
+ilptmp42 = x1; 
+return ILP_Times(ilptmp41, ilptmp42);
 } 
 }
 struct ILP_Closure deuxfois_closure_object = { 
@@ -34,9 +34,9 @@ struct ILP_Closure deuxfois_closure_object = {
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp86; 
-ilptmp86 = ILP_Integer2ILP(27); 
-return ilp__deuxfois(NULL , ilptmp86);
+  ILP_Object ilptmp43; 
+ilptmp43 = ILP_Integer2ILP(27); 
+return ilp__deuxfois(NULL , ilptmp43);
 }
 
 } 

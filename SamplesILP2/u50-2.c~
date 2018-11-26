@@ -12,20 +12,20 @@
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp4; 
-ilptmp4 = ILP_Integer2ILP(50); 
+  ILP_Object ilptmp1; 
+ilptmp1 = ILP_Integer2ILP(50); 
 
   {
-    ILP_Object x1 = ilptmp4;
+    ILP_Object x1 = ilptmp1;
 { 
-  ILP_Object ilptmp5; 
+  ILP_Object ilptmp2; 
 { 
-  ILP_Object ilptmp6; 
-ilptmp6 = ILP_Integer2ILP(500); 
-ilptmp5 = (x1 = ilptmp6); 
+  ILP_Object ilptmp3; 
+ilptmp3 = ILP_Integer2ILP(500); 
+ilptmp2 = (x1 = ilptmp3); 
 } 
-ilptmp5 = x1; 
-return ilptmp5; 
+ilptmp2 = x1; 
+return ilptmp2; 
 } 
 
   }

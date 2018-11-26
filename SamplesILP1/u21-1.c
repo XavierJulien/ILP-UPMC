@@ -13,12 +13,12 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp473;
-    ilptmp473 = ILP_Integer2ILP (1);
-    ilptmp473 = ILP_Float2ILP (2.2);
-    ilptmp473 = ILP_TRUE;
-    ilptmp473 = ILP_String2ILP ("foobar");
-    return ilptmp473;
+    ILP_Object ilptmp286;
+    ilptmp286 = ILP_Integer2ILP (1);
+    ilptmp286 = ILP_Float2ILP (2.2);
+    ilptmp286 = ILP_TRUE;
+    ilptmp286 = ILP_String2ILP ("foobar");
+    return ilptmp286;
   }
 
 }
