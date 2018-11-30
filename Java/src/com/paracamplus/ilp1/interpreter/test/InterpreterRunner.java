@@ -49,8 +49,8 @@ public class InterpreterRunner {
     }
     
     protected Interpreter interpreter;
-    public void setInterpreter(Interpreter interpreter2)  {
-    	this.interpreter = interpreter2;
+    public void setInterpreter(Interpreter interpreter)  {
+    	this.interpreter = interpreter;
    }
 
     protected Writer stdout;

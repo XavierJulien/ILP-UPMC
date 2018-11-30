@@ -1,0 +1,19 @@
+function f()
+(
+ print("b1 ");
+ yield();
+ print("b2 ");
+ yield();
+ print("b3 ")
+);
+
+let x = costart f() in (
+print("a1 ");
+resume(x);
+print("a2 ");
+resume(x);
+print("a3 ");
+resume(x);
+print("a4 ");
+resume(x);
+print("a5"))
