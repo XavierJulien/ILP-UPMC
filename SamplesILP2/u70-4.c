@@ -13,28 +13,28 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp147;
+    ILP_Object ilptmp289;
     {
-      ILP_Object ilptmp148;
+      ILP_Object ilptmp290;
       {
-	ILP_Object ilptmp149;
-	ILP_Object ilptmp150;
-	ilptmp149 = ILP_Integer2ILP (1);
-	ilptmp150 = ILP_Integer2ILP (1);
-	ilptmp148 = ILP_Equal (ilptmp149, ilptmp150);
+	ILP_Object ilptmp291;
+	ILP_Object ilptmp292;
+	ilptmp291 = ILP_Integer2ILP (1);
+	ilptmp292 = ILP_Integer2ILP (1);
+	ilptmp290 = ILP_Equal (ilptmp291, ilptmp292);
       }
-      if (ILP_isEquivalentToTrue (ilptmp148))
+      if (ILP_isEquivalentToTrue (ilptmp290))
 	{
-	  ilptmp147 = ILP_TRUE;
+	  ilptmp289 = ILP_TRUE;
 
 	}
       else
 	{
-	  ilptmp147 = ILP_FALSE;
+	  ilptmp289 = ILP_FALSE;
 
 	}
     }
-    if (ILP_isEquivalentToTrue (ilptmp147))
+    if (ILP_isEquivalentToTrue (ilptmp289))
       {
 	return ILP_Integer2ILP (3);
 

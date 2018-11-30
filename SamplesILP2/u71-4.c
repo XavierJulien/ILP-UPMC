@@ -13,18 +13,18 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp151;
+    ILP_Object ilptmp295;
     {
-      ILP_Object ilptmp152;
-      ilptmp152 = ILP_TRUE;
+      ILP_Object ilptmp296;
+      ilptmp296 = ILP_TRUE;
 
       {
-	ILP_Object x1 = ilptmp152;
-	ilptmp151 = x1;
+	ILP_Object x1 = ilptmp296;
+	ilptmp295 = x1;
 
       }
     }
-    if (ILP_isEquivalentToTrue (ilptmp151))
+    if (ILP_isEquivalentToTrue (ilptmp295))
       {
 	return ILP_Integer2ILP (1);
 

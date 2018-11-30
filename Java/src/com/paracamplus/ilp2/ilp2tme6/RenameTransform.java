@@ -10,7 +10,7 @@ package com.paracamplus.ilp2.ilp2tme6;
 import com.paracamplus.ilp2.interfaces.IASTfactory;
 import com.paracamplus.ilp2.interfaces.IASTfunctionDefinition;
 import com.paracamplus.ilp2.ast.ASTfactory;
-import com.paracamplus.ilp2.interfaces.IASTassignment;
+//import com.paracamplus.ilp2.interfaces.IASTassignment;
 
 import com.paracamplus.ilp2.interfaces.IASTprogram;
 import com.paracamplus.ilp2.interfaces.IASTvisitor;
@@ -18,13 +18,14 @@ import com.paracamplus.ilp1.interfaces.IASTinvocation;
 import com.paracamplus.ilp1.interfaces.IASTvariable;
 import com.paracamplus.ilp1.compiler.CompilationException;
 import com.paracamplus.ilp1.compiler.normalizer.INormalizationEnvironment;
+import com.paracamplus.ilp1.compiler.normalizer.NoSuchLocalVariableException;
 import com.paracamplus.ilp1.interfaces.IASTblock;
 import com.paracamplus.ilp1.interfaces.IASTblock.IASTbinding;
 import com.paracamplus.ilp1.interfaces.IASTexpression;
 
 public class RenameTransform extends CopyTransform<INormalizationEnvironment> implements IASTvisitor<IASTexpression, INormalizationEnvironment, CompilationException> {
     
-	public static int cpt = 1;
+	public int cpt = 1;
     public RenameTransform(IASTfactory fact) {
     	super(fact);
 	}
@@ -40,8 +41,7 @@ public class RenameTransform extends CopyTransform<INormalizationEnvironment> im
     			IASTvariable v = vars[i];
     			IASTvariable newV = factory.newVariable(v.getName() + "_" + cpt++);
     			System.out.println(newV.getName());
-    			//data = data.extend(v, newV);
-    			System.out.println("Aaa");
+    			data = data.extend(v, newV);
     		}
     		IASTexpression newBody = f.getBody().accept(this, data);
     		fcts2[j] = factory.newFunctionDefinition(f.getFunctionVariable(), newVars, newBody);
@@ -53,6 +53,7 @@ public class RenameTransform extends CopyTransform<INormalizationEnvironment> im
 
 	@Override
 	public IASTexpression visit(IASTinvocation iast, INormalizationEnvironment data) throws CompilationException {
+		System.out.println("passe dans invocation");
 		int n = iast.getArguments().length;
 		IASTexpression[] exprs = iast.getArguments();
         IASTexpression[] newArg = new IASTexpression[n];
@@ -65,10 +66,16 @@ public class RenameTransform extends CopyTransform<INormalizationEnvironment> im
 
 	@Override
 	public IASTvariable visit(IASTvariable iast, INormalizationEnvironment data) throws CompilationException {
-		return data.renaming(iast); // Ajouter try/catch pour variables spéciales (par exemple, PI)
+		try {
+			IASTvariable v = data.renaming(iast);
+			System.out.println("passe dans la variable renoméee"+v.getName());
+			return v; // Ajouter try/catch pour variables spéciales (par exemple, PI)
+		}catch(NoSuchLocalVariableException e) {
+			return iast;
+		}
 	}
 	
-	@Override
+	/*@Override
 	public IASTexpression visit(IASTassignment iast, INormalizationEnvironment data) throws CompilationException {
 		 IASTvariable variable = iast.getVariable();
 	     IASTvariable newvariable = visit(variable, data);
@@ -76,21 +83,22 @@ public class RenameTransform extends CopyTransform<INormalizationEnvironment> im
 	     IASTexpression newexpression = expression.accept(this, data);
 	     return factory.newAssignment(newvariable, newexpression);
 	    
-	}
+	}*/
 	
 	@Override
 	public IASTexpression visit(IASTblock iast, INormalizationEnvironment data) throws CompilationException {
+		System.out.println("passé dans block");
 		INormalizationEnvironment newData = data;
 		IASTbinding[] b = iast.getBindings();
+		IASTbinding[] newB = new IASTbinding[b.length];
 		for(int i = 0; i < b.length;i++) {
 			IASTvariable v = b[i].getVariable();
 			IASTvariable newV = factory.newVariable(v.getName() + "_" + cpt++);
-			System.out.println(newV.getName());
-			//newData = newData.extend(v, newV);
+			newData = newData.extend(v, newV);
+			newB[i] = factory.newBinding(newV, b[i].getInitialisation().accept(this, data));
 		}
-		return new ASTfactory().newBlock(iast.getBindings(), iast.getBody().accept(this, newData));
+		return new ASTfactory().newBlock(newB, iast.getBody().accept(this, newData));
 	}
-
 }
 /*
 Var globale : Set<String> recursive;

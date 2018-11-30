@@ -14,15 +14,15 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp356;
+    ILP_Object ilptmp605;
     {
-      ILP_Object ilptmp357;
-      ILP_Object ilptmp358;
-      ilptmp357 = ILP_Integer2ILP (4);
-      ilptmp358 = ILP_Integer2ILP (5);
-      ilptmp356 = ILP_LessThan (ilptmp357, ilptmp358);
+      ILP_Object ilptmp606;
+      ILP_Object ilptmp607;
+      ilptmp606 = ILP_Integer2ILP (4);
+      ilptmp607 = ILP_Integer2ILP (5);
+      ilptmp605 = ILP_LessThan (ilptmp606, ilptmp607);
     }
-    return ILP_print (ilptmp356);
+    return ILP_print (ilptmp605);
   }
 
 }

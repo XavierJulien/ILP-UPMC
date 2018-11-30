@@ -12,11 +12,11 @@
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp267; 
-  ILP_Object ilptmp268; 
-ilptmp267 = ILP_Integer2ILP(44); 
-ilptmp268 = ILP_Integer2ILP(33); 
-return ILP_LessThan(ilptmp267, ilptmp268);
+  ILP_Object ilptmp454; 
+  ILP_Object ilptmp455; 
+ilptmp454 = ILP_Integer2ILP(44); 
+ilptmp455 = ILP_Integer2ILP(33); 
+return ILP_LessThan(ilptmp454, ilptmp455);
 } 
 
 } 

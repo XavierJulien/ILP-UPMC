@@ -16,15 +16,15 @@ ILP_Object
 ilp__odd (ILP_Closure ilp_useless, ILP_Object n1)
 {
   {
-    ILP_Object ilptmp59;
+    ILP_Object ilptmp137;
     {
-      ILP_Object ilptmp60;
-      ILP_Object ilptmp61;
-      ilptmp60 = n1;
-      ilptmp61 = ILP_Integer2ILP (0);
-      ilptmp59 = ILP_Equal (ilptmp60, ilptmp61);
+      ILP_Object ilptmp138;
+      ILP_Object ilptmp139;
+      ilptmp138 = n1;
+      ilptmp139 = ILP_Integer2ILP (0);
+      ilptmp137 = ILP_Equal (ilptmp138, ilptmp139);
     }
-    if (ILP_isEquivalentToTrue (ilptmp59))
+    if (ILP_isEquivalentToTrue (ilptmp137))
       {
 	return ILP_FALSE;
 
@@ -32,15 +32,15 @@ ilp__odd (ILP_Closure ilp_useless, ILP_Object n1)
     else
       {
 	{
-	  ILP_Object ilptmp62;
+	  ILP_Object ilptmp140;
 	  {
-	    ILP_Object ilptmp63;
-	    ILP_Object ilptmp64;
-	    ilptmp63 = n1;
-	    ilptmp64 = ILP_Integer2ILP (1);
-	    ilptmp62 = ILP_Equal (ilptmp63, ilptmp64);
+	    ILP_Object ilptmp141;
+	    ILP_Object ilptmp142;
+	    ilptmp141 = n1;
+	    ilptmp142 = ILP_Integer2ILP (1);
+	    ilptmp140 = ILP_Equal (ilptmp141, ilptmp142);
 	  }
-	  if (ILP_isEquivalentToTrue (ilptmp62))
+	  if (ILP_isEquivalentToTrue (ilptmp140))
 	    {
 	      return ILP_TRUE;
 
@@ -48,15 +48,15 @@ ilp__odd (ILP_Closure ilp_useless, ILP_Object n1)
 	  else
 	    {
 	      {
-		ILP_Object ilptmp65;
+		ILP_Object ilptmp143;
 		{
-		  ILP_Object ilptmp66;
-		  ILP_Object ilptmp67;
-		  ilptmp66 = n1;
-		  ilptmp67 = ILP_Integer2ILP (1);
-		  ilptmp65 = ILP_Minus (ilptmp66, ilptmp67);
+		  ILP_Object ilptmp144;
+		  ILP_Object ilptmp145;
+		  ilptmp144 = n1;
+		  ilptmp145 = ILP_Integer2ILP (1);
+		  ilptmp143 = ILP_Minus (ilptmp144, ilptmp145);
 		}
-		return ilp__even (NULL, ilptmp65);
+		return ilp__even (NULL, ilptmp143);
 	      }
 
 	    }
@@ -77,15 +77,15 @@ ILP_Object
 ilp__even (ILP_Closure ilp_useless, ILP_Object n2)
 {
   {
-    ILP_Object ilptmp68;
+    ILP_Object ilptmp146;
     {
-      ILP_Object ilptmp69;
-      ILP_Object ilptmp70;
-      ilptmp69 = n2;
-      ilptmp70 = ILP_Integer2ILP (0);
-      ilptmp68 = ILP_Equal (ilptmp69, ilptmp70);
+      ILP_Object ilptmp147;
+      ILP_Object ilptmp148;
+      ilptmp147 = n2;
+      ilptmp148 = ILP_Integer2ILP (0);
+      ilptmp146 = ILP_Equal (ilptmp147, ilptmp148);
     }
-    if (ILP_isEquivalentToTrue (ilptmp68))
+    if (ILP_isEquivalentToTrue (ilptmp146))
       {
 	return ILP_TRUE;
 
@@ -93,15 +93,15 @@ ilp__even (ILP_Closure ilp_useless, ILP_Object n2)
     else
       {
 	{
-	  ILP_Object ilptmp71;
+	  ILP_Object ilptmp149;
 	  {
-	    ILP_Object ilptmp72;
-	    ILP_Object ilptmp73;
-	    ilptmp72 = n2;
-	    ilptmp73 = ILP_Integer2ILP (1);
-	    ilptmp71 = ILP_Equal (ilptmp72, ilptmp73);
+	    ILP_Object ilptmp150;
+	    ILP_Object ilptmp151;
+	    ilptmp150 = n2;
+	    ilptmp151 = ILP_Integer2ILP (1);
+	    ilptmp149 = ILP_Equal (ilptmp150, ilptmp151);
 	  }
-	  if (ILP_isEquivalentToTrue (ilptmp71))
+	  if (ILP_isEquivalentToTrue (ilptmp149))
 	    {
 	      return ILP_FALSE;
 
@@ -109,15 +109,15 @@ ilp__even (ILP_Closure ilp_useless, ILP_Object n2)
 	  else
 	    {
 	      {
-		ILP_Object ilptmp74;
+		ILP_Object ilptmp152;
 		{
-		  ILP_Object ilptmp75;
-		  ILP_Object ilptmp76;
-		  ilptmp75 = n2;
-		  ilptmp76 = ILP_Integer2ILP (1);
-		  ilptmp74 = ILP_Minus (ilptmp75, ilptmp76);
+		  ILP_Object ilptmp153;
+		  ILP_Object ilptmp154;
+		  ilptmp153 = n2;
+		  ilptmp154 = ILP_Integer2ILP (1);
+		  ilptmp152 = ILP_Minus (ilptmp153, ilptmp154);
 		}
-		return ilp__odd (NULL, ilptmp74);
+		return ilp__odd (NULL, ilptmp152);
 	      }
 
 	    }
@@ -139,13 +139,13 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp77;
+    ILP_Object ilptmp155;
     {
-      ILP_Object ilptmp78;
-      ilptmp78 = ILP_Integer2ILP (56);
-      ilptmp77 = ilp__odd (NULL, ilptmp78);
+      ILP_Object ilptmp156;
+      ilptmp156 = ILP_Integer2ILP (56);
+      ilptmp155 = ilp__odd (NULL, ilptmp156);
     }
-    return ILP_Not (ilptmp77);
+    return ILP_Not (ilptmp155);
   }
 
 }

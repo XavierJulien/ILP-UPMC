@@ -27,8 +27,11 @@ extends com.paracamplus.ilp2.parser.ilpml.ILPMLParser {
     public IASTprogram getProgram() throws ParseException {
 		IASTprogram p = super.getProgram();
 		try {
+			System.out.println("passe dans la copy");
 			return new CopyTransform<Void>((IASTfactory) factory).visit(p, null);
+			
 		} catch (CompilationException e) {
+			System.out.println("passe dans p");
 			return p;
 		}
     }

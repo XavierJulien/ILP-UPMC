@@ -14,11 +14,11 @@ ILP_Object
 ilp__dou_ble (ILP_Closure ilp_useless, ILP_Object x1)
 {
   {
-    ILP_Object ilptmp54;
-    ILP_Object ilptmp55;
-    ilptmp54 = ILP_Integer2ILP (2);
-    ilptmp55 = x1;
-    return ILP_Times (ilptmp54, ilptmp55);
+    ILP_Object ilptmp112;
+    ILP_Object ilptmp113;
+    ilptmp112 = ILP_Integer2ILP (2);
+    ilptmp113 = x1;
+    return ILP_Times (ilptmp112, ilptmp113);
   }
 }
 
@@ -34,15 +34,15 @@ ILP_Object
 ilp_program ()
 {
   {
-    ILP_Object ilptmp56;
+    ILP_Object ilptmp114;
     {
-      ILP_Object ilptmp57;
-      ILP_Object ilptmp58;
-      ilptmp57 = ILP_Integer2ILP (52);
-      ilptmp58 = ILP_Integer2ILP (3);
-      ilptmp56 = ILP_Plus (ilptmp57, ilptmp58);
+      ILP_Object ilptmp115;
+      ILP_Object ilptmp116;
+      ilptmp115 = ILP_Integer2ILP (52);
+      ilptmp116 = ILP_Integer2ILP (3);
+      ilptmp114 = ILP_Plus (ilptmp115, ilptmp116);
     }
-    return ilp__dou_ble (NULL, ilptmp56);
+    return ilp__dou_ble (NULL, ilptmp114);
   }
 
 }

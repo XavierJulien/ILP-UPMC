@@ -12,9 +12,9 @@
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp198; 
-ilptmp198 = ILP_Integer2ILP(34); 
-return ILP_Opposite(ilptmp198);
+  ILP_Object ilptmp385; 
+ilptmp385 = ILP_Integer2ILP(34); 
+return ILP_Opposite(ilptmp385);
 } 
 
 } 

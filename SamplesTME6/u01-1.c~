@@ -3,6 +3,8 @@
 #include "ilp.h" 
 
 /* Global variables */ 
+ILP_Object print;
+ILP_Object x;
 
 /* Global prototypes */ 
 
@@ -12,22 +14,41 @@
 ILP_Object ilp_program () 
 { 
 { 
-  ILP_Object ilptmp636; 
+  ILP_Object ilptmp1; 
 { 
-  ILP_Object ilptmp637; 
-  ILP_Object ilptmp638; 
-ilptmp637 = ILP_Integer2ILP(2); 
-ilptmp638 = ILP_Integer2ILP(2); 
-ilptmp636 = ILP_Equal(ilptmp637, ilptmp638);
+  ILP_Object ilptmp2; 
+ilptmp2 = ILP_Integer2ILP(12); 
+ilptmp1 = (x = ilptmp2); 
 } 
-  if ( ILP_isEquivalentToTrue(ilptmp636 ) ) {
-return ILP_Integer2ILP(3); 
+{ 
+  ILP_Object ilptmp3; 
+{ 
+  ILP_Object ilptmp4; 
+  ILP_Object ilptmp5; 
+ilptmp4 = ILP_Integer2ILP(3); 
+ilptmp5 = x; 
+ilptmp3 = ILP_Times(ilptmp4, ilptmp5);
+} 
 
-  } else {
-return ILP_FALSE; 
+  {
+    ILP_Object x_11 = ilptmp3;
+{ 
+  ILP_Object ilptmp6; 
+  ILP_Object ilptmp7; 
+ilptmp6 = ILP_Integer2ILP(3); 
+ilptmp7 = x_11; 
+ilptmp1 = ILP_Times(ilptmp6, ilptmp7);
+} 
 
   }
 }
+{ 
+  ILP_Object ilptmp8; 
+ilptmp8 = x; 
+ilptmp1 = ILP_print(ilptmp8);
+}
+return ilptmp1; 
+} 
 
 } 
 
