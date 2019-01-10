@@ -1,4 +1,4 @@
-// Generated from ILPMLgrammar2.g4 by ANTLR 4.4
+// Generated from ILPMLgrammar1tme2.g4 by ANTLR 4.4
 
     package antlr4;
 
@@ -12,7 +12,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class ILPMLgrammar2Lexer extends Lexer {
+public class ILPMLgrammar1tme2Lexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.4", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -45,13 +45,13 @@ public class ILPMLgrammar2Lexer extends Lexer {
 	};
 
 
-	public ILPMLgrammar2Lexer(CharStream input) {
+	public ILPMLgrammar1tme2Lexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "ILPMLgrammar2.g4"; }
+	public String getGrammarFileName() { return "ILPMLgrammar1tme2.g4"; }
 
 	@Override
 	public String[] getTokenNames() { return tokenNames; }

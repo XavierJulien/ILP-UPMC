@@ -5,7 +5,6 @@ import java.util.concurrent.Semaphore;
 import com.paracamplus.ilp1.interpreter.interfaces.EvaluationException;
 import com.paracamplus.ilp1.interpreter.interfaces.Invocable;
 import com.paracamplus.ilp3.ilp3tme7.interpreter.Interpreter;
-import com.paracamplus.ilp3.ilp3tme7.interpreter.primitive.Yield;
 
 public class CoroutineInstance extends Thread {
 
@@ -41,7 +40,6 @@ public class CoroutineInstance extends Thread {
 			resumesem.release();
 			yieldsem.acquireUninterruptibly();
 			
-		}else {
 		}
 	}
 	
