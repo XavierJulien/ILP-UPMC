@@ -1,0 +1,15 @@
+class Point extends Object
+{
+    var x;
+    var y;
+
+    method x ()
+    self.x;
+}
+
+let p = new Point(11, 22) in
+(p.x();
+p.x();
+p.x();
+p.x();
+836)

@@ -1,0 +1,17 @@
+class Point extends Object
+{
+    var x;
+    var y;
+
+    method m () ( print(self.x) );
+    method n () ( self.m() );
+}
+
+let p = new Point(11, 22) in
+(p.m();
+let x = 0 in 
+ while x < 10 do
+  (p.n();
+  x = x + 1)
+done;
+836)
