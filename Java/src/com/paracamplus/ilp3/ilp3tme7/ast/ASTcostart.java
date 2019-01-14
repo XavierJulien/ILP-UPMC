@@ -30,8 +30,7 @@ public class ASTcostart extends ASTexpression implements IASTcostart, IASTvisita
         return arguments;
     }
 
-    @SuppressWarnings("unchecked")
-	public <Result, Data, Anomaly extends Throwable> Result accept(
+    public <Result, Data, Anomaly extends Throwable> Result accept(
 			com.paracamplus.ilp1.interfaces.IASTvisitor<Result, Data, Anomaly> visitor, Data data) throws Anomaly {
 		return ((IASTvisitor <Result, Data, Anomaly>) visitor).visit(this, data);
 	}

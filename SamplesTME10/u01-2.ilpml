@@ -1,0 +1,2 @@
+print(exists(g0));
+g0 = 1;

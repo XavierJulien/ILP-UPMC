@@ -1,0 +1,16 @@
+function f(a) (
+  g3 = a;
+  print(exists(a)); // true
+  print(exists(g4)); // false
+  print(exists(g0)); // true
+  g3
+) in (
+  g0 = 1;
+  print(exists(a)); // false
+  g2 = f(g0);
+  print(exists(f)); // true
+  print(exists(g1)); // true
+  g1 = g2;
+  print(exists(g1)); // true
+  g1
+)

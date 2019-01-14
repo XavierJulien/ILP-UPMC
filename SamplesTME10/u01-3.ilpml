@@ -1,0 +1,7 @@
+let a = 0 in //var loc
+(
+ a = 2;
+ b = 0;
+)
+ print(b);
+ print(exists(a));
